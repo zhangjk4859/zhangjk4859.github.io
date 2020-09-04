@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>传承</title>
+  
+  
+  <link href="http://pluscool.cn/atom.xml" rel="self"/>
+  
+  <link href="http://pluscool.cn/"/>
+  <updated>2020-09-04T05:52:10.307Z</updated>
+  <id>http://pluscool.cn/</id>
+  
+  <author>
+    <name>kevin z</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>newpapername</title>
+    <link href="http://pluscool.cn/2020/09/04/newpapername/"/>
+    <id>http://pluscool.cn/2020/09/04/newpapername/</id>
+    <published>2020-09-04T05:52:10.000Z</published>
+    <updated>2020-09-04T05:52:10.307Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
