@@ -6,7 +6,7 @@
   <link href="http://pluscool.cn/atom.xml" rel="self"/>
   
   <link href="http://pluscool.cn/"/>
-  <updated>2020-09-04T06:44:19.474Z</updated>
+  <updated>2020-09-04T10:03:33.549Z</updated>
   <id>http://pluscool.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>babylon</title>
+    <link href="http://pluscool.cn/2020/09/04/babylon/"/>
+    <id>http://pluscool.cn/2020/09/04/babylon/</id>
+    <published>2020-09-04T09:40:00.000Z</published>
+    <updated>2020-09-04T10:03:33.549Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://www.iquilezles.org/blog/myContent/mathroom02.jpg" alt="image"><br>在博客中看到这张有趣的图片，自己加了点扩展<br><img src="http://note.youdao.com/yws/res/5712/806752A3DDC541DDAB3DC91D98BE0404" alt="image"><br>自动证明了</p><ul><li>(a+b)^2 = a^2 + 2ab + b^2</li><li>(a-b)^2 = a^2 - 2ab + b^2</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://www.iquilezles.org/blog/myContent/mathroom02.jpg&quot; alt=&quot;image&quot;&gt;&lt;br&gt;在博客中看到这张有趣的图片，自己加了点扩展&lt;br&gt;&lt;img src=&quot;http://note.youdao</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>博客诞生啦</title>
