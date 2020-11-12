@@ -5,17 +5,17 @@
   
 
   
-  <title>2020-11安装cocoapods问题 | 网络日志</title>
+  <title>跑flutter工程的坑 | 网络日志</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天安装pods发生无法下载问题， 1Unable to download data from XXX  切换了镜像源解决  查看镜像源  1gem sources -l   删除淘宝镜像源 -r remove  1sudo gem sources -r https:&#x2F;&#x2F;ruby.taobao.org&#x2F;   添加新的镜像源  -a add  1sudo gem sou">
+  <meta name="description" content="下载过来，一定要把pod和workspace删掉重新安装，否则会出现奇奇怪怪的问题，比如目标系统不对应，不适配arm64架构等：  The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |undefined symbols for architecture arm |">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2020-11安装cocoapods问题">
-<meta property="og:url" content="http://www.pluscool.cn/2020/11/12/cocoapods/index.html">
+<meta property="og:title" content="跑flutter工程的坑">
+<meta property="og:url" content="http://www.pluscool.cn/2020/11/12/flutter-points/index.html">
 <meta property="og:site_name" content="网络日志">
-<meta property="og:description" content="今天安装pods发生无法下载问题， 1Unable to download data from XXX  切换了镜像源解决  查看镜像源  1gem sources -l   删除淘宝镜像源 -r remove  1sudo gem sources -r https:&#x2F;&#x2F;ruby.taobao.org&#x2F;   添加新的镜像源  -a add  1sudo gem sou">
+<meta property="og:description" content="下载过来，一定要把pod和workspace删掉重新安装，否则会出现奇奇怪怪的问题，比如目标系统不对应，不适配arm64架构等：  The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |undefined symbols for architecture arm |">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-12T10:48:08.000Z">
-<meta property="article:modified_time" content="2020-11-12T10:48:30.575Z">
+<meta property="article:published_time" content="2020-11-12T13:05:29.000Z">
+<meta property="article:modified_time" content="2020-11-12T13:06:08.072Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-cocoapods" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-flutter-points" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/12/cocoapods/" class="article-date">
-  <time datetime="2020-11-12T10:48:08.000Z" itemprop="datePublished">2020-11-12</time>
+    <a href="/2020/11/12/flutter-points/" class="article-date">
+  <time datetime="2020-11-12T13:05:29.000Z" itemprop="datePublished">2020-11-12</time>
 </a>
     
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      2020-11安装cocoapods问题
+      跑flutter工程的坑
     </h1>
   
 
@@ -88,38 +88,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天安装pods发生无法下载问题，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to download data from XXX</span><br></pre></td></tr></table></figure>
-
-<p>切换了镜像源解决</p>
-<ul>
-<li>查看镜像源</li>
+        <ul>
+<li>下载过来，一定要把pod和workspace删掉重新安装，否则会出现奇奇怪怪的问题，比如目标系统不对应，不适配arm64架构等：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除淘宝镜像源 -r remove</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -r https:&#x2F;&#x2F;ruby.taobao.org&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>添加新的镜像源  -a add</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -a https:&#x2F;&#x2F;rubygems.org</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>成功<br>Successfully installed cocoapods-1.10.0<br>Parsing documentation for cocoapods-1.10.0<br>Done installing documentation for cocoapods after 2 seconds </p>
-</li>
-</ul>
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/li_ph/article/details/43852845">https://blog.csdn.net/li_ph/article/details/43852845</a></p>
-
+<h2 id="The-iOS-deployment-target-‘IPHONEOS-DEPLOYMENT-TARGET’-is-set-to-8-0"><a href="#The-iOS-deployment-target-‘IPHONEOS-DEPLOYMENT-TARGET’-is-set-to-8-0" class="headerlink" title="The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |"></a>The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |</h2><h2 id="undefined-symbols-for-architecture-arm"><a href="#undefined-symbols-for-architecture-arm" class="headerlink" title="undefined symbols for architecture arm |"></a>undefined symbols for architecture arm |</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/12/cocoapods/" data-id="ckheplz1f00005vk85ktz2ypf" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2020/11/12/flutter-points/" data-id="ckheuiyyz0000uwk8a7q8fylf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -128,19 +104,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/12/pub-get-is-slow/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          flutter pub get慢
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/12/zsh/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/11/12/pub-get-is-slow/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">catalina系统的zsh配置</div>
+      <div class="article-nav-title">flutter pub get慢</div>
     </a>
   
 </nav>
