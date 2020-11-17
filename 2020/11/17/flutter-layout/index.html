@@ -5,19 +5,22 @@
   
 
   
-  <title>生活中的老师们 | 网络日志</title>
+  <title>flutter基础知识 | 网络日志</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友 章老师 许樱淑老师 罗永浩 李笑来 座上客HR 父母亲 大姨 武超大哥 陈静姐 亲姐 姐夫 徐世委 夫人 夫人大伯 朱存剑 吴旭龙 潘梁梁 小蘑菇 黄总 冯唐 shena 大妖怪王杰 翁恺老师 左耳朵耗子陈皓 王垠（垠神） 张驰源 张宏杰 老张 陆姐 巴特勒 scaler 柳承敏 徐宥 陈思录 阮一峰 九边 吉姆克拉克 霍华德艾">
+  <meta name="description" content="基本上由widget组成，widget有stateless和stateful两种，常用的基础widget有  container：矩形元素，可以设置背景边框阴影 row，column：让子控件水平和垂直布局，flex布局原理 stack：可以堆砌widget，用上下左右来定位 text：一个文本显示容器  多功能widget叫做material app widget，苹果风格的叫做Cupertin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生活中的老师们">
-<meta property="og:url" content="http://www.pluscool.cn/2020/11/14/teachers/index.html">
+<meta property="og:title" content="flutter基础知识">
+<meta property="og:url" content="http://www.pluscool.cn/2020/11/17/flutter-layout/index.html">
 <meta property="og:site_name" content="网络日志">
-<meta property="og:description" content="洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友 章老师 许樱淑老师 罗永浩 李笑来 座上客HR 父母亲 大姨 武超大哥 陈静姐 亲姐 姐夫 徐世委 夫人 夫人大伯 朱存剑 吴旭龙 潘梁梁 小蘑菇 黄总 冯唐 shena 大妖怪王杰 翁恺老师 左耳朵耗子陈皓 王垠（垠神） 张驰源 张宏杰 老张 陆姐 巴特勒 scaler 柳承敏 徐宥 陈思录 阮一峰 九边 吉姆克拉克 霍华德艾">
+<meta property="og:description" content="基本上由widget组成，widget有stateless和stateful两种，常用的基础widget有  container：矩形元素，可以设置背景边框阴影 row，column：让子控件水平和垂直布局，flex布局原理 stack：可以堆砌widget，用上下左右来定位 text：一个文本显示容器  多功能widget叫做material app widget，苹果风格的叫做Cupertin">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-14T15:40:59.000Z">
-<meta property="article:modified_time" content="2020-11-14T15:41:31.053Z">
+<meta property="og:image" content="https://flutter.cn/assets/ui/layout/lakes-icons-visual-f9e45691d76ba85d4ea2160941f42c8a2ce1a17d41d6e6aac8f3feb89e679f99.png">
+<meta property="og:image" content="https://flutter.cn/assets/ui/layout/sample-flutter-layout-46c76f6ab08f94fa4204469dbcf6548a968052af102ae5a1ae3c78bc24e0d915.png">
+<meta property="article:published_time" content="2020-11-17T09:38:24.000Z">
+<meta property="article:modified_time" content="2020-11-17T09:39:20.173Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://flutter.cn/assets/ui/layout/lakes-icons-visual-f9e45691d76ba85d4ea2160941f42c8a2ce1a17d41d6e6aac8f3feb89e679f99.png">
   
     <link rel="alternate" href="/atom.xml" title="网络日志" type="application/atom+xml">
   
@@ -66,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-teachers" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-flutter-layout" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/14/teachers/" class="article-date">
-  <time datetime="2020-11-14T15:40:59.000Z" itemprop="datePublished">2020-11-14</time>
+    <a href="/2020/11/17/flutter-layout/" class="article-date">
+  <time datetime="2020-11-17T09:38:24.000Z" itemprop="datePublished">2020-11-17</time>
 </a>
     
   </div>
@@ -80,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      生活中的老师们
+      flutter基础知识
     </h1>
   
 
@@ -88,51 +91,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友"><a href="#洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友" class="headerlink" title="洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友"></a>洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友</h2><ul>
-<li>章老师</li>
-<li>许樱淑老师</li>
-<li>罗永浩</li>
-<li>李笑来</li>
-<li>座上客HR</li>
-<li>父母亲</li>
-<li>大姨</li>
-<li>武超大哥</li>
-<li>陈静姐</li>
-<li>亲姐 姐夫</li>
-<li>徐世委</li>
-<li>夫人</li>
-<li>夫人大伯</li>
-<li>朱存剑</li>
-<li>吴旭龙</li>
-<li>潘梁梁</li>
-<li>小蘑菇</li>
-<li>黄总</li>
-<li>冯唐</li>
-<li>shena</li>
-<li>大妖怪王杰</li>
-<li>翁恺老师</li>
-<li>左耳朵耗子陈皓</li>
-<li>王垠（垠神）</li>
-<li>张驰源</li>
-<li>张宏杰</li>
-<li>老张</li>
-<li>陆姐</li>
-<li>巴特勒</li>
-<li>scaler</li>
-<li>柳承敏</li>
-<li>徐宥</li>
-<li>陈思录</li>
-<li>阮一峰</li>
-<li>九边</li>
-<li>吉姆克拉克</li>
-<li>霍华德艾肯</li>
-<li>杰克伦敦</li>
+        <p>基本上由widget组成，widget有stateless和stateful两种，常用的基础widget有</p>
+<ul>
+<li>container：矩形元素，可以设置背景边框阴影</li>
+<li>row，column：让子控件水平和垂直布局，flex布局原理</li>
+<li>stack：可以堆砌widget，用上下左右来定位</li>
+<li>text：一个文本显示容器</li>
 </ul>
+<p>多功能widget叫做material app widget，苹果风格的叫做CupertinoApp，常见的有：</p>
+<ul>
+<li>navigator，也叫routes</li>
+<li>appbar</li>
+<li>scaffold</li>
+</ul>
+<hr>
+<ul>
+<li>一个widget加gestureDetector便形成了按钮</li>
+<li>一个widget+state = statefull widget</li>
+<li>keys：类似于tableview中的cellid，重用机制</li>
+<li>全局key：用来标识全局唯一的widget</li>
+</ul>
+<p>关于widget组合的图：<br><img src="https://flutter.cn/assets/ui/layout/lakes-icons-visual-f9e45691d76ba85d4ea2160941f42c8a2ce1a17d41d6e6aac8f3feb89e679f99.png" alt="image"><br><img src="https://flutter.cn/assets/ui/layout/sample-flutter-layout-46c76f6ab08f94fa4204469dbcf6548a968052af102ae5a1ae3c78bc24e0d915.png" alt="image"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://flutter.cn/docs/development/ui/layout">https://flutter.cn/docs/development/ui/layout</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/14/teachers/" data-id="ckhhuyixc0000w6k8eq8zbvyj" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2020/11/17/flutter-layout/" data-id="ckhlsc8v800008pk804lqc07s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,19 +126,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/15/find-next-numnber/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          寻找下一个数
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/14/2020-11-14-thoughts/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/11/16/build-apk/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">今日念</div>
+      <div class="article-nav-title">mac android studio flutter 打包 apk</div>
     </a>
   
 </nav>
