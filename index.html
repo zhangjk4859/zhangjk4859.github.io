@@ -64,6 +64,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-tabbar-click-bug" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/18/flutter-tabbar-click-bug/" class="article-date">
+  <time datetime="2020-11-18T08:14:48.000Z" itemprop="datePublished">2020-11-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/18/flutter-tabbar-click-bug/">flutter tabcontroller监听点击调用两次</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听<br>解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_tabController.addListener(() &#123;</span><br><span class="line">      if(_tabController.index &#x3D;&#x3D; _tabController.animation.value)&#123;</span><br><span class="line">        int index &#x3D; _tabController.index;</span><br><span class="line">        print(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;当前点击了$index&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>代码拿过来自己分析一遍会记得牢。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/18/flutter-tabbar-click-bug/" data-id="ckhn5n42t0000xnk83q2nhco8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-what-interviewer-want-know" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/18/what-interviewer-want-know/" class="article-date">
@@ -78,7 +117,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/18/what-interviewer-want-know/">what-interviewer-want-know</a>
+      <a class="article-title" href="/2020/11/18/what-interviewer-want-know/">面试官想要知道的我的信息</a>
     </h1>
   
 
@@ -86,7 +125,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="项目开发过程中用到的三方库有哪些"><a href="#项目开发过程中用到的三方库有哪些" class="headerlink" title="项目开发过程中用到的三方库有哪些"></a>项目开发过程中用到的三方库有哪些</h3><ul>
+<li>Masonry  布局</li>
+<li>YYModel  json转模型</li>
+<li>YYCache  缓存工具</li>
+<li>AFNetworking  网络请求</li>
+<li>SDWebImage   图片缓存</li>
+<li>YBAttributeTextTapAction  label特定的字体点击</li>
+</ul>
+<h3 id="对你们公司有什么想问的"><a href="#对你们公司有什么想问的" class="headerlink" title="对你们公司有什么想问的"></a>对你们公司有什么想问的</h3><ul>
+<li>前端人员配置如何，iOS端用什么语言</li>
+<li>后端用的什么语言</li>
+<li>产品是2B还是2C</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
@@ -156,7 +208,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/18/flutter-gradient/">flutter-gradient</a>
+      <a class="article-title" href="/2020/11/18/flutter-gradient/">flutter渐变处理</a>
     </h1>
   
 
@@ -164,7 +216,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li>线性渐变</li>
+<li>开始位置</li>
+<li>结束位置</li>
+<li>开始结束点</li>
+<li>颜色<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">LinearGradient(      &#x2F;&#x2F;渐变位置</span><br><span class="line">              begin: Alignment.topLeft, &#x2F;&#x2F;左上</span><br><span class="line">              end: Alignment.bottomRight, &#x2F;&#x2F;右下</span><br><span class="line">              stops: [0.0, 1.0],         &#x2F;&#x2F;[渐变起始点, 渐变结束点]</span><br><span class="line">              &#x2F;&#x2F;渐变颜色[始点颜色, 结束颜色]</span><br><span class="line">              colors: [Color.fromRGBO(253, 1, 129, 1), Color.fromRGBO(206, 21, 240, 1)]</span><br><span class="line">          )</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
@@ -521,48 +581,6 @@
 
 
   
-    <article id="post-dic-nil" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/dic-nil/" class="article-date">
-  <time datetime="2020-11-13T02:24:39.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/13/dic-nil/">字典取值为空崩溃问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天后台报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[_NSPlaceholderData initWithBase64Encoding:]: nil string argument</span><br><span class="line">Foundation	-[NSData(NSData) base64Encoding]</span><br></pre></td></tr></table></figure>
-<p>经过检查问题发生在字典取出值没有判空就传递给方法使用，细节也要注意，养成良好的编码习惯</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSString *urlstr &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br></pre></td></tr></table></figure>
-<p>正确的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">id obj &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">if (obj &amp;&amp; [obj isKindOfClass:[NSString class]]) &#123;</span><br><span class="line">    NSString *urlstr &#x3D; (NSString *)obj;</span><br><span class="line">    NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/13/dic-nil/" data-id="ckhfn2koa0000rhk88p8j9z4u" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -599,7 +617,11 @@
       <ul>
         
           <li>
-            <a href="/2020/11/18/what-interviewer-want-know/">what-interviewer-want-know</a>
+            <a href="/2020/11/18/flutter-tabbar-click-bug/">flutter tabcontroller监听点击调用两次</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/18/what-interviewer-want-know/">面试官想要知道的我的信息</a>
           </li>
         
           <li>
@@ -607,15 +629,11 @@
           </li>
         
           <li>
-            <a href="/2020/11/18/flutter-gradient/">flutter-gradient</a>
+            <a href="/2020/11/18/flutter-gradient/">flutter渐变处理</a>
           </li>
         
           <li>
             <a href="/2020/11/17/flutter-layout/">flutter基础知识</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/16/build-apk/">mac android studio flutter 打包 apk</a>
           </li>
         
       </ul>
