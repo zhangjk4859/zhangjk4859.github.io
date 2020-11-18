@@ -9,7 +9,7 @@ tags:
 keytool -genkey -v -keystore ~/key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key
 
 ```
-- 生成属性文件关联秘钥
+- <app dir>/android文件夹下生成属性文件关联秘钥 key.properties
 
 ```
 storePassword=<password from previous step>
