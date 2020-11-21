@@ -141,3 +141,18 @@ public class LRUCache {
 ```
 
 I hope code and tutorial is self explanatory.
+
+来源：https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237
+
+
+
+总结：最近最少使用算法，内存有限制，查找得快，删除得快，插入也得快
+
+- 获取缓存
+
+  >  根据key从字典查找，如果存在，返回值，双向链表删除当前值，插入到最顶端
+
+- 插入缓存
+
+  > 1. 如果已经存在，更新值，并移动到链表顶端
+  > 2. 不存在，生成一个新的节点，插入到顶端，如果满了，删除最后一个
