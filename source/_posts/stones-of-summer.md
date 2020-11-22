@@ -52,3 +52,7 @@ a long area of high land,especially at the top of a mountain
 ### spine /spaɪn/ noun
 the row of bones down the center of your back that supports your body and protects your spinal cord.
 ![image](https://tse4-mm.cn.bing.net/th/id/OIP.eVObcV6TOnB6jYMpIXJN9gHaIO?pid=Api&rs=1)
+
+
+
+And the land was best when a storm came,and the wind and the small rain blew the shadow and ==gown== of the grown pillow against the window;a hurt, whispering  thing growing on glass.Then sometimes Arthur got upland passed through living room,the ==den== where the boy lay sleeping within the sprawl of gold trophies and old, dustless stud-books which were  ==cloistered== in the walls, nestled like birds,like so many ==scattered== but well-kept ==tombstones==.The wind then was an easy hand;a ==furious== wood of night.It was an eye lying beyond easily, drifting,something full of ==smoky== listing water.And Arthur would pass on, stopping on the back ==stoop==,standing into the wind,the thin ==strands== of light,the ==tents== of water,the ==retching== and heaving face of storm.For a long time,it seemed,his ==etched== water-form flew in the wind;became the frozen statue of a general eyeing angrily the chaos being wreaked on his hill.
