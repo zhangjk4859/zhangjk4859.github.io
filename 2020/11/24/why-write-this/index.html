@@ -5,17 +5,17 @@
   
 
   
-  <title>flutter tabcontroller监听点击调用两次 | 加酷知识源</title>
+  <title>为什么写这些微博 | 加酷知识源</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen 1234567_tabController.addListener(() &amp;#123;      if(_tabController.index &#x3D;&#x3D; _tabController.animation.va">
+  <meta name="description" content="在未来的某一天需要用到的时候，有素材可以提供 在路上等红绿灯的时候，想到了刘未鹏说的一个概念，叫做暗时间，如果把业余时间全部用来读书，会产生多么大的改变？不可估量 人类站在顶级食物链，是因为拥有大脑，会思考 输出倒逼输入，问自己今天读了什么 工业革命，化石燃料转化为机械能和电能，把人力劳动解放出来，自动化，信息革命，产生了众多信息，需要的是信息的自动化，程序员就是干这个活的，所以未来一百年，程序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter tabcontroller监听点击调用两次">
-<meta property="og:url" content="http://www.pluscool.cn/2020/11/18/flutter-tabbar-click-bug/index.html">
+<meta property="og:title" content="为什么写这些微博">
+<meta property="og:url" content="http://www.pluscool.cn/2020/11/24/why-write-this/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen 1234567_tabController.addListener(() &amp;#123;      if(_tabController.index &#x3D;&#x3D; _tabController.animation.va">
+<meta property="og:description" content="在未来的某一天需要用到的时候，有素材可以提供 在路上等红绿灯的时候，想到了刘未鹏说的一个概念，叫做暗时间，如果把业余时间全部用来读书，会产生多么大的改变？不可估量 人类站在顶级食物链，是因为拥有大脑，会思考 输出倒逼输入，问自己今天读了什么 工业革命，化石燃料转化为机械能和电能，把人力劳动解放出来，自动化，信息革命，产生了众多信息，需要的是信息的自动化，程序员就是干这个活的，所以未来一百年，程序">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-18T08:14:48.000Z">
-<meta property="article:modified_time" content="2020-11-18T08:19:22.938Z">
+<meta property="article:published_time" content="2020-11-24T05:24:47.000Z">
+<meta property="article:modified_time" content="2020-11-24T05:34:58.167Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-flutter-tabbar-click-bug" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-why-write-this" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/18/flutter-tabbar-click-bug/" class="article-date">
-  <time datetime="2020-11-18T08:14:48.000Z" itemprop="datePublished">2020-11-18</time>
+    <a href="/2020/11/24/why-write-this/" class="article-date">
+  <time datetime="2020-11-24T05:24:47.000Z" itemprop="datePublished">2020-11-24</time>
 </a>
     
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      flutter tabcontroller监听点击调用两次
+      为什么写这些微博
     </h1>
   
 
@@ -88,14 +88,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听<br>解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_tabController.addListener(() &#123;</span><br><span class="line">      if(_tabController.index &#x3D;&#x3D; _tabController.animation.value)&#123;</span><br><span class="line">        int index &#x3D; _tabController.index;</span><br><span class="line">        print(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;当前点击了$index&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<p>代码拿过来自己分析一遍会记得牢。</p>
+        <ul>
+<li>在未来的某一天需要用到的时候，有素材可以提供</li>
+<li>在路上等红绿灯的时候，想到了刘未鹏说的一个概念，叫做暗时间，如果把业余时间全部用来读书，会产生多么大的改变？不可估量</li>
+<li>人类站在顶级食物链，是因为拥有大脑，会思考</li>
+<li>输出倒逼输入，问自己今天读了什么</li>
+<li>工业革命，化石燃料转化为机械能和电能，把人力劳动解放出来，自动化，信息革命，产生了众多信息，需要的是信息的自动化，程序员就是干这个活的，所以未来一百年，程序员不会失业，无论是工业革命还是信息革命，核心就是解放人的体力和脑力，自动化</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/18/flutter-tabbar-click-bug/" data-id="ckhn5n42t0000xnk83q2nhco8" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2020/11/24/why-write-this/" data-id="ckhvl4vqf000029k81k5402l5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -104,19 +108,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/18/babylon/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/24/splash-page/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          图片引发的思考
+          flutter启动页
         
       </div>
     </a>
   
   
-    <a href="/2020/11/18/what-interviewer-want-know/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/11/24/flutter-tips/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">面试官想要知道的我的信息</div>
+      <div class="article-nav-title">flutter工程注意事项</div>
     </a>
   
 </nav>
