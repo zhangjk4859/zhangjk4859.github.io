@@ -145,6 +145,15 @@ tags:
 ### 用过react吗？
 ### 多线程有哪些使用场景
 ### block有几种类型
+
+- 栈上block NSConcreteStackBlock
+
+- 堆上block  栈上block做了copy以后  NSConcreteMallocBlock
+
+- 全局block NSConcreteGlobeBlock 存储在全局数据区
+
+  总结：block是对象，一般情况下，对象经常呆的也就是这三个区，对于基础类型，会进行拷贝，对象会默认进行强引用，如果__block修饰过的数据类型，会包装一个指针，指向变量
+
 ### 如何检测内存的占用情况
 ### 常用的本地存储有哪些
 ### 在项目中做了哪些优化
