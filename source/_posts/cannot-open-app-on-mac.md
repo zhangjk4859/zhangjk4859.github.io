@@ -18,4 +18,6 @@ sudo spctl --master-enable
 
   ![image](https://huajiakeji.com/Content/kindeditor/attached/image/20190725/20190725213552_3966.png)
 
+  参考：https://huajiakeji.com/macos/2019-07/2793.html
+
 完。
