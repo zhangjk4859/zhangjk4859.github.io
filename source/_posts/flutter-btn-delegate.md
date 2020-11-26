@@ -42,6 +42,11 @@ class ImageBtn extends StatelessWidget {
   }
   //实例对象时传进去
   ImageBtn(callback:_ontap)
+  
+  //另外一种写法，不传参数也可以，仅仅是invoke外部函数，
+  ImageBtn(callback:(){
+     //do sth...
+  })
 ```
 注意:callback和外部的方法，参数类型要保持一致
-总结：外部函数传给按钮，让按钮内部可以调用
+总结：外部函数传给按钮，让按钮内部可以调用，通过无参数函数调用有参数也可以
