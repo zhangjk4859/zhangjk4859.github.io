@@ -5,19 +5,21 @@
   
 
   
-  <title>flutter延迟执行方法 | 加酷知识源</title>
+  <title>什么是bitCode | 加酷知识源</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="延迟加载 1234&#x2F;&#x2F;延迟1秒加载Future.delayed(Duration(seconds: 1), ()&amp;#123;      &#x2F;&#x2F;do sth    &amp;#125;); 使用场景：  同时执行toast和导航栏页面切换，会导致卡顿，可用延迟其中一个方法，避免同时执行">
+  <meta name="description" content="The process of compiling consists of three different steps: 1.The compilier front-end converts the source code into some kind of intermediate representation. 2.The optimizer performs a sequence of opt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter延迟执行方法">
-<meta property="og:url" content="http://www.pluscool.cn/2020/11/18/thread-delay/index.html">
+<meta property="og:title" content="什么是bitCode">
+<meta property="og:url" content="http://www.pluscool.cn/2020/12/02/what-is-bit-code/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="延迟加载 1234&#x2F;&#x2F;延迟1秒加载Future.delayed(Duration(seconds: 1), ()&amp;#123;      &#x2F;&#x2F;do sth    &amp;#125;); 使用场景：  同时执行toast和导航栏页面切换，会导致卡顿，可用延迟其中一个方法，避免同时执行">
+<meta property="og:description" content="The process of compiling consists of three different steps: 1.The compilier front-end converts the source code into some kind of intermediate representation. 2.The optimizer performs a sequence of opt">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-18T04:21:12.000Z">
-<meta property="article:modified_time" content="2020-11-18T08:05:16.057Z">
+<meta property="og:image" content="https://www.guardsquare.com/files/media/guardsquare2017/Compiling-with-bitcode-enabled.png">
+<meta property="article:published_time" content="2020-12-01T23:45:52.000Z">
+<meta property="article:modified_time" content="2020-12-02T00:01:45.743Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.guardsquare.com/files/media/guardsquare2017/Compiling-with-bitcode-enabled.png">
   
     <link rel="alternate" href="/atom.xml" title="加酷知识源" type="application/atom+xml">
   
@@ -66,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-thread-delay" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-what-is-bit-code" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/18/thread-delay/" class="article-date">
-  <time datetime="2020-11-18T04:21:12.000Z" itemprop="datePublished">2020-11-18</time>
+    <a href="/2020/12/02/what-is-bit-code/" class="article-date">
+  <time datetime="2020-12-01T23:45:52.000Z" itemprop="datePublished">2020-12-02</time>
 </a>
     
   </div>
@@ -80,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      flutter延迟执行方法
+      什么是bitCode
     </h1>
   
 
@@ -88,17 +90,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>延迟加载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;延迟1秒加载</span><br><span class="line">Future.delayed(Duration(seconds: 1), ()&#123;</span><br><span class="line">      &#x2F;&#x2F;do sth</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<p>使用场景：</p>
-<blockquote>
-<p>同时执行toast和导航栏页面切换，会导致卡顿，可用延迟其中一个方法，避免同时执行</p>
-</blockquote>
+        <p>The process of compiling consists of three different steps:</p>
+<p>1.The compilier front-end converts the source code into some kind of intermediate representation.</p>
+<p>2.The optimizer performs a sequence of optimizing transformations on the IR to render it smaller and more performant:redundant code is removed,results are pretaculated,code is inlined, etc.This crucial step of the compilation process makes use of IR,rather than cource code or machine code,because it can more easily be interreted by the optimizer.</p>
+<ol start="3">
+<li>The compilier back-end generates machine code based on the optimized IR. </li>
+</ol>
+<p>When we are talking about bitcode,we are actually talking about the IR used by the Clang Compilier.</p>
+<p><img src="https://www.guardsquare.com/files/media/guardsquare2017/Compiling-with-bitcode-enabled.png" alt="image"></p>
+<p>With the bitcode embedded in the executable,Apple is able to recompile applications without interacting with the developer.This has a lot of advantages. </p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/18/thread-delay/" data-id="ckhn4fney0001dyk8bej7boyg" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2020/12/02/what-is-bit-code/" data-id="cki6nb3pf0000li49h7zl4xge" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,19 +112,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/11/18/what-interviewer-want-know/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          面试官想要知道的我的信息
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/11/18/flutter-gradient/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/12/01/pros-of-run/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">flutter渐变处理</div>
+      <div class="article-nav-title">跑步第1天</div>
     </a>
   
 </nav>
