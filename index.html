@@ -64,6 +64,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-render-theory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/flutter-render-theory/" class="article-date">
+  <time datetime="2020-12-02T15:35:58.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/flutter-render-theory/">flutter渲染原理要点</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>渲染过程会生成三棵树</p>
+<ul>
+<li><p>widget树</p>
+</li>
+<li><p>element树</p>
+</li>
+<li><p>render object树</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>提高buid效率，在build方法中尽量少做事，层级越简单越好</li>
+<li>setState方法尽量下放到底层节点</li>
+<li>尽量减少重绘区域，使用repaint boundry</li>
+<li>减少离屏渲染 比如save layer，clip path，</li>
+<li>减少透明度使用，因为每一帧都会重建widget</li>
+<li>建立缓存池</li>
+<li>提升layout效率</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.freesion.com/article/8834628331/">https://www.freesion.com/article/8834628331/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/flutter-render-theory/" data-id="cki7l3nho00008o4990rfhn0r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2020-12-2-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/02/2020-12-2-run/" class="article-date">
@@ -641,55 +699,6 @@
 
 
   
-    <article id="post-cannot-open-app-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/25/cannot-open-app-on-mac/" class="article-date">
-  <time datetime="2020-11-25T15:55:41.000Z" itemprop="datePublished">2020-11-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/cannot-open-app-on-mac/">无法打开&#34;xxx&#34;,因为无法确认开发者的身份</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>处理方法</p>
-<ul>
-<li>加权限,同意任何来源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br><span class="line">&#x2F;&#x2F;用完还原</span><br><span class="line">sudo spctl --master-enable</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>按住command键，鼠标右键菜单选择打开app，出现窗口会出现打开按钮，正常情况下不会出现</p>
-<p><img src="https://huajiakeji.com/Content/kindeditor/attached/image/20190725/20190725213552_3966.png" alt="image"></p>
-<p>参考：<a target="_blank" rel="noopener" href="https://huajiakeji.com/macos/2019-07/2793.html">https://huajiakeji.com/macos/2019-07/2793.html</a></p>
-</li>
-</ul>
-<p>完。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/cannot-open-app-on-mac/" data-id="ckhxlf8s800005t4997zp5mfi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -726,6 +735,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/02/flutter-render-theory/">flutter渲染原理要点</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/02/2020-12-2-run/">2020-12-2跑步日志</a>
           </li>
         
@@ -739,10 +752,6 @@
         
           <li>
             <a href="/2020/12/01/pros-of-run/">跑步第1天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/30/11-30-thoughts/">11-30念头</a>
           </li>
         
       </ul>

@@ -64,6 +64,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-tabbar-click-bug" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/18/flutter-tabbar-click-bug/" class="article-date">
+  <time datetime="2020-11-18T08:14:48.000Z" itemprop="datePublished">2020-11-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/18/flutter-tabbar-click-bug/">flutter tabcontroller监听点击调用两次</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听<br>解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_tabController.addListener(() &#123;</span><br><span class="line">      if(_tabController.index &#x3D;&#x3D; _tabController.animation.value)&#123;</span><br><span class="line">        int index &#x3D; _tabController.index;</span><br><span class="line">        print(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;当前点击了$index&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>代码拿过来自己分析一遍会记得牢。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/18/flutter-tabbar-click-bug/" data-id="ckhn5n42t0000xnk83q2nhco8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-what-interviewer-want-know" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/18/what-interviewer-want-know/" class="article-date">
@@ -202,7 +241,7 @@
 <p>总结：block是对象，一般情况下，对象经常呆的也就是这三个区，对于基础类型，会进行拷贝，对象会默认进行强引用，如果__block修饰过的数据类型，会包装一个指针，指向变量</p>
 </li>
 </ul>
-<h3 id="如何检测内存的占用情况"><a href="#如何检测内存的占用情况" class="headerlink" title="如何检测内存的占用情况"></a>如何检测内存的占用情况</h3><h3 id="常用的本地存储有哪些"><a href="#常用的本地存储有哪些" class="headerlink" title="常用的本地存储有哪些"></a>常用的本地存储有哪些</h3><h3 id="在项目中做了哪些优化"><a href="#在项目中做了哪些优化" class="headerlink" title="在项目中做了哪些优化"></a>在项目中做了哪些优化</h3><h3 id="RAC是什么原理"><a href="#RAC是什么原理" class="headerlink" title="RAC是什么原理"></a>RAC是什么原理</h3><h3 id="性能检测用过吗？"><a href="#性能检测用过吗？" class="headerlink" title="性能检测用过吗？"></a>性能检测用过吗？</h3><h3 id="NSConditionLock，wait和lock区别是什么"><a href="#NSConditionLock，wait和lock区别是什么" class="headerlink" title="NSConditionLock，wait和lock区别是什么"></a>NSConditionLock，wait和lock区别是什么</h3><h3 id="WKWebview缓存如何使用"><a href="#WKWebview缓存如何使用" class="headerlink" title="WKWebview缓存如何使用"></a>WKWebview缓存如何使用</h3><h3 id="WKWebview和Uiwebview有什么区别"><a href="#WKWebview和Uiwebview有什么区别" class="headerlink" title="WKWebview和Uiwebview有什么区别"></a>WKWebview和Uiwebview有什么区别</h3><h3 id="常用的锁有哪几种"><a href="#常用的锁有哪几种" class="headerlink" title="常用的锁有哪几种"></a>常用的锁有哪几种</h3><h3 id="AutoReleasePool原理是什么"><a href="#AutoReleasePool原理是什么" class="headerlink" title="AutoReleasePool原理是什么"></a>AutoReleasePool原理是什么</h3><h3 id="常见的崩溃有哪些？"><a href="#常见的崩溃有哪些？" class="headerlink" title="常见的崩溃有哪些？"></a>常见的崩溃有哪些？</h3><h3 id="sync开线程吗？"><a href="#sync开线程吗？" class="headerlink" title="sync开线程吗？"></a>sync开线程吗？</h3><h3 id="设计模式有哪些？"><a href="#设计模式有哪些？" class="headerlink" title="设计模式有哪些？"></a>设计模式有哪些？</h3><h3 id="HTTPS如何保证文件的完整性-没有被篡改？"><a href="#HTTPS如何保证文件的完整性-没有被篡改？" class="headerlink" title="HTTPS如何保证文件的完整性 没有被篡改？"></a>HTTPS如何保证文件的完整性 没有被篡改？</h3><h3 id="工厂模式又细分为哪些模式"><a href="#工厂模式又细分为哪些模式" class="headerlink" title="工厂模式又细分为哪些模式"></a>工厂模式又细分为哪些模式</h3><h3 id="app的加密安全性了解过吗"><a href="#app的加密安全性了解过吗" class="headerlink" title="app的加密安全性了解过吗"></a>app的加密安全性了解过吗</h3><h3 id="了解哪些设计原则"><a href="#了解哪些设计原则" class="headerlink" title="了解哪些设计原则"></a>了解哪些设计原则</h3><h3 id="工程有哪些优化，fastlane证书配在哪里"><a href="#工程有哪些优化，fastlane证书配在哪里" class="headerlink" title="工程有哪些优化，fastlane证书配在哪里"></a>工程有哪些优化，fastlane证书配在哪里</h3><h3 id="链表了解吗，双向链表是什么，跟数组的区别，数组为什么快"><a href="#链表了解吗，双向链表是什么，跟数组的区别，数组为什么快" class="headerlink" title="链表了解吗，双向链表是什么，跟数组的区别，数组为什么快"></a>链表了解吗，双向链表是什么，跟数组的区别，数组为什么快</h3><h3 id="weak原理能讲下吗，assign区别是什么"><a href="#weak原理能讲下吗，assign区别是什么" class="headerlink" title="weak原理能讲下吗，assign区别是什么"></a>weak原理能讲下吗，assign区别是什么</h3><h3 id="工程里具体的设计模式"><a href="#工程里具体的设计模式" class="headerlink" title="工程里具体的设计模式"></a>工程里具体的设计模式</h3><h3 id="ios断点续传原理"><a href="#ios断点续传原理" class="headerlink" title="ios断点续传原理"></a>ios断点续传原理</h3><ul>
+<h3 id="如何检测内存的占用情况"><a href="#如何检测内存的占用情况" class="headerlink" title="如何检测内存的占用情况"></a>如何检测内存的占用情况</h3><h3 id="常用的本地存储有哪些"><a href="#常用的本地存储有哪些" class="headerlink" title="常用的本地存储有哪些"></a>常用的本地存储有哪些</h3><h3 id="在项目中做了哪些优化"><a href="#在项目中做了哪些优化" class="headerlink" title="在项目中做了哪些优化"></a>在项目中做了哪些优化</h3><h3 id="RAC是什么原理"><a href="#RAC是什么原理" class="headerlink" title="RAC是什么原理"></a>RAC是什么原理</h3><h3 id="性能检测用过吗？"><a href="#性能检测用过吗？" class="headerlink" title="性能检测用过吗？"></a>性能检测用过吗？</h3><h3 id="NSConditionLock，wait和lock区别是什么"><a href="#NSConditionLock，wait和lock区别是什么" class="headerlink" title="NSConditionLock，wait和lock区别是什么"></a>NSConditionLock，wait和lock区别是什么</h3><h3 id="WKWebview缓存如何使用"><a href="#WKWebview缓存如何使用" class="headerlink" title="WKWebview缓存如何使用"></a>WKWebview缓存如何使用</h3><h3 id="WKWebview和Uiwebview有什么区别"><a href="#WKWebview和Uiwebview有什么区别" class="headerlink" title="WKWebview和Uiwebview有什么区别"></a>WKWebview和Uiwebview有什么区别</h3><h3 id="常用的锁有哪几种"><a href="#常用的锁有哪几种" class="headerlink" title="常用的锁有哪几种"></a>常用的锁有哪几种</h3><h3 id="AutoReleasePool原理是什么"><a href="#AutoReleasePool原理是什么" class="headerlink" title="AutoReleasePool原理是什么"></a>AutoReleasePool原理是什么</h3><h3 id="常见的崩溃有哪些？"><a href="#常见的崩溃有哪些？" class="headerlink" title="常见的崩溃有哪些？"></a>常见的崩溃有哪些？</h3><h3 id="sync开线程吗？"><a href="#sync开线程吗？" class="headerlink" title="sync开线程吗？"></a>sync开线程吗？</h3><h3 id="设计模式有哪些？"><a href="#设计模式有哪些？" class="headerlink" title="设计模式有哪些？"></a>设计模式有哪些？</h3><h3 id="HTTPS如何保证文件的完整性-没有被篡改？"><a href="#HTTPS如何保证文件的完整性-没有被篡改？" class="headerlink" title="HTTPS如何保证文件的完整性 没有被篡改？"></a>HTTPS如何保证文件的完整性 没有被篡改？</h3><h3 id="工厂模式又细分为哪些模式"><a href="#工厂模式又细分为哪些模式" class="headerlink" title="工厂模式又细分为哪些模式"></a>工厂模式又细分为哪些模式</h3><h3 id="app的加密安全性了解过吗"><a href="#app的加密安全性了解过吗" class="headerlink" title="app的加密安全性了解过吗"></a>app的加密安全性了解过吗</h3><h3 id="了解哪些设计原则"><a href="#了解哪些设计原则" class="headerlink" title="了解哪些设计原则"></a>了解哪些设计原则</h3><h3 id="工程有哪些优化，fastlane证书配在哪里"><a href="#工程有哪些优化，fastlane证书配在哪里" class="headerlink" title="工程有哪些优化，fastlane证书配在哪里"></a>工程有哪些优化，fastlane证书配在哪里</h3><h3 id="链表了解吗，双向链表是什么，跟数组的区别，数组为什么快"><a href="#链表了解吗，双向链表是什么，跟数组的区别，数组为什么快" class="headerlink" title="链表了解吗，双向链表是什么，跟数组的区别，数组为什么快"></a>链表了解吗，双向链表是什么，跟数组的区别，数组为什么快</h3><h3 id="weak原理能讲下吗，assign区别是什么"><a href="#weak原理能讲下吗，assign区别是什么" class="headerlink" title="weak原理能讲下吗，assign区别是什么"></a>weak原理能讲下吗，assign区别是什么</h3><h3 id="工程里具体的设计模式"><a href="#工程里具体的设计模式" class="headerlink" title="工程里具体的设计模式"></a>工程里具体的设计模式</h3><h3 id="srwebsocket用的什么协议"><a href="#srwebsocket用的什么协议" class="headerlink" title="srwebsocket用的什么协议"></a>srwebsocket用的什么协议</h3><h3 id="客户端如何做好网络请求管理-减少服务器的压力"><a href="#客户端如何做好网络请求管理-减少服务器的压力" class="headerlink" title="客户端如何做好网络请求管理 减少服务器的压力"></a>客户端如何做好网络请求管理 减少服务器的压力</h3><h3 id="客户端如果被破解了怎么办？加密方式怎么处理"><a href="#客户端如果被破解了怎么办？加密方式怎么处理" class="headerlink" title="客户端如果被破解了怎么办？加密方式怎么处理"></a>客户端如果被破解了怎么办？加密方式怎么处理</h3><h3 id="本地存储有用数据库吗"><a href="#本地存储有用数据库吗" class="headerlink" title="本地存储有用数据库吗"></a>本地存储有用数据库吗</h3><h3 id="leetcode第一题有更优的解法"><a href="#leetcode第一题有更优的解法" class="headerlink" title="leetcode第一题有更优的解法"></a>leetcode第一题有更优的解法</h3><h3 id="IM负载多少？"><a href="#IM负载多少？" class="headerlink" title="IM负载多少？"></a>IM负载多少？</h3><h3 id="客户端如何实现https的"><a href="#客户端如何实现https的" class="headerlink" title="客户端如何实现https的"></a>客户端如何实现https的</h3><h3 id="服务端如何处理大量网路访问请求"><a href="#服务端如何处理大量网路访问请求" class="headerlink" title="服务端如何处理大量网路访问请求"></a>服务端如何处理大量网路访问请求</h3><h3 id="ios断点续传原理"><a href="#ios断点续传原理" class="headerlink" title="ios断点续传原理"></a>ios断点续传原理</h3><ul>
 <li>工厂模式+ 切片 + 多种文件格式怎么处理 + 长连接</li>
 </ul>
 <p>待处理信息：</p>
@@ -652,48 +691,6 @@
 
 
   
-    <article id="post-dic-nil" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/dic-nil/" class="article-date">
-  <time datetime="2020-11-13T02:24:39.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/13/dic-nil/">字典取值为空崩溃问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天后台报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[_NSPlaceholderData initWithBase64Encoding:]: nil string argument</span><br><span class="line">Foundation	-[NSData(NSData) base64Encoding]</span><br></pre></td></tr></table></figure>
-<p>经过检查问题发生在字典取出值没有判空就传递给方法使用，细节也要注意，养成良好的编码习惯</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSString *urlstr &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br></pre></td></tr></table></figure>
-<p>正确的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">id obj &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">if (obj &amp;&amp; [obj isKindOfClass:[NSString class]]) &#123;</span><br><span class="line">    NSString *urlstr &#x3D; (NSString *)obj;</span><br><span class="line">    NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/13/dic-nil/" data-id="ckhfn2koa0000rhk88p8j9z4u" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -730,6 +727,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/02/flutter-render-theory/">flutter渲染原理要点</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/02/2020-12-2-run/">2020-12-2跑步日志</a>
           </li>
         
@@ -743,10 +744,6 @@
         
           <li>
             <a href="/2020/12/01/pros-of-run/">跑步第1天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/30/11-30-thoughts/">11-30念头</a>
           </li>
         
       </ul>
