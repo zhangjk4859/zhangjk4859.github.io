@@ -64,6 +64,48 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-thread-delay" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/18/thread-delay/" class="article-date">
+  <time datetime="2020-11-18T04:21:12.000Z" itemprop="datePublished">2020-11-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/18/thread-delay/">flutter延迟执行方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>延迟加载</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;延迟1秒加载</span><br><span class="line">Future.delayed(Duration(seconds: 1), ()&#123;</span><br><span class="line">      &#x2F;&#x2F;do sth</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>使用场景：</p>
+<blockquote>
+<p>同时执行toast和导航栏页面切换，会导致卡顿，可用延迟其中一个方法，避免同时执行</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/18/thread-delay/" data-id="ckhn4fney0001dyk8bej7boyg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter-gradient" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/18/flutter-gradient/" class="article-date">
@@ -535,45 +577,6 @@
 
 
   
-    <article id="post-flutter-points" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/12/flutter-points/" class="article-date">
-  <time datetime="2020-11-12T13:05:29.000Z" itemprop="datePublished">2020-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/12/flutter-points/">跑flutter工程的坑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>下载过来，一定要把pod和workspace删掉重新安装，否则会出现奇奇怪怪的问题，比如目标系统不对应，不适配arm64架构等：</li>
-</ul>
-<h2 id="The-iOS-deployment-target-‘IPHONEOS-DEPLOYMENT-TARGET’-is-set-to-8-0"><a href="#The-iOS-deployment-target-‘IPHONEOS-DEPLOYMENT-TARGET’-is-set-to-8-0" class="headerlink" title="The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |"></a>The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |</h2><h2 id="undefined-symbols-for-architecture-arm"><a href="#undefined-symbols-for-architecture-arm" class="headerlink" title="undefined symbols for architecture arm |"></a>undefined symbols for architecture arm |</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/12/flutter-points/" data-id="ckheuiyyz0000uwk8a7q8fylf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -610,6 +613,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/02/dart-enum/">dart枚举</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/02/what-is-bit-code/">什么是bitCode</a>
           </li>
         
@@ -623,10 +630,6 @@
         
           <li>
             <a href="/2020/11/29/elements-of-computing-systems/">elements-of-computing-systems</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/28/human-resource/">创业企业如何打造人力资本</a>
           </li>
         
       </ul>
