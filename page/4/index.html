@@ -64,6 +64,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-btn-delegate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter-btn-delegate/" class="article-date">
+  <time datetime="2020-11-19T14:43:34.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter-btn-delegate/">flutter按钮点击事件传给delegate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在ios中，通常用block或者代理去实现，在flutter中，外部实现一个方法，把这个方法传给按钮，按钮内部用callback接受，ontap方法调用即可，实现如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import &#39;package:flutter&#x2F;cupertino.dart&#39;;</span><br><span class="line">import &#39;package:flutter&#x2F;material.dart&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义函数类型</span><br><span class="line">typedef StringValue &#x3D; void Function(String);</span><br><span class="line"></span><br><span class="line">class ImageBtn extends StatelessWidget &#123;</span><br><span class="line"> &#x2F;&#x2F;作为属性</span><br><span class="line">  StringValue callback;</span><br><span class="line"></span><br><span class="line">  ImageBtn(&#123;Key key,this.callback&#125;) : super(key: key);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">   </span><br><span class="line">    return new GestureDetector(</span><br><span class="line">      onTap: () &#123;</span><br><span class="line">        print(&#39;MyButton was tappedq!&#39;);</span><br><span class="line">        &#x2F;&#x2F;调用</span><br><span class="line">        this.callback(&quot;testString&quot;);</span><br><span class="line">      &#125;,</span><br><span class="line">      child: ...</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>外部使用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;顶部按钮点击事件</span><br><span class="line">void _ontap(String name)&#123;</span><br><span class="line">  print(name);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;实例对象时传进去</span><br><span class="line">ImageBtn(callback:_ontap)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;另外一种写法，不传参数也可以，仅仅是invoke外部函数，</span><br><span class="line">ImageBtn(callback:()&#123;</span><br><span class="line">   &#x2F;&#x2F;do sth...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注意:callback和外部的方法，参数类型要保持一致<br>总结：外部函数传给按钮，让按钮内部可以调用，通过无参数函数调用有参数也可以</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter-btn-delegate/" data-id="ckhoy40av00000r49cf530jlp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/19/flutter-expanded/" class="article-date">
@@ -592,69 +633,6 @@
 
 
   
-    <article id="post-build-apk" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/16/build-apk/" class="article-date">
-  <time datetime="2020-11-16T12:16:07.000Z" itemprop="datePublished">2020-11-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/16/build-apk/">mac android studio flutter 打包 apk</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>Create a keystore</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore ~&#x2F;key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ul>
-<li><app dir>/android文件夹下生成属性文件关联秘钥 key.properties</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">storePassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyPassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyAlias&#x3D;key</span><br><span class="line">storeFile&#x3D;&lt;location of the key store file, such as &#x2F;Users&#x2F;&lt;user name&gt;&#x2F;key.jks&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><app dir>/android/app/build.gradle文件里增加load代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def keystoreProperties &#x3D; new Properties()</span><br><span class="line">   def keystorePropertiesFile &#x3D; rootProject.file(&#39;key.properties&#39;)</span><br><span class="line">   if (keystorePropertiesFile.exists()) &#123;</span><br><span class="line">       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   android &#123;</span><br><span class="line">         ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在buildTypes之前增加签名配置代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           keyAlias keystoreProperties[&#39;keyAlias&#39;]</span><br><span class="line">           keyPassword keystoreProperties[&#39;keyPassword&#39;]</span><br><span class="line">           storeFile keystoreProperties[&#39;storeFile&#39;] ? file(keystoreProperties[&#39;storeFile&#39;]) : null</span><br><span class="line">           storePassword keystoreProperties[&#39;storePassword&#39;]</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   buildTypes &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           signingConfig signingConfigs.release</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>运行编译命令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter build apk</span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行结果</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Running Gradle task &#39;assembleRelease&#39;... Done                     143.3s (!)</span><br><span class="line">✓ Built build&#x2F;app&#x2F;outputs&#x2F;flutter-apk&#x2F;app-release.apk (79.9MB).</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="完。"><a href="#完。" class="headerlink" title="完。"></a>完。</h4><p>参考：<a target="_blank" rel="noopener" href="https://flutter.dev/docs/deployment/android">https://flutter.dev/docs/deployment/android</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/16/build-apk/" data-id="ckhkirp3k00008kk89xwff2ax" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -691,6 +669,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/07/2020-12-07-run/">跑步第7天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/06/2020-12-06-run/">跑步第六天</a>
           </li>
         
@@ -704,10 +686,6 @@
         
           <li>
             <a href="/2020/12/03/2020-12-03-run/">跑步第3天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/02/flutter-render-theory/">flutter渲染原理要点</a>
           </li>
         
       </ul>
