@@ -64,6 +64,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-gradient" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/18/flutter-gradient/" class="article-date">
+  <time datetime="2020-11-18T04:20:54.000Z" itemprop="datePublished">2020-11-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/18/flutter-gradient/">flutter渐变处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>线性渐变</li>
+<li>开始位置</li>
+<li>结束位置</li>
+<li>开始结束点</li>
+<li>颜色<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">LinearGradient(      &#x2F;&#x2F;渐变位置</span><br><span class="line">              begin: Alignment.topLeft, &#x2F;&#x2F;左上</span><br><span class="line">              end: Alignment.bottomRight, &#x2F;&#x2F;右下</span><br><span class="line">              stops: [0.0, 1.0],         &#x2F;&#x2F;[渐变起始点, 渐变结束点]</span><br><span class="line">              &#x2F;&#x2F;渐变颜色[始点颜色, 结束颜色]</span><br><span class="line">              colors: [Color.fromRGBO(253, 1, 129, 1), Color.fromRGBO(206, 21, 240, 1)]</span><br><span class="line">          )</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/18/flutter-gradient/" data-id="ckhn4fneq0000dyk89fgn6q04" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter-layout" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/17/flutter-layout/" class="article-date">
@@ -530,51 +574,6 @@
 
 
   
-    <article id="post-pub-get-is-slow" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/12/pub-get-is-slow/" class="article-date">
-  <time datetime="2020-11-12T11:30:00.000Z" itemprop="datePublished">2020-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/12/pub-get-is-slow/">flutter pub get慢</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>分析：从开发者仓库网站下载依赖比较慢，网络问题</li>
-<li>解决：<br>更换数据源地址</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PUB_HOSTED_URL&#x3D;https:&#x2F;&#x2F;pub.flutter-io.cn</span><br><span class="line">export FLUTTER_STORAGE_BASE_URL&#x3D;https:&#x2F;&#x2F;storage.flutter-io.cn</span><br></pre></td></tr></table></figure>
-<p>最后翻墙运行</p>
-<ul>
-<li>参考：<a target="_blank" rel="noopener" href="https://www.askmaclean.com/archives/flutter-pub-get-slow.html">https://www.askmaclean.com/archives/flutter-pub-get-slow.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/12/pub-get-is-slow/" data-id="ckher48pp0000xpk8f4l99gnk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -611,6 +610,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/09/2020-12-09-run/">跑步第9天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/08/2020-12-08-run/">跑步第8天</a>
           </li>
         
@@ -624,10 +627,6 @@
         
           <li>
             <a href="/2020/12/05/2020-12-05-run/">跑步第5天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/04/2020-12-04-run/">跑步第4天</a>
           </li>
         
       </ul>
