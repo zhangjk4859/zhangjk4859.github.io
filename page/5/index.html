@@ -64,6 +64,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-tabbar-click-bug" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/18/flutter-tabbar-click-bug/" class="article-date">
+  <time datetime="2020-11-18T08:14:48.000Z" itemprop="datePublished">2020-11-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/18/flutter-tabbar-click-bug/">flutter tabcontroller监听点击调用两次</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听<br>解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_tabController.addListener(() &#123;</span><br><span class="line">      if(_tabController.index &#x3D;&#x3D; _tabController.animation.value)&#123;</span><br><span class="line">        int index &#x3D; _tabController.index;</span><br><span class="line">        print(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;当前点击了$index&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>代码拿过来自己分析一遍会记得牢。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/18/flutter-tabbar-click-bug/" data-id="ckhn5n42t0000xnk83q2nhco8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-what-interviewer-want-know" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/18/what-interviewer-want-know/" class="article-date">
@@ -652,48 +691,6 @@
 
 
   
-    <article id="post-dic-nil" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/dic-nil/" class="article-date">
-  <time datetime="2020-11-13T02:24:39.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/13/dic-nil/">字典取值为空崩溃问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天后台报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[_NSPlaceholderData initWithBase64Encoding:]: nil string argument</span><br><span class="line">Foundation	-[NSData(NSData) base64Encoding]</span><br></pre></td></tr></table></figure>
-<p>经过检查问题发生在字典取出值没有判空就传递给方法使用，细节也要注意，养成良好的编码习惯</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSString *urlstr &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br></pre></td></tr></table></figure>
-<p>正确的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">id obj &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">if (obj &amp;&amp; [obj isKindOfClass:[NSString class]]) &#123;</span><br><span class="line">    NSString *urlstr &#x3D; (NSString *)obj;</span><br><span class="line">    NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/13/dic-nil/" data-id="ckhfn2koa0000rhk88p8j9z4u" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -730,6 +727,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/12/2020-12-12-run/">跑步第12天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/11/2020-12-11-run/">跑步第11天</a>
           </li>
         
@@ -743,10 +744,6 @@
         
           <li>
             <a href="/2020/12/08/2020-12-08-run/">跑步第8天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/07/2020-12-07-run/">跑步第7天</a>
           </li>
         
       </ul>
