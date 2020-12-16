@@ -64,6 +64,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ssh-issue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/ssh-issue/" class="article-date">
+  <time datetime="2020-11-24T03:47:58.000Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/ssh-issue/">enter passphrase for key询问解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~&#x2F;.ssh&#x2F;id_rsa</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ssh添加id_rsa文件即可</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/24/ssh-issue/" data-id="ckhvfxx2q0000m2k81hnr07dw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-zsh-problem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/23/zsh-problem/" class="article-date">
@@ -533,49 +574,6 @@
 
 
   
-    <article id="post-flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/19/flutter-expanded/" class="article-date">
-  <time datetime="2020-11-19T14:30:23.000Z" itemprop="datePublished">2020-11-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/flutter-expanded/">flutter控件从上到下居中排列</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Column(</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            Expanded(child:</span><br><span class="line">            Image.asset(&#39;assets&#x2F;images&#x2F;$imageName.png&#39;)</span><br><span class="line">            ),</span><br><span class="line">            </span><br><span class="line">            Text(</span><br><span class="line">              this.model.title,</span><br><span class="line">              style: TextStyle(</span><br><span class="line">                fontSize: 15,</span><br><span class="line">                color: Colors.white,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br></pre></td></tr></table></figure>
-<p>注解：</p>
-<ul>
-<li>column是一个垂直的容器，子控件放在children里面</li>
-<li>要想让图片居中，需要放在expanded容器里面,官方定义：expanded is a widget that expands a child of a row,column,or flex so that the child fills the available space.</li>
-<li><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/expanded_column.png" alt="image"></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/19/flutter-expanded/" data-id="ckhoxms2k00004349atv19stl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -612,6 +610,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/16/2020-12-16-run/">跑步第16天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/15/2020-12-15-run/">跑步第15天</a>
           </li>
         
@@ -625,10 +627,6 @@
         
           <li>
             <a href="/2020/12/12/2020-12-12-run/">跑步第12天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/11/2020-12-11-run/">跑步第11天</a>
           </li>
         
       </ul>
