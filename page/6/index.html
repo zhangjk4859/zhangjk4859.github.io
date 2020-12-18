@@ -64,6 +64,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter-layout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/17/flutter-layout/" class="article-date">
+  <time datetime="2020-11-17T09:38:24.000Z" itemprop="datePublished">2020-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/17/flutter-layout/">flutter基础知识</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基本上由widget组成，widget有stateless和stateful两种，常用的基础widget有</p>
+<ul>
+<li>container：矩形元素，可以设置背景边框阴影</li>
+<li>row，column：让子控件水平和垂直布局，flex布局原理</li>
+<li>stack：可以堆砌widget，用上下左右来定位</li>
+<li>text：一个文本显示容器</li>
+</ul>
+<p>多功能widget叫做material app widget，苹果风格的叫做CupertinoApp，常见的有：</p>
+<ul>
+<li>navigator，也叫routes</li>
+<li>appbar</li>
+<li>scaffold</li>
+</ul>
+<hr>
+<ul>
+<li>一个widget加gestureDetector便形成了按钮</li>
+<li>一个widget+state = statefull widget</li>
+<li>keys：类似于tableview中的cellid，重用机制</li>
+<li>全局key：用来标识全局唯一的widget</li>
+</ul>
+<p>关于widget组合的图：<br><img src="https://flutter.cn/assets/ui/layout/lakes-icons-visual-f9e45691d76ba85d4ea2160941f42c8a2ce1a17d41d6e6aac8f3feb89e679f99.png" alt="image"><br><img src="https://flutter.cn/assets/ui/layout/sample-flutter-layout-46c76f6ab08f94fa4204469dbcf6548a968052af102ae5a1ae3c78bc24e0d915.png" alt="image"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://flutter.cn/docs/development/ui/layout">https://flutter.cn/docs/development/ui/layout</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/17/flutter-layout/" data-id="ckhlsc8v800008pk804lqc07s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-build-apk" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/16/build-apk/" class="article-date">
@@ -517,69 +575,6 @@
 
 
   
-    <article id="post-cocoapods" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/12/cocoapods/" class="article-date">
-  <time datetime="2020-11-12T10:48:08.000Z" itemprop="datePublished">2020-11-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/12/cocoapods/">2020-11安装cocoapods问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天安装pods发生无法下载问题，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to download data from XXX</span><br></pre></td></tr></table></figure>
-
-<p>切换了镜像源解决</p>
-<ul>
-<li>查看镜像源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除淘宝镜像源 -r remove</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -r https:&#x2F;&#x2F;ruby.taobao.org&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>添加新的镜像源  -a add</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -a https:&#x2F;&#x2F;rubygems.org</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>成功<br>Successfully installed cocoapods-1.10.0<br>Parsing documentation for cocoapods-1.10.0<br>Done installing documentation for cocoapods after 2 seconds </p>
-</li>
-</ul>
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/li_ph/article/details/43852845">https://blog.csdn.net/li_ph/article/details/43852845</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/12/cocoapods/" data-id="ckheplz1f00005vk85ktz2ypf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -616,6 +611,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/18/2020-12-18-run/">跑步第18天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/17/2020-12-17-run/">跑步第17天</a>
           </li>
         
@@ -629,10 +628,6 @@
         
           <li>
             <a href="/2020/12/14/2020-12-14-run/">跑步第14天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/13/2020-12-13-run/">跑步第13天</a>
           </li>
         
       </ul>
