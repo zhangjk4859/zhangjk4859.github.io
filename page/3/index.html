@@ -64,6 +64,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-dart-enum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/dart-enum/" class="article-date">
+  <time datetime="2020-12-02T00:03:53.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/dart-enum/">dart枚举</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> MediaType &#123;</span><br><span class="line">  movie,      <span class="comment">//0</span></span><br><span class="line">  shortVideo, <span class="comment">//1</span></span><br><span class="line">  other,      <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> videoType = MediaType.values[<span class="number">0</span>];</span><br><span class="line"><span class="comment">// videoType == movie</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>定义枚举和OC差别不大，取值的时候不可以直接和int比较，需要从枚举数组中根据index拿出来，比OC多了一步</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/dart-enum/" data-id="cki6nigai00004v4912b2dg34" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-what-is-bit-code" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/02/what-is-bit-code/" class="article-date">
@@ -654,49 +693,6 @@
 
 
   
-    <article id="post-pubspec-error" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/25/pubspec-error/" class="article-date">
-  <time datetime="2020-11-25T01:27:09.000Z" itemprop="datePublished">2020-11-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/pubspec-error/">pubspec.lock坑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天以为pubspec.lock文件和cocoapods的profile.lock文件性质一样，可以生成，所以删除，结果遇见了编译报错，即使在执行了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
-
-<p>命令重新生成后，经过一番研究和队友协助，找到是这个问题，把老的恢复回来工程编译正常，下面是报错的关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Execution failed for task &#39;:app:processDebugManifest&#39;. &gt; Manifest merger failed : Attribute provider...</span><br></pre></td></tr></table></figure>
-
-<p>做记录方便以后查阅。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/pubspec-error/" data-id="ckhwqfy2s00007uk88yhp3flh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -733,6 +729,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/20/2020-12-20-run/">跑步第20天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/19/2020-12-19-run/">跑步第19天</a>
           </li>
         
@@ -746,10 +746,6 @@
         
           <li>
             <a href="/2020/12/16/2020-12-16-run/">跑步第16天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/15/2020-12-15-run/">跑步第15天</a>
           </li>
         
       </ul>
