@@ -64,6 +64,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-fijkplayer-off" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/25/fijkplayer-off/" class="article-date">
+  <time datetime="2020-11-25T15:49:43.000Z" itemprop="datePublished">2020-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/25/fijkplayer-off/">fijkplayer播放期间屏幕熄灭处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>两种方案</p>
+<p>1.借用第三方插件，让当前页面保持常量，别的页面跟随系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wakelock: ^0.1.4+2</span><br><span class="line"></span><br><span class="line">Wakelock.enable();</span><br><span class="line">Wakelock.disable();</span><br></pre></td></tr></table></figure>
+
+<p>2.调用fijkplayer自身的常量参数 二选一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">await player.setOption(FijkOption.hostCategory, &quot;request-screen-on&quot;, 1);</span><br><span class="line">FijkPlugin.keepScreenOn ;</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8750de450850">https://www.jianshu.com/p/8750de450850</a></p>
+<p><a target="_blank" rel="noopener" href="https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0">https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/25/fijkplayer-off/" data-id="ckhxl9b0s00001j49bpdo8mu4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-pubspec-error" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/25/pubspec-error/" class="article-date">
@@ -468,60 +513,6 @@
 
 
   
-    <article id="post-11-22-thoughts" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/22/11-22-thoughts/" class="article-date">
-  <time datetime="2020-11-22T15:36:23.000Z" itemprop="datePublished">2020-11-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/22/11-22-thoughts/">今日思</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日听范登读书《善战者说》关于孙子兵法的讲解，有几个细节</p>
-<ul>
-<li><p>林彪打仗对地图烂熟于胸，经常研究地图就一两天，并且不准人打扰，开战时集中百分之八十的兵力在自己的优势部分，计算地形的容量误差在一个营以内，也就是说战场能容纳多少人，非常清楚</p>
-</li>
-<li><p>毛主席打仗善于审时度势，打得过就打，打不过就跑，长征时期，其实一开始去的不是陕北，先定的湘西，再遵义，然后川西，发现都不合适，走到了甘肃，在报纸上发现陕北有刘志丹不对，才决定进军陕北，可以得出结论的是，不要为长远焦虑，要在当下做最正确的事情。毛主席的战略和春秋时期的孙子兵法是一脉相承的，是中文文化的瑰宝</p>
-</li>
-<li><p>战争中真正的赢家，在战争还没开始前就已经赢了，打仗最终的目的不是为了赢，好好想想是为了什么</p>
-</li>
-<li><p>常说的知己知彼是错的，应该是知彼知己，首先要知道对方的情况，了解自己往往比了解对方要容易的多</p>
-</li>
-<li><p>阴阳相合，优点就会有不可避免的弱点，可口可乐强调自己经典正宗，但从另一个维度上来讲，经典代表着老，百事就主打是年轻人的生活态度，可口可乐无法回击，如果从价格上竞争，赢面太小</p>
-</li>
-<li><p>兵法贯穿于企业生存与管理，做一家企业，首先考虑的不是盈利，而是能活下去，保证不输，不倒闭，曾国藩以前经常吃败仗，甚至要跳船自杀，后来会打仗了，攻下了天京，用的就是结硬寨，打呆仗之法，因为自己的军队攻城，在开阔的平原上，地势处于不利，挖壕沟，扎营，打好根基，先保证自己不输，然后围城，围个一年两年，直到耗光城里的粮食资源</p>
-</li>
-<li><p>强者经常读书总结思考，进而形成的直觉是最厉害的，可以瞬时做出正确的判断，正所谓养兵千日用兵一时！</p>
-<p>以上勉励自己一定要多读书！！</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/22/11-22-thoughts/" data-id="ckhtattmn0000h849fwhletf4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -558,6 +549,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/21/2020-12-21-run/">跑步第21天</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/20/2020-12-20-run/">跑步第20天</a>
           </li>
         
@@ -571,10 +566,6 @@
         
           <li>
             <a href="/2020/12/17/2020-12-17-run/">跑步第17天</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/16/2020-12-16-run/">跑步第16天</a>
           </li>
         
       </ul>
