@@ -64,12 +64,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-fijkplayer-off" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-flutter/flutter-random-color" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/25/fijkplayer-off/" class="article-date">
-  <time datetime="2020-11-25T15:49:43.000Z" itemprop="datePublished">2020-11-25</time>
+    <a href="/2021/01/05/flutter/flutter-random-color/" class="article-date">
+  <time datetime="2021-01-05T02:00:03.000Z" itemprop="datePublished">2021-01-05</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/fijkplayer-off/">fijkplayer播放期间屏幕熄灭处理</a>
+      <a class="article-title" href="/2021/01/05/flutter/flutter-random-color/">flutter随机颜色生成</a>
     </h1>
   
 
@@ -86,20 +90,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>两种方案</p>
-<p>1.借用第三方插件，让当前页面保持常量，别的页面跟随系统</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wakelock: ^0.1.4+2</span><br><span class="line"></span><br><span class="line">Wakelock.enable();</span><br><span class="line">Wakelock.disable();</span><br></pre></td></tr></table></figure>
+        <p>在listview或gridview中，用index去获颜色，挨个取一遍</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Colors.primaries[index % Colors.primaries.length]</span><br></pre></td></tr></table></figure>
 
-<p>2.调用fijkplayer自身的常量参数 二选一</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">await player.setOption(FijkOption.hostCategory, &quot;request-screen-on&quot;, 1);</span><br><span class="line">FijkPlugin.keepScreenOn ;</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8750de450850">https://www.jianshu.com/p/8750de450850</a></p>
-<p><a target="_blank" rel="noopener" href="https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0">https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/fijkplayer-off/" data-id="ckhxl9b0s00001j49bpdo8mu4" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-random-color/" data-id="ckju62sqn001jhf499qe543mk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -109,12 +107,16 @@
 
 
   
-    <article id="post-pubspec-error" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-倒计时/358" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/25/pubspec-error/" class="article-date">
-  <time datetime="2020-11-25T01:27:09.000Z" itemprop="datePublished">2020-11-25</time>
+    <a href="/2021/01/04/%E5%80%92%E8%AE%A1%E6%97%B6/358/" class="article-date">
+  <time datetime="2021-01-04T15:44:46.000Z" itemprop="datePublished">2021-01-04</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -123,7 +125,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/pubspec-error/">pubspec.lock坑</a>
+      <a class="article-title" href="/2021/01/04/%E5%80%92%E8%AE%A1%E6%97%B6/358/">358</a>
     </h1>
   
 
@@ -131,18 +133,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>昨天以为pubspec.lock文件和cocoapods的profile.lock文件性质一样，可以生成，所以删除，结果遇见了编译报错，即使在执行了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
-
-<p>命令重新生成后，经过一番研究和队友协助，找到是这个问题，把老的恢复回来工程编译正常，下面是报错的关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Execution failed for task &#39;:app:processDebugManifest&#39;. &gt; Manifest merger failed : Attribute provider...</span><br></pre></td></tr></table></figure>
-
-<p>做记录方便以后查阅。</p>
+        <p>今日要清空，无收获</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/pubspec-error/" data-id="ckhwqfy2s00007uk88yhp3flh" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/04/%E5%80%92%E8%AE%A1%E6%97%B6/358/" data-id="ckju62sst005ghf49fsor4bzg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,12 +148,16 @@
 
 
   
-    <article id="post-splash-page" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-run/35-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/24/splash-page/" class="article-date">
-  <time datetime="2020-11-24T06:09:04.000Z" itemprop="datePublished">2020-11-24</time>
+    <a href="/2021/01/04/run/35-run/" class="article-date">
+  <time datetime="2021-01-04T15:43:12.000Z" itemprop="datePublished">2021-01-04</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -166,57 +166,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/24/splash-page/">flutter启动页</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在main.dart文件的materialAPP.home属性返回一个UI，这个UI就是启动页，启动页的scanffold的body，返回一张图片</p>
-<ul>
-<li>in main.dart</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">return MaterialApp(</span><br><span class="line">          home: SplashPage(),</span><br><span class="line">        );</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>in SplashPage</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Scaffold(</span><br><span class="line">      body: Container(</span><br><span class="line">        child: Image.asset(</span><br><span class="line">          &#39;assets&#x2F;images&#x2F;launch_image.png&#39;,</span><br><span class="line">          fit: BoxFit.fill,</span><br><span class="line">          width: double.infinity,</span><br><span class="line">          height: double.infinity,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/24/splash-page/" data-id="ckhvl4vqm000129k8cf8rbxuv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-why-write-these" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/24/why-write-these/" class="article-date">
-  <time datetime="2020-11-24T05:24:47.000Z" itemprop="datePublished">2020-11-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/24/why-write-these/">为什么写这些微博</a>
+      <a class="article-title" href="/2021/01/04/run/35-run/">跑步第35天</a>
     </h1>
   
 
@@ -225,18 +175,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>在未来的某一天需要用到的时候，有素材可以提供</li>
-<li>在路上等红绿灯的时候，想到了刘未鹏说的一个概念，叫做暗时间，如果把业余时间全部用来读书，会产生多么大的改变？不可估量</li>
-<li>人类站在顶级食物链，是因为拥有大脑，会思考</li>
-<li>输出倒逼输入，问自己今天读了什么</li>
-<li>工业革命，化石燃料转化为机械能和电能，把人力劳动解放出来，自动化，信息革命，产生了众多信息，需要的是信息的自动化，程序员就是干这个活的，所以未来一百年，程序员不会失业，无论是工业革命还是信息革命，核心就是解放人的体力和脑力，自动化</li>
-<li>毒品会对人脑造成不可逆的伤害，美国如果毒品合法化将加速衰落</li>
+<li>跑步：1.5km</li>
+<li>俯卧撑：30</li>
+<li>仰卧起坐：30</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/24/why-write-these/" data-id="ckhvvyqm100003uk8athp4gij" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/04/run/35-run/" data-id="ckju62ss10043hf4985pq3s9a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -246,12 +193,16 @@
 
 
   
-    <article id="post-flutter-tips" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-倒计时/359" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/24/flutter-tips/" class="article-date">
-  <time datetime="2020-11-24T03:50:49.000Z" itemprop="datePublished">2020-11-24</time>
+    <a href="/2021/01/03/%E5%80%92%E8%AE%A1%E6%97%B6/359/" class="article-date">
+  <time datetime="2021-01-03T15:35:51.000Z" itemprop="datePublished">2021-01-03</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -260,7 +211,48 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/24/flutter-tips/">flutter工程注意事项</a>
+      <a class="article-title" href="/2021/01/03/%E5%80%92%E8%AE%A1%E6%97%B6/359/">359</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>思考总结：网飞ceo公司原则：聚集高密度人才，用市场最高薪酬稳住，每年10-20percent增长，因为类似于编剧，讲书人，程序员，工程师等职业不同的人生产效率可能相差成千上万倍。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/03/%E5%80%92%E8%AE%A1%E6%97%B6/359/" data-id="ckju62ssu005ihf496gscdnpg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-run/34-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/03/run/34-run/" class="article-date">
+  <time datetime="2021-01-03T15:34:32.000Z" itemprop="datePublished">2021-01-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/03/run/34-run/">跑步第34天</a>
     </h1>
   
 
@@ -269,19 +261,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>在工程文件夹内，git管理，忽略pubspec.lock文件 ，运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>/ios文件夹里，忽略Pods文件夹，Podfile.lock文件，*.xcworkspace文件,运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>跑步：1km</li>
+<li>仰卧起坐：30</li>
+<li>俯卧撑：30</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/24/flutter-tips/" data-id="ckhvg9h7p00007sk80hehcjms" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/03/run/34-run/" data-id="ckju62ss00041hf49apdpgu1p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,12 +279,16 @@
 
 
   
-    <article id="post-ssh-issue" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-倒计时/360" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/24/ssh-issue/" class="article-date">
-  <time datetime="2020-11-24T03:47:58.000Z" itemprop="datePublished">2020-11-24</time>
+    <a href="/2021/01/02/%E5%80%92%E8%AE%A1%E6%97%B6/360/" class="article-date">
+  <time datetime="2021-01-02T15:45:53.000Z" itemprop="datePublished">2021-01-02</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -305,7 +297,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/24/ssh-issue/">enter passphrase for key询问解决</a>
+      <a class="article-title" href="/2021/01/02/%E5%80%92%E8%AE%A1%E6%97%B6/360/">360</a>
     </h1>
   
 
@@ -313,16 +305,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~&#x2F;.ssh&#x2F;id_rsa</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>ssh添加id_rsa文件即可</li>
-</ul>
+        <p>过节，无收获，乒乓技能有进展，麻将技能有进展</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/24/ssh-issue/" data-id="ckhvfxx2q0000m2k81hnr07dw" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/02/%E5%80%92%E8%AE%A1%E6%97%B6/360/" data-id="ckju62ssv005khf497oaeb97c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,12 +320,16 @@
 
 
   
-    <article id="post-zsh-problem" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-run/33-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/23/zsh-problem/" class="article-date">
-  <time datetime="2020-11-23T10:36:03.000Z" itemprop="datePublished">2020-11-23</time>
+    <a href="/2021/01/02/run/33-run/" class="article-date">
+  <time datetime="2021-01-02T15:44:50.000Z" itemprop="datePublished">2021-01-02</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -346,92 +338,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/zsh-problem/">zsh的挽救</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天配置环境变量的时候，因为失误不小心让zsh整个失效了，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found:xxx</span><br></pre></td></tr></table></figure>
-
-<p>补救办法，在命令行输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH&#x3D;&#x2F;bin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;bin:$&#123;PATH&#125;</span><br></pre></td></tr></table></figure>
-
-<p>恢复正常</p>
-<p>失误的地方在于配置flutter时路径少输入一个$符号，在$HOME/.zshrc文件中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;正确</span><br><span class="line">export PATH&#x3D;&quot;$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]&#x2F;flutter&#x2F;bin&quot;</span><br><span class="line">&#x2F;&#x2F;错误</span><br><span class="line">export PATH&#x3D;&quot;PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]&#x2F;flutter&#x2F;bin&quot;</span><br><span class="line">&#x2F;&#x2F;注意 PATH_TO_FLUTTER_GIT_DIRECTORY 是需要输入全路径的，&#x2F;User&#x2F;xxx&#x2F;xxx,不是~符号！</span><br></pre></td></tr></table></figure>
-
-<p>最后一个坑，android studio无法加载应用市场插件，乖乖下载安装包从零开始安装便不会出现问题，不能从别的电脑直接拖过来直接用.</p>
-<h3 id="完"><a href="#完" class="headerlink" title="完"></a>完</h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/23/zsh-problem/" data-id="ckhufduz00000brk89gb67xij" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-what-is-luck" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/23/what-is-luck/" class="article-date">
-  <time datetime="2020-11-23T06:49:39.000Z" itemprop="datePublished">2020-11-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/what-is-luck/">幸运是什么</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://www.wangbase.com/blogimg/asset/202011/bg2020111807.jpg" alt="image"></p>
-<p>幸运是机会和准备的乘积，机会自己无法掌控，自己能做的只有准备，做好一千份准备，自然会有机会降临，养兵千日用兵一时！！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/23/what-is-luck/" data-id="ckhu7x5ff0000k1k8bmar3inc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-strong-thoughs" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/23/strong-thoughs/" class="article-date">
-  <time datetime="2020-11-22T16:55:41.000Z" itemprop="datePublished">2020-11-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/strong-thoughs/">强者思维</a>
+      <a class="article-title" href="/2021/01/02/run/33-run/">跑步第33天</a>
     </h1>
   
 
@@ -440,25 +347,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>对待人生的不同态度，性格决定命运</p>
-</li>
-<li><p>把问题细化，去处理大难题，不要畏难</p>
-</li>
-<li><p>教育你心地善良，简单单纯，毫无心机，及时行乐，天下太平的教育，是母权教育，或者白左教育，绵阳般的教育</p>
-</li>
-<li><p>父权是狼性的，男人必须在社会中竞争，负责买房买车养家糊口，升官做官，光宗耀祖，拼搏职场，男人是不可以装楚楚可怜的，一些真正的兵法，只有在父亲的角色下，才受教育，只有父亲，才会教导你你诡计，竞争，突袭，埋伏，阴谋，野蛮人</p>
-</li>
-<li><p>思维分为阴性思维和阳性思维，阴性思维是穷人的思维，凡事总是我不行，永远只能在既有的大陆做盘算，注重于分配而不是创造，永远没有勇气，驶出探索一片新大陆，凡事躲避，借口，一切都是你的错，一切都是社会的错，99项资源，缺了一项，他就不敢出发</p>
-</li>
-<li><p>强者思维，没有资源去创造资源，没有机会去创造机会，限制是用来打破的，而不是限制你的行动，手里有了70项资源，缺足30项，就敢出门，站在岸上一百次，学不会游泳</p>
-<p>来源:<a target="_blank" rel="noopener" href="http://www.oushenwenji.net/thread-44164-1-1.html">http://www.oushenwenji.net/thread-44164-1-1.html</a></p>
-</li>
+<li>跑步：1km</li>
+<li>仰卧起坐：30</li>
+<li>俯卧撑：30</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/23/strong-thoughs/" data-id="ckhtdhnn30000w3499dp59tom" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/02/run/33-run/" data-id="ckju62srz003zhf49gadkb1cl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -468,12 +365,16 @@
 
 
   
-    <article id="post-oushen-thoughs" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-倒计时/361" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/11/22/oushen-thoughs/" class="article-date">
-  <time datetime="2020-11-22T15:54:20.000Z" itemprop="datePublished">2020-11-22</time>
+    <a href="/2021/01/01/%E5%80%92%E8%AE%A1%E6%97%B6/361/" class="article-date">
+  <time datetime="2021-01-01T15:01:01.000Z" itemprop="datePublished">2021-01-01</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -482,7 +383,48 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/22/oushen-thoughs/">读欧神文章</a>
+      <a class="article-title" href="/2021/01/01/%E5%80%92%E8%AE%A1%E6%97%B6/361/">361</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今日过节，无收获。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/01/%E5%80%92%E8%AE%A1%E6%97%B6/361/" data-id="ckju62ssw005mhf49baswf2jn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-run/32-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/01/run/32-run/" class="article-date">
+  <time datetime="2021-01-01T14:58:43.000Z" itemprop="datePublished">2021-01-01</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/01/run/32-run/">跑步32天</a>
     </h1>
   
 
@@ -491,19 +433,56 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>成功从来不是一根线，更像是编制蜘蛛网，这里拉一根线，那里吐一根丝，然后慢慢连接起来，不知何时，就突然出现了一张结实的网，它的作用大于各条蛛丝之和，甚至性质上都发生变化，在有复杂因素组成的人生里，能力只是因素之一，或者说，能够支配调用复杂因素就是一种能力的体现，只会读书学习，不懂给自己铺路，不叫本事</li>
-<li>想成为神仙，哪里有那么容易呢，需要多做一些增加自己内力的事情，比如读书思考总结，与人交流，听名师指点，强身健体，不做那些消耗内力的事情，如刷手机看新闻，微信聊天，看体育比赛，黄赌毒，抽烟，拖延，偷懒，玩游戏，也就是那些人们主动寻求快乐的事情，主动寻求的快乐，最后都会转化为痛苦，要谨慎自己的内力！</li>
-<li>财富来源于减熵，减了多少熵，就获得多少财富，为什么程序员工资相对比较高，是因为在自动化现实世界的过程中，让混乱变为有序，做了减熵操作，比如外卖系统，即时通讯系统，网络购物系统等，游戏除外，目前为止，还有很多现实还未完全开发数码化，大有可为！</li>
-<li>”愈发言真率，无所畏避，操行坚正，拙于世务“，等于人是个好人，心直口快，但什么事情都做不好，所以他说千里马常有，伯乐不常有。昔年打瞌睡吃零食的同桌，爱关了老师的训斥，不会太把自尊心当一回事，懂得随机应变，能把琐事周旋的漂亮。浙江巡抚王有龄布衣时，胡雪岩借了他五百两盘缠，他得以发迹，两江总督何桂清，小时候是王有龄的伴读，胡雪岩与松江漕帮交情颇深，还帮漕帮老大尤五爷的妹妹的七姑奶奶，与买办古应春牵线拉媒，几个人合伙，出钱出力出渠道，买卖生丝军火，立马就支起一个像模像样的摊子。他们私交关系特别好，尤五认胡雪岩做了小爷叔，杭州城被太平军围困断粮，王有龄性命交关之际，胡雪岩命都不要，逃出城来替他去买米，胡雪岩想跟阿巧姐分开时，七姑奶奶亲自下场挑拨，而不怕担干系。说起这帮人，三教九流，没一个上得台面的人物。王有龄不是个清官，少不得有点私产让胡雪岩打理。漕帮是灰色性质组织。胡雪岩等人，却借此秘密地织起一张互惠互利的关系网，乃至于互相交托后事，虽说是小说家言，多少有些现实意义。如果一个人，交友若斯，又怎会感到孤独难过，无人援手。县城状元的举步维艰，就是因为，以上这些事情，他们统统做不到。从读书就习惯了自己做题，碍于天才光环，不肯问人，或是自己的疑惑，无人能解。工作之后，自诩才智过人，当然也是一样的单打独斗。”我自食其力，不需弯腰低头“，怀抱着这样的想法，时时锱铢计较，与人一划两清。不肯欠别人的人情，也不肯让别人欠人情，遇到同等实力的人物，不是想着如何结交，先是把自己爹妈单位勾心斗角争半个职称，或者上学时熬夜做题，第二天吹牛说看电视剧的本事拿出来，比他个混天黑地再说。过高的自尊心，使他们从不肯与怡情老二，七姑奶奶之流”灰色人物“搅在一起，也很难在陷入窘境时，化干戈为玉帛。手腕和身段，都远不够玲珑活泛。</li>
-<li>心气太高而姿态不足，扎不下根，只做事，不做人，不是靠刷脸吃饭，就是靠卖苦力吃饭，精明的老板，早把工作切分好。公司是个庞然大物，每个人都是一颗螺丝钉，一个不可替代的员工，理论上是不允许存在的，苦力做的再多，依旧是一个标准化的零部件，用坏了，市场上随后买得到。如果你在任何一个地方，没有专属于自己的一套班底，那么四十岁，很可能还是跟一群小年轻一起，递简历被人挑来挑去，老着脸皮说积累了丰富的工作经验。大多人吃苦力饭，手停口停，为了提高自己的劳动价值，只好唱唱”精进“的高调子。真正的质变，往往是突然发生的，金鳞岂是池中物，一遇风云便化龙。攀岩之路，道阻且长，不坐缆车，什么时候爬的完。不可以迷信劳动价值，靠苦力去计件工资，需要有质变的能力。</li>
-<li>有了成功的意愿，不等于就可以成功，但是即使没有成功，尽力的人就可以获得无悔的安宁</li>
-<li>良马之所以是良马，是因为良好的饮食习惯，跑起来不疾不徐的心性，不疾不徐，不骄不馁！</li>
+<li>跑步：2km</li>
+<li>仰卧起坐：30</li>
+<li>俯卧撑：30</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/22/oushen-thoughs/" data-id="ckhtd3vqq0000p049dm9kaitc" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/01/01/run/32-run/" data-id="ckju62srx003vhf494n6kadwx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-倒计时/362" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/31/%E5%80%92%E8%AE%A1%E6%97%B6/362/" class="article-date">
+  <time datetime="2020-12-31T15:16:06.000Z" itemprop="datePublished">2020-12-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/31/%E5%80%92%E8%AE%A1%E6%97%B6/362/">362</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2020年最后一天，新年快乐！新的一年有新的进步！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/31/%E5%80%92%E8%AE%A1%E6%97%B6/362/" data-id="ckju62ssx005ohf491omrd5o8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -517,7 +496,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -525,6 +504,13 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -536,7 +522,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -549,23 +535,23 @@
       <ul>
         
           <li>
-            <a href="/2020/12/21/2020-12-21-run/">跑步第21天</a>
+            <a href="/2021/01/12/%E5%80%92%E8%AE%A1%E6%97%B6/350/">350</a>
           </li>
         
           <li>
-            <a href="/2020/12/20/2020-12-20-run/">跑步第20天</a>
+            <a href="/2021/01/12/run/43-run/">跑步第43天</a>
           </li>
         
           <li>
-            <a href="/2020/12/19/2020-12-19-run/">跑步第19天</a>
+            <a href="/2021/01/11/%E5%80%92%E8%AE%A1%E6%97%B6/351/">351</a>
           </li>
         
           <li>
-            <a href="/2020/12/18/2020-12-18-run/">跑步第18天</a>
+            <a href="/2021/01/11/run/42-run/">跑步第42天</a>
           </li>
         
           <li>
-            <a href="/2020/12/17/2020-12-17-run/">跑步第17天</a>
+            <a href="/2021/01/10/%E5%80%92%E8%AE%A1%E6%97%B6/352/">352</a>
           </li>
         
       </ul>
@@ -580,7 +566,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 张俊凯<br>
+      &copy; 2021 张俊凯<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
