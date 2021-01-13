@@ -64,6 +64,102 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-run/26-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/26/run/26-run/" class="article-date">
+  <time datetime="2020-12-26T14:44:24.000Z" itemprop="datePublished">2020-12-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/26/run/26-run/">跑步第26天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>跑步：28km</li>
+<li>仰卧起坐：30</li>
+<li>俯卧撑：30</li>
+</ul>
+<p>总结思考：想跑30km，可惜实在体力不支，止步于28公里，估计明天身体很痛，需要中断跑步了，非常佩服跑马拉松的人</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/26/run/26-run/" data-id="ckju62srs003jhf49h1dt7of5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/generate-gdart-file" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/25/flutter/generate-gdart-file/" class="article-date">
+  <time datetime="2020-12-25T05:17:10.000Z" itemprop="datePublished">2020-12-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/25/flutter/generate-gdart-file/">flutter模型生成</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>首先自己写好模型类模板代码</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:json_annotation/json_annotation.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">part</span> <span class="string">&#x27;buy_record_data.g.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">///<span class="markdown">标志class需要实现json序列化功能</span></span></span><br><span class="line"><span class="meta">@JsonSerializable</span>()</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BuyRecordData</span> </span>&#123;</span><br><span class="line">  <span class="comment">///<span class="markdown">属性</span></span></span><br><span class="line">  <span class="built_in">List</span>&lt;BuyRecordEntity&gt; entities;</span><br><span class="line">  <span class="comment">/// <span class="markdown">构造函数</span></span></span><br><span class="line">  BuyRecordData(<span class="keyword">this</span>.entities);</span><br><span class="line">  <span class="comment">/// <span class="markdown">这个函数在.g.dart中，命名就是类名+FromJson</span></span></span><br><span class="line">  <span class="comment">/// <span class="markdown">直接写就行 报错也没关系 生成.g.dart文件之后就好了</span></span></span><br><span class="line">  <span class="keyword">factory</span> BuyRecordData.fromJson(<span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">dynamic</span>&gt; json) =&gt;</span><br><span class="line">      _$BuyRecordDataFromJson(json);</span><br><span class="line">  <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">dynamic</span>&gt; toJson() =&gt; _$BuyRecordDataToJson(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在终端运行，生成.g.dart文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter packages pub run build_runner build --delete-conflicting-outputs</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考：1. <a target="_blank" rel="noopener" href="https://blog.csdn.net/YoYo_Newbie/article/details/90634878?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control">https://blog.csdn.net/YoYo_Newbie/article/details/90634878?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control</a></p>
+<ol start="2">
+<li><a target="_blank" rel="noopener" href="https://my.oschina.net/u/4326108/blog/3675231">https://my.oschina.net/u/4326108/blog/3675231</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/25/flutter/generate-gdart-file/" data-id="ckju62sqy0023hf49455gbzsf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-run/25-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/25/run/25-run/" class="article-date">
@@ -432,98 +528,6 @@
 
 
   
-    <article id="post-run/17-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/12/17/run/17-run/" class="article-date">
-  <time datetime="2020-12-17T15:15:18.000Z" itemprop="datePublished">2020-12-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/17/run/17-run/">跑步第17天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：5km</li>
-<li>俯卧撑：30</li>
-<li>仰卧起坐：30</li>
-</ul>
-<p>总结：今天很累很困，十一点睡觉</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/12/17/run/17-run/" data-id="ckju62srb002vhf498xh0e95a" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-run/16-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/12/16/run/16-run/" class="article-date">
-  <time datetime="2020-12-16T13:00:30.000Z" itemprop="datePublished">2020-12-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/12/16/run/16-run/">跑步第16天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：26km</li>
-<li>俯卧撑：60</li>
-<li>仰卧起坐：60</li>
-</ul>
-<p>总结：今晚跑步没有穿长袖，俩胳膊冻僵了，下次记得穿长袖，冬天晚上气温会越来越低。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/12/16/run/16-run/" data-id="ckju62sra002shf496hutaxs9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -567,6 +571,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/13/%E5%80%92%E8%AE%A1%E6%97%B6/349/">349</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/13/run/44-run/">跑步第44天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/12/%E5%80%92%E8%AE%A1%E6%97%B6/350/">350</a>
           </li>
         
@@ -576,14 +588,6 @@
         
           <li>
             <a href="/2021/01/11/%E5%80%92%E8%AE%A1%E6%97%B6/351/">351</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/11/run/42-run/">跑步第42天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/10/%E5%80%92%E8%AE%A1%E6%97%B6/352/">352</a>
           </li>
         
       </ul>

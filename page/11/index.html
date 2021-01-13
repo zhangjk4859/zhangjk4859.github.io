@@ -64,6 +64,98 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-btn-delegate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter/flutter-btn-delegate/" class="article-date">
+  <time datetime="2020-11-19T14:43:34.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter/flutter-btn-delegate/">flutter按钮点击事件传给delegate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在ios中，通常用block或者代理去实现，在flutter中，外部实现一个方法，把这个方法传给按钮，按钮内部用callback接受，ontap方法调用即可，实现如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import &#39;package:flutter&#x2F;cupertino.dart&#39;;</span><br><span class="line">import &#39;package:flutter&#x2F;material.dart&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义函数类型</span><br><span class="line">typedef StringValue &#x3D; void Function(String);</span><br><span class="line"></span><br><span class="line">class ImageBtn extends StatelessWidget &#123;</span><br><span class="line"> &#x2F;&#x2F;作为属性</span><br><span class="line">  StringValue callback;</span><br><span class="line"></span><br><span class="line">  ImageBtn(&#123;Key key,this.callback&#125;) : super(key: key);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">   </span><br><span class="line">    return new GestureDetector(</span><br><span class="line">      onTap: () &#123;</span><br><span class="line">        print(&#39;MyButton was tappedq!&#39;);</span><br><span class="line">        &#x2F;&#x2F;调用</span><br><span class="line">        this.callback(&quot;testString&quot;);</span><br><span class="line">      &#125;,</span><br><span class="line">      child: ...</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>外部使用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;顶部按钮点击事件</span><br><span class="line">void _ontap(String name)&#123;</span><br><span class="line">  print(name);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;实例对象时传进去</span><br><span class="line">ImageBtn(callback:_ontap)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;另外一种写法，不传参数也可以，仅仅是invoke外部函数，</span><br><span class="line">ImageBtn(callback:()&#123;</span><br><span class="line">   &#x2F;&#x2F;do sth...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注意:callback和外部的方法，参数类型要保持一致<br>总结：外部函数传给按钮，让按钮内部可以调用，通过无参数函数调用有参数也可以</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-btn-delegate/" data-id="ckju62sq2000phf49abl71gdi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter/flutter-expanded/" class="article-date">
+  <time datetime="2020-11-19T14:30:23.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter/flutter-expanded/">flutter控件从上到下居中排列</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Column(</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            Expanded(child:</span><br><span class="line">            Image.asset(&#39;assets&#x2F;images&#x2F;$imageName.png&#39;)</span><br><span class="line">            ),</span><br><span class="line">            </span><br><span class="line">            Text(</span><br><span class="line">              this.model.title,</span><br><span class="line">              style: TextStyle(</span><br><span class="line">                fontSize: 15,</span><br><span class="line">                color: Colors.white,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br></pre></td></tr></table></figure>
+<p>注解：</p>
+<ul>
+<li>column是一个垂直的容器，子控件放在children里面</li>
+<li>要想让图片居中，需要放在expanded容器里面,官方定义：expanded is a widget that expands a child of a row,column,or flex so that the child fills the available space.</li>
+<li><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/expanded_column.png" alt="image"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-expanded/" data-id="ckju62sq7000xhf4921tpgqjg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-page-is-current" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/19/flutter/flutter-page-is-current/" class="article-date">
@@ -581,122 +673,6 @@
 
 
   
-    <article id="post-unix工具/build-apk" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/" class="article-date">
-  <time datetime="2020-11-16T12:16:07.000Z" itemprop="datePublished">2020-11-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/unix/">unix</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/">mac android studio flutter 打包 apk</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>Create a keystore</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore ~&#x2F;key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ul>
-<li><app dir>/android文件夹下生成属性文件关联秘钥 key.properties</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">storePassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyPassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyAlias&#x3D;key</span><br><span class="line">storeFile&#x3D;&lt;location of the key store file, such as &#x2F;Users&#x2F;&lt;user name&gt;&#x2F;key.jks&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><app dir>/android/app/build.gradle文件里增加load代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def keystoreProperties &#x3D; new Properties()</span><br><span class="line">   def keystorePropertiesFile &#x3D; rootProject.file(&#39;key.properties&#39;)</span><br><span class="line">   if (keystorePropertiesFile.exists()) &#123;</span><br><span class="line">       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   android &#123;</span><br><span class="line">         ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在buildTypes之前增加签名配置代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           keyAlias keystoreProperties[&#39;keyAlias&#39;]</span><br><span class="line">           keyPassword keystoreProperties[&#39;keyPassword&#39;]</span><br><span class="line">           storeFile keystoreProperties[&#39;storeFile&#39;] ? file(keystoreProperties[&#39;storeFile&#39;]) : null</span><br><span class="line">           storePassword keystoreProperties[&#39;storePassword&#39;]</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   buildTypes &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           signingConfig signingConfigs.release</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>运行编译命令</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter build apk</span><br></pre></td></tr></table></figure>
-<ul>
-<li>运行结果</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Running Gradle task &#39;assembleRelease&#39;... Done                     143.3s (!)</span><br><span class="line">✓ Built build&#x2F;app&#x2F;outputs&#x2F;flutter-apk&#x2F;app-release.apk (79.9MB).</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="完。"><a href="#完。" class="headerlink" title="完。"></a>完。</h4><p>参考：<a target="_blank" rel="noopener" href="https://flutter.dev/docs/deployment/android">https://flutter.dev/docs/deployment/android</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/" data-id="ckju62stc006shf49hkezb2o4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-算法/find-next-numnber" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" class="article-date">
-  <time datetime="2020-11-15T15:03:38.000Z" itemprop="datePublished">2020-11-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/">寻找下一个数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>寻找下一个数字，例如输入345，输出354<blockquote>
-<p>思路：从最右边位和上一位对比，如果大，就往前移，移动完，尾数排序，从大到小，保证次大</p>
-</blockquote>
-</li>
-<li>代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;字符串逆序</span><br><span class="line">NSString *reverseStr(NSString *str)&#123;</span><br><span class="line">    NSMutableString *string&#x3D;[[NSMutableString alloc] init];</span><br><span class="line">    for(int i&#x3D;0;i&lt;str.length;i++)&#123;</span><br><span class="line">        [string appendString:[str substringWithRange:NSMakeRange(str.length-1-i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;字符串分成数组</span><br><span class="line">NSMutableArray *separateStringToArray(NSString *str)&#123;</span><br><span class="line">    NSMutableArray *marr &#x3D; [NSMutableArray array];</span><br><span class="line">    for (NSInteger i &#x3D; 0; i &lt; str.length; i++) &#123;</span><br><span class="line">        [marr addObject:[str substringWithRange:NSMakeRange(i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return marr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NSString *findNextLargerNum(NSString *oriNum)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    NSMutableString *finalStr &#x3D; [NSMutableString string];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    NSMutableArray *marr &#x3D; separateStringToArray(oriNum);</span><br><span class="line">    for (NSInteger i &#x3D; marr.count - 1; i &gt; 0; i--) &#123;</span><br><span class="line">        NSNumber *lastNum &#x3D; [marr objectAtIndex:i];</span><br><span class="line">        NSNumber *preNum &#x3D; [marr objectAtIndex:i-1];</span><br><span class="line">        if (lastNum.integerValue &gt; preNum.integerValue) &#123;</span><br><span class="line">            &#x2F;&#x2F;截取字符串</span><br><span class="line">            NSString *rightStr &#x3D; reverseStr([oriNum substringWithRange:NSMakeRange(i, oriNum.length - i)]);</span><br><span class="line">            NSString *leftStr &#x3D; [oriNum substringWithRange:NSMakeRange(0,i)];</span><br><span class="line">            &#x2F;&#x2F;第i-1位截取出来</span><br><span class="line">            NSString *leftCompareStr &#x3D; [oriNum substringWithRange:NSMakeRange(i-1, 1)];</span><br><span class="line">            &#x2F;&#x2F;和右边逐个对比</span><br><span class="line">            for (int j &#x3D; 0; j &lt; rightStr.length; j++) &#123;</span><br><span class="line">                NSString *rightCompareStr &#x3D; [rightStr substringWithRange:NSMakeRange(j, 1)];</span><br><span class="line">                if (leftCompareStr.integerValue &lt; rightCompareStr.integerValue) &#123;</span><br><span class="line">                    NSMutableArray *finalArr &#x3D; separateStringToArray([NSString stringWithFormat:@&quot;%@%@&quot;,leftStr,rightStr]);</span><br><span class="line">                    NSInteger leftIndex &#x3D; [finalArr indexOfObject:leftCompareStr];</span><br><span class="line">                    NSInteger rightIndex &#x3D; [finalArr indexOfObject:rightCompareStr];</span><br><span class="line">                    [finalArr exchangeObjectAtIndex:leftIndex withObjectAtIndex:rightIndex];</span><br><span class="line">                    for (NSString *str in finalArr) &#123;</span><br><span class="line">                        [finalStr appendString:str];</span><br><span class="line">                    &#125;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return finalStr.length?finalStr:oriNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NSString *str &#x3D; findNextLargerNum(@&quot;8976&quot;);</span><br><span class="line">NSLog(@&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;%@&quot;,str);</span><br><span class="line">&#x2F;&#x2F;打印结果</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;9678</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" data-id="ckju62sta006nhf49hfvzcw96" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -740,6 +716,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/13/%E5%80%92%E8%AE%A1%E6%97%B6/349/">349</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/13/run/44-run/">跑步第44天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/12/%E5%80%92%E8%AE%A1%E6%97%B6/350/">350</a>
           </li>
         
@@ -749,14 +733,6 @@
         
           <li>
             <a href="/2021/01/11/%E5%80%92%E8%AE%A1%E6%97%B6/351/">351</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/11/run/42-run/">跑步第42天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/10/%E5%80%92%E8%AE%A1%E6%97%B6/352/">352</a>
           </li>
         
       </ul>
