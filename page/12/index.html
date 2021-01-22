@@ -64,6 +64,100 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-tips" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/flutter/flutter-tips/" class="article-date">
+  <time datetime="2020-11-24T03:50:49.000Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/flutter/flutter-tips/">flutter工程注意事项</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>在工程文件夹内，git管理，忽略pubspec.lock文件 ，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>/ios文件夹里，忽略Pods文件夹，Podfile.lock文件，*.xcworkspace文件,运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/24/flutter/flutter-tips/" data-id="ckju62sqt001rhf494v8x0wb2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-unix工具/ssh-issue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/unix%E5%B7%A5%E5%85%B7/ssh-issue/" class="article-date">
+  <time datetime="2020-11-24T03:47:58.000Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/unix/">unix</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/unix%E5%B7%A5%E5%85%B7/ssh-issue/">enter passphrase for key询问解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-add ~&#x2F;.ssh&#x2F;id_rsa</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ssh添加id_rsa文件即可</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/24/unix%E5%B7%A5%E5%85%B7/ssh-issue/" data-id="ckju62stf0072hf49e4f6ecsy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/zsh-problem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/23/unix%E5%B7%A5%E5%85%B7/zsh-problem/" class="article-date">
@@ -524,98 +618,6 @@
 
 
   
-    <article id="post-flutter/flutter-btn-delegate" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/19/flutter/flutter-btn-delegate/" class="article-date">
-  <time datetime="2020-11-19T14:43:34.000Z" itemprop="datePublished">2020-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/flutter/flutter-btn-delegate/">flutter按钮点击事件传给delegate</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在ios中，通常用block或者代理去实现，在flutter中，外部实现一个方法，把这个方法传给按钮，按钮内部用callback接受，ontap方法调用即可，实现如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import &#39;package:flutter&#x2F;cupertino.dart&#39;;</span><br><span class="line">import &#39;package:flutter&#x2F;material.dart&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义函数类型</span><br><span class="line">typedef StringValue &#x3D; void Function(String);</span><br><span class="line"></span><br><span class="line">class ImageBtn extends StatelessWidget &#123;</span><br><span class="line"> &#x2F;&#x2F;作为属性</span><br><span class="line">  StringValue callback;</span><br><span class="line"></span><br><span class="line">  ImageBtn(&#123;Key key,this.callback&#125;) : super(key: key);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">   </span><br><span class="line">    return new GestureDetector(</span><br><span class="line">      onTap: () &#123;</span><br><span class="line">        print(&#39;MyButton was tappedq!&#39;);</span><br><span class="line">        &#x2F;&#x2F;调用</span><br><span class="line">        this.callback(&quot;testString&quot;);</span><br><span class="line">      &#125;,</span><br><span class="line">      child: ...</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>外部使用方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;顶部按钮点击事件</span><br><span class="line">void _ontap(String name)&#123;</span><br><span class="line">  print(name);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;实例对象时传进去</span><br><span class="line">ImageBtn(callback:_ontap)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;另外一种写法，不传参数也可以，仅仅是invoke外部函数，</span><br><span class="line">ImageBtn(callback:()&#123;</span><br><span class="line">   &#x2F;&#x2F;do sth...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>注意:callback和外部的方法，参数类型要保持一致<br>总结：外部函数传给按钮，让按钮内部可以调用，通过无参数函数调用有参数也可以</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-btn-delegate/" data-id="ckju62sq2000phf49abl71gdi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-flutter/flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/19/flutter/flutter-expanded/" class="article-date">
-  <time datetime="2020-11-19T14:30:23.000Z" itemprop="datePublished">2020-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/flutter/flutter-expanded/">flutter控件从上到下居中排列</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Column(</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            Expanded(child:</span><br><span class="line">            Image.asset(&#39;assets&#x2F;images&#x2F;$imageName.png&#39;)</span><br><span class="line">            ),</span><br><span class="line">            </span><br><span class="line">            Text(</span><br><span class="line">              this.model.title,</span><br><span class="line">              style: TextStyle(</span><br><span class="line">                fontSize: 15,</span><br><span class="line">                color: Colors.white,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br></pre></td></tr></table></figure>
-<p>注解：</p>
-<ul>
-<li>column是一个垂直的容器，子控件放在children里面</li>
-<li>要想让图片居中，需要放在expanded容器里面,官方定义：expanded is a widget that expands a child of a row,column,or flex so that the child fills the available space.</li>
-<li><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/expanded_column.png" alt="image"></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-expanded/" data-id="ckju62sq7000xhf4921tpgqjg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -659,6 +661,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/22/%E5%80%92%E8%AE%A1%E6%97%B6/340/">340</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/22/run/53-run/">跑步第53天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/21/%E5%80%92%E8%AE%A1%E6%97%B6/341/">341</a>
           </li>
         
@@ -668,14 +678,6 @@
         
           <li>
             <a href="/2021/01/20/%E5%80%92%E8%AE%A1%E6%97%B6/342/">342</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/20/run/51-run/">跑步第51天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/rsa-add/">ssh避免重复输入密码</a>
           </li>
         
       </ul>
