@@ -64,6 +64,145 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-unix工具/hexo-categories" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/unix%E5%B7%A5%E5%85%B7/hexo-categories/" class="article-date">
+  <time datetime="2021-01-05T05:55:10.000Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/unix/">unix</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/05/unix%E5%B7%A5%E5%85%B7/hexo-categories/">hexo给目录分类</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>创建分类功能</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>打开index文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;source&#x2F;categories&#x2F;index.md</span><br></pre></td></tr></table></figure>
+
+<p>文件添加字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2021-01-05 12:19:59</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+<p>写文章的时候加上分类标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: mac android studio flutter 打包 apk</span><br><span class="line">date: 2020-11-16 20:16:07</span><br><span class="line">categories: </span><br><span class="line">- unix</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
+
+<p>添加标签同理</p>
+<p>完。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/hankleo/p/11606224.html">https://www.cnblogs.com/hankleo/p/11606224.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/05/unix%E5%B7%A5%E5%85%B7/hexo-categories/" data-id="ckju62ste006xhf49973e87ux" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-websocket" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/flutter/flutter-websocket/" class="article-date">
+  <time datetime="2021-01-05T03:44:00.000Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/05/flutter/flutter-websocket/">flutter中的websocket概念</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>目的：实现客户端与服务端的实时通讯，基于TCP协议</p>
+<p>与keep-alive区别：keep-alive机制会连接一小段时间，最终会断开，ws协议不会断开</p>
+<p>原理：通过一条特殊的http协议请求进行握手后，服务端支持ws协议，则进行协议升级，利用http创建的tcp连接，实现长连接。</p>
+<p>步骤分解：</p>
+<ul>
+<li><p>连接服务器</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> channel = IOWebSocketChannel.connect(<span class="string">&#x27;ws://echo.websocket.org&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>关闭连接</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">channel.sink.close();</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>监听服务器</p>
+<ul>
+<li>StreamBuilder是一个组件，收到一个stream就刷新界面</li>
+</ul>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> StreamBuilder(</span><br><span class="line">  stream: widget.channel.stream,</span><br><span class="line">  builder: (context, snapshot) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Text(snapshot.hasData ? <span class="string">&#x27;<span class="subst">$&#123;snapshot.data&#125;</span>&#x27;</span> : <span class="string">&#x27;&#x27;</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>发送消息</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">channel.sink.add(<span class="string">&#x27;Hello!&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<p>完整demo</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:flutter/material.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:web_socket_channel/io.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WebSocketRoute</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _WebSocketRouteState createState() =&gt; <span class="keyword">new</span> _WebSocketRouteState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_WebSocketRouteState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">WebSocketRoute</span>&gt; </span>&#123;</span><br><span class="line">  TextEditingController _controller = <span class="keyword">new</span> TextEditingController();</span><br><span class="line">  IOWebSocketChannel channel;</span><br><span class="line">  <span class="built_in">String</span> _text = <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> initState() &#123;</span><br><span class="line">    <span class="comment">//创建websocket连接</span></span><br><span class="line">    channel = <span class="keyword">new</span> IOWebSocketChannel.connect(<span class="string">&#x27;ws://echo.websocket.org&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Scaffold(</span><br><span class="line">      appBar: <span class="keyword">new</span> AppBar(</span><br><span class="line">        title: <span class="keyword">new</span> Text(<span class="string">&quot;WebSocket(内容回显)&quot;</span>),</span><br><span class="line">      ),</span><br><span class="line">      body: <span class="keyword">new</span> Padding(</span><br><span class="line">        padding: <span class="keyword">const</span> EdgeInsets.all(<span class="number">20.0</span>),</span><br><span class="line">        child: <span class="keyword">new</span> Column(</span><br><span class="line">          crossAxisAlignment: CrossAxisAlignment.start,</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            <span class="keyword">new</span> Form(</span><br><span class="line">              child: <span class="keyword">new</span> TextFormField(</span><br><span class="line">                controller: _controller,</span><br><span class="line">                decoration: <span class="keyword">new</span> InputDecoration(labelText: <span class="string">&#x27;Send a message&#x27;</span>),</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">            <span class="keyword">new</span> StreamBuilder(</span><br><span class="line">              stream: channel.stream,</span><br><span class="line">              builder: (context, snapshot) &#123;</span><br><span class="line">                <span class="comment">//网络不通会走到这</span></span><br><span class="line">                <span class="keyword">if</span> (snapshot.hasError) &#123;</span><br><span class="line">                  _text = <span class="string">&quot;网络不通...&quot;</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (snapshot.hasData) &#123;</span><br><span class="line">                  _text = <span class="string">&quot;echo: &quot;</span>+snapshot.data;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Padding(</span><br><span class="line">                  padding: <span class="keyword">const</span> EdgeInsets.symmetric(vertical: <span class="number">24.0</span>),</span><br><span class="line">                  child: <span class="keyword">new</span> Text(_text),</span><br><span class="line">                );</span><br><span class="line">              &#125;,</span><br><span class="line">            )</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">      floatingActionButton: <span class="keyword">new</span> FloatingActionButton(</span><br><span class="line">        onPressed: _sendMessage,</span><br><span class="line">        tooltip: <span class="string">&#x27;Send message&#x27;</span>,</span><br><span class="line">        child: <span class="keyword">new</span> Icon(Icons.send),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> _sendMessage() &#123;</span><br><span class="line">    <span class="keyword">if</span> (_controller.text.isNotEmpty) &#123;</span><br><span class="line">      channel.sink.add(_controller.text);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> dispose() &#123;</span><br><span class="line">    channel.sink.close();</span><br><span class="line">    <span class="keyword">super</span>.dispose();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>数据类型：发送的过程中数据以frame形式存在，每一个frame都由opcode字段指定类型，客户端在收到消息时已经知道类型，会自动转换，streamBuilder.snapshot.data如果是文本，类型是string，二进制数据，类型是List<int>,还有其他类型</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://book.flutterchina.club/chapter11/websocket.html">https://book.flutterchina.club/chapter11/websocket.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-websocket/" data-id="ckju62squ001thf49293m62s7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-book" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/05/flutter/flutter-book/" class="article-date">
@@ -429,95 +568,11 @@
 
 
   
-    <article id="post-flutter/flutter-random-color" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/05/flutter/flutter-random-color/" class="article-date">
-  <time datetime="2021-01-05T02:00:03.000Z" itemprop="datePublished">2021-01-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/05/flutter/flutter-random-color/">flutter随机颜色生成</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在listview或gridview中，用index去获颜色，挨个取一遍</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Colors.primaries[index % Colors.primaries.length]</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-random-color/" data-id="ckju62sqn001jhf499qe543mk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/358" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/04/%E5%80%92%E8%AE%A1%E6%97%B6/358/" class="article-date">
-  <time datetime="2021-01-04T15:44:46.000Z" itemprop="datePublished">2021-01-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/04/%E5%80%92%E8%AE%A1%E6%97%B6/358/">358</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今日要清空，无收获</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/04/%E5%80%92%E8%AE%A1%E6%97%B6/358/" data-id="ckju62sst005ghf49fsor4bzg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/5/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/7/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -556,6 +611,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/26/%E5%80%92%E8%AE%A1%E6%97%B6/336/">336</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/run/57-run/">跑步第57天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/25/%E5%80%92%E8%AE%A1%E6%97%B6/337/">337</a>
           </li>
         
@@ -565,14 +628,6 @@
         
           <li>
             <a href="/2021/01/24/%E5%80%92%E8%AE%A1%E6%97%B6/338/">338</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/24/run/55-run/">跑步第55天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/23/%E5%80%92%E8%AE%A1%E6%97%B6/339/">339</a>
           </li>
         
       </ul>

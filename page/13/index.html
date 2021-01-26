@@ -64,6 +64,99 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-unix工具/zsh-problem" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/23/unix%E5%B7%A5%E5%85%B7/zsh-problem/" class="article-date">
+  <time datetime="2020-11-23T10:36:03.000Z" itemprop="datePublished">2020-11-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/unix/">unix</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/23/unix%E5%B7%A5%E5%85%B7/zsh-problem/">zsh的挽救</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天配置环境变量的时候，因为失误不小心让zsh整个失效了，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh: command not found:xxx</span><br></pre></td></tr></table></figure>
+
+<p>补救办法，在命令行输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH&#x3D;&#x2F;bin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;bin:$&#123;PATH&#125;</span><br></pre></td></tr></table></figure>
+
+<p>恢复正常</p>
+<p>失误的地方在于配置flutter时路径少输入一个$符号，在$HOME/.zshrc文件中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;正确</span><br><span class="line">export PATH&#x3D;&quot;$PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]&#x2F;flutter&#x2F;bin&quot;</span><br><span class="line">&#x2F;&#x2F;错误</span><br><span class="line">export PATH&#x3D;&quot;PATH:[PATH_TO_FLUTTER_GIT_DIRECTORY]&#x2F;flutter&#x2F;bin&quot;</span><br><span class="line">&#x2F;&#x2F;注意 PATH_TO_FLUTTER_GIT_DIRECTORY 是需要输入全路径的，&#x2F;User&#x2F;xxx&#x2F;xxx,不是~符号！</span><br></pre></td></tr></table></figure>
+
+<p>最后一个坑，android studio无法加载应用市场插件，乖乖下载安装包从零开始安装便不会出现问题，不能从别的电脑直接拖过来直接用.</p>
+<h3 id="完"><a href="#完" class="headerlink" title="完"></a>完</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/23/unix%E5%B7%A5%E5%85%B7/zsh-problem/" data-id="ckju62stg0074hf4905kkctaz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-杂念/what-is-luck" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/23/%E6%9D%82%E5%BF%B5/what-is-luck/" class="article-date">
+  <time datetime="2020-11-23T06:49:39.000Z" itemprop="datePublished">2020-11-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/23/%E6%9D%82%E5%BF%B5/what-is-luck/">幸运是什么</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://www.wangbase.com/blogimg/asset/202011/bg2020111807.jpg" alt="image"></p>
+<p>幸运是机会和准备的乘积，机会自己无法掌控，自己能做的只有准备，做好一千份准备，自然会有机会降临，养兵千日用兵一时！！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/23/%E6%9D%82%E5%BF%B5/what-is-luck/" data-id="ckju62st7006hhf495tes2jhh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-杂念/strong-thoughs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/23/%E6%9D%82%E5%BF%B5/strong-thoughs/" class="article-date">
@@ -523,121 +616,11 @@
 
 
   
-    <article id="post-flutter/flutter-page-is-current" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/19/flutter/flutter-page-is-current/" class="article-date">
-  <time datetime="2020-11-19T14:18:51.000Z" itemprop="datePublished">2020-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/flutter/flutter-page-is-current/">flutter判断页面是否在屏幕上</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModalRoute.of(context).isCurrent</span><br></pre></td></tr></table></figure>
-<p>解析：由于页面的组合都是由路由管理的，所以把当前的context传给路由，让路由去判断是否在最顶端，这个路由叫做模态路由</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-page-is-current/" data-id="ckju62sqf0019hf49egdwhndi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-English/new-words" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/19/English/new-words/" class="article-date">
-  <time datetime="2020-11-19T06:47:42.000Z" itemprop="datePublished">2020-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/English/">English</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/English/new-words/">new words</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="sliver"><a href="#sliver" class="headerlink" title="sliver"></a>sliver</h1><p>/ˈslɪvə $ -ər/</p>
-<ul>
-<li><em>noun</em><blockquote>
-<p>a small pointed piece that has been cut off something</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://tse4-mm.cn.bing.net/th/id/OIP.2upzPbTQf0-bCp2PPcPxKgHaEL?w=322&h=181&c=7&o=5&pid=1.7" alt="image"></p>
-<h2 id="reckoning"><a href="#reckoning" class="headerlink" title="reckoning"></a>reckoning</h2><p>/ˈrekənɪŋ/</p>
-<ul>
-<li><p>noun</p>
-<blockquote>
-<p>calculation that is based on a careful guess rather than on exact knowledge</p>
-<p><img src="https://www.mdpi.com/sensors/sensors-19-00294/article_deploy/html/images/sensors-19-00294-g001.png" alt="image"></p>
-</blockquote>
-<p>** By my reckoning,we have 12,000 clients.</p>
-</li>
-</ul>
-<h3 id="adjacent"><a href="#adjacent" class="headerlink" title="adjacent"></a>adjacent</h3><p> /əˈdʒeɪsənt/</p>
-<ul>
-<li><p><strong>adjective</strong></p>
-<blockquote>
-<p>a room that is adjacent to sth is next to it.</p>
-<p>** We stayed in adjacent rooms</p>
-</blockquote>
-</li>
-</ul>
-<p><img src="https://th.bing.com/th/id/OIP.MUEba2ANuHQJI0b_cF-THAHaEF?pid=Api&rs=1" alt="image"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/19/English/new-words/" data-id="ckju62sp20001hf490osx9kpr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/12/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/14/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/12/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/14/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -676,6 +659,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/26/%E5%80%92%E8%AE%A1%E6%97%B6/336/">336</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/run/57-run/">跑步第57天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/25/%E5%80%92%E8%AE%A1%E6%97%B6/337/">337</a>
           </li>
         
@@ -685,14 +676,6 @@
         
           <li>
             <a href="/2021/01/24/%E5%80%92%E8%AE%A1%E6%97%B6/338/">338</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/24/run/55-run/">跑步第55天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/23/%E5%80%92%E8%AE%A1%E6%97%B6/339/">339</a>
           </li>
         
       </ul>
