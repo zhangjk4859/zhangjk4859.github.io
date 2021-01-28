@@ -64,6 +64,98 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-points" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/12/flutter/flutter-points/" class="article-date">
+  <time datetime="2020-11-12T13:05:29.000Z" itemprop="datePublished">2020-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/12/flutter/flutter-points/">跑flutter工程的坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>下载过来，一定要把pod和workspace删掉重新安装，否则会出现奇奇怪怪的问题，比如目标系统不对应，不适配arm64架构等：</li>
+</ul>
+<h2 id="The-iOS-deployment-target-‘IPHONEOS-DEPLOYMENT-TARGET’-is-set-to-8-0"><a href="#The-iOS-deployment-target-‘IPHONEOS-DEPLOYMENT-TARGET’-is-set-to-8-0" class="headerlink" title="The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |"></a>The iOS deployment target ‘IPHONEOS_DEPLOYMENT_TARGET’ is set to 8.0 |</h2><h2 id="undefined-symbols-for-architecture-arm"><a href="#undefined-symbols-for-architecture-arm" class="headerlink" title="undefined symbols for architecture arm |"></a>undefined symbols for architecture arm |</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/12/flutter/flutter-points/" data-id="ckju62sqk001ehf49himv1fo8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/pub-get-is-slow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/12/flutter/pub-get-is-slow/" class="article-date">
+  <time datetime="2020-11-12T11:30:00.000Z" itemprop="datePublished">2020-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/12/flutter/pub-get-is-slow/">flutter pub get慢</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>分析：从开发者仓库网站下载依赖比较慢，网络问题</li>
+<li>解决：<br>更换数据源地址</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PUB_HOSTED_URL&#x3D;https:&#x2F;&#x2F;pub.flutter-io.cn</span><br><span class="line">export FLUTTER_STORAGE_BASE_URL&#x3D;https:&#x2F;&#x2F;storage.flutter-io.cn</span><br></pre></td></tr></table></figure>
+<p>最后翻墙运行</p>
+<ul>
+<li>参考：<a target="_blank" rel="noopener" href="https://www.askmaclean.com/archives/flutter-pub-get-slow.html">https://www.askmaclean.com/archives/flutter-pub-get-slow.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/12/flutter/pub-get-is-slow/" data-id="ckju62sqw001yhf49as5s5xaa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-iOS/cocoapods" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/12/iOS/cocoapods/" class="article-date">
@@ -309,6 +401,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/28/%E5%80%92%E8%AE%A1%E6%97%B6/334/">334</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/28/run/59-run/">跑步第59天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/27/%E5%80%92%E8%AE%A1%E6%97%B6/335/">335</a>
           </li>
         
@@ -318,14 +418,6 @@
         
           <li>
             <a href="/2021/01/27/flutter/rongcloud-cannot-receive-message-ios/">融云iOS无法接受语音视频消息</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/26/%E5%80%92%E8%AE%A1%E6%97%B6/336/">336</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/26/run/57-run/">跑步第57天</a>
           </li>
         
       </ul>

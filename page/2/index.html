@@ -64,6 +64,92 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-run/55-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/24/run/55-run/" class="article-date">
+  <time datetime="2021-01-24T15:28:34.000Z" itemprop="datePublished">2021-01-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/24/run/55-run/">跑步第55天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>跑步：6km</li>
+<li>俯卧撑：30</li>
+<li>仰卧起坐：30</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/24/run/55-run/" data-id="ckkbacr550000yck8g9wufpxt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-倒计时/339" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/23/%E5%80%92%E8%AE%A1%E6%97%B6/339/" class="article-date">
+  <time datetime="2021-01-23T15:29:15.000Z" itemprop="datePublished">2021-01-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/23/%E5%80%92%E8%AE%A1%E6%97%B6/339/">339</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>认知升级，行动！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/23/%E5%80%92%E8%AE%A1%E6%97%B6/339/" data-id="ckk9vxhri0001txk8ap3de7vq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-run/54-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/23/run/54-run/" class="article-date">
@@ -431,115 +517,6 @@
 
 
   
-    <article id="post-unix工具/jenkins-installation" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/" class="article-date">
-  <time datetime="2021-01-20T02:33:31.000Z" itemprop="datePublished">2021-01-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/unix/">unix</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/">jenkins安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services stop jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade jenkins-lts</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>局域网访问配置</p>
-<p><code>homebrew.mxcl.jenkins.plist</code>里面<code>httpListenAddress</code>从<code>127.0.0.1</code>更改为<code>0.0.0.0</code></p>
-<p>两个地方</p>
-<ul>
-<li><code> ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist</code></li>
-<li><code>/usr/local/Cellar/jenkins/版本号/homebrew.mxcl.jenkins.plist</code></li>
-</ul>
-<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/10041e79ac6f">https://www.jianshu.com/p/10041e79ac6f</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/" data-id="ckk4wbk2l0000a0k89pk76of9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/343" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/19/%E5%80%92%E8%AE%A1%E6%97%B6/343/" class="article-date">
-  <time datetime="2021-01-19T15:29:15.000Z" itemprop="datePublished">2021-01-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/19/%E5%80%92%E8%AE%A1%E6%97%B6/343/">343</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>飞机，火车，廉价的快乐，克服困难，生产者，熵减，充斥着大脑</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/19/%E5%80%92%E8%AE%A1%E6%97%B6/343/" data-id="ckk45y84z0001g1k8acuk8fmy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -583,6 +560,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/28/%E5%80%92%E8%AE%A1%E6%97%B6/334/">334</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/28/run/59-run/">跑步第59天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/27/%E5%80%92%E8%AE%A1%E6%97%B6/335/">335</a>
           </li>
         
@@ -592,14 +577,6 @@
         
           <li>
             <a href="/2021/01/27/flutter/rongcloud-cannot-receive-message-ios/">融云iOS无法接受语音视频消息</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/26/%E5%80%92%E8%AE%A1%E6%97%B6/336/">336</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/26/run/57-run/">跑步第57天</a>
           </li>
         
       </ul>
