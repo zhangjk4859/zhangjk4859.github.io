@@ -64,6 +64,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-components" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/27/flutter/flutter-components/" class="article-date">
+  <time datetime="2020-11-27T03:14:54.000Z" itemprop="datePublished">2020-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/27/flutter/flutter-components/">flutter组件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="sliverList"><a href="#sliverList" class="headerlink" title="sliverList"></a>sliverList</h3><blockquote>
+<p>A sliver that places multiple box children in a linear array along the main axis.</p>
+<p>Each child is forced to have the SliverConstraints.crossAxisExtent in the cross axis but determines its own main axis extent.</p>
+<p>SliverList determines its scroll offset by “dead <strong>reckoning</strong>“ because children outside the visible part of the sliver are not materialized, which means SliverList cannot learn their main axis extent.Instead,newly materialized children are placed <strong>adjacent</strong> to existing children.</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/27/flutter/flutter-components/" data-id="ckju62sq4000thf496x4y30e9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-action-sheet" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/26/flutter/flutter-action-sheet/" class="article-date">
+  <time datetime="2020-11-26T10:51:55.000Z" itemprop="datePublished">2020-11-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/26/flutter/flutter-action-sheet/">flutter actionSheet使用方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数</span></span><br><span class="line">_showCupertinoActionSheet() <span class="keyword">async</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">await</span> showCupertinoModalPopup(</span><br><span class="line">        context: context,</span><br><span class="line">        builder: (context) &#123;</span><br><span class="line">          <span class="keyword">return</span> CupertinoActionSheet(</span><br><span class="line"></span><br><span class="line">            title: Text(<span class="string">&#x27;标题&#x27;</span>),</span><br><span class="line">            message: Text(<span class="string">&#x27;内容&#x27;</span>),</span><br><span class="line">            actions: &lt;Widget&gt;[</span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(</span><br><span class="line">                    <span class="string">&#x27;标题一&#x27;</span>,</span><br><span class="line">                  style: TextStyle(</span><br><span class="line">                    color: Color(<span class="number">0xFF00C599</span>)</span><br><span class="line">                  ),</span><br><span class="line">                ),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDefaultAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">              </span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(<span class="string">&#x27;标题二&#x27;</span>),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;not delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDestructiveAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">            ],</span><br><span class="line">            cancelButton: CupertinoActionSheetAction(</span><br><span class="line">              child: Text(</span><br><span class="line">                  <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">                style: TextStyle(</span><br><span class="line">                  color: Colors.white</span><br><span class="line">                ),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () &#123;</span><br><span class="line">                Navigator.of(context).pop(<span class="string">&#x27;cancel&#x27;</span>);</span><br><span class="line">              &#125;,</span><br><span class="line">            ),</span><br><span class="line">          );</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;<span class="subst">$result</span>&#x27;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：在showCupertinoModalPopup方法里返回CupertinoActionSheet，里面的元素由CupertinoActionSheetAction组成，有default和destructive类型可选，用法和UI和苹果大致一样</p>
+<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2828331492,1718232482&fm=15&gp=0.jpg" alt="image"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/26/flutter/flutter-action-sheet/" data-id="ckju62sq1000ohf49cphcg6z2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/cannot-open-app-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/" class="article-date">
@@ -456,103 +545,6 @@
 
 
   
-    <article id="post-杂念/what-is-luck" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/23/%E6%9D%82%E5%BF%B5/what-is-luck/" class="article-date">
-  <time datetime="2020-11-23T06:49:39.000Z" itemprop="datePublished">2020-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/%E6%9D%82%E5%BF%B5/what-is-luck/">幸运是什么</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://www.wangbase.com/blogimg/asset/202011/bg2020111807.jpg" alt="image"></p>
-<p>幸运是机会和准备的乘积，机会自己无法掌控，自己能做的只有准备，做好一千份准备，自然会有机会降临，养兵千日用兵一时！！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/23/%E6%9D%82%E5%BF%B5/what-is-luck/" data-id="ckju62st7006hhf495tes2jhh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-杂念/strong-thoughs" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/23/%E6%9D%82%E5%BF%B5/strong-thoughs/" class="article-date">
-  <time datetime="2020-11-22T16:55:41.000Z" itemprop="datePublished">2020-11-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/%E6%9D%82%E5%BF%B5/strong-thoughs/">强者思维</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>对待人生的不同态度，性格决定命运</p>
-</li>
-<li><p>把问题细化，去处理大难题，不要畏难</p>
-</li>
-<li><p>教育你心地善良，简单单纯，毫无心机，及时行乐，天下太平的教育，是母权教育，或者白左教育，绵阳般的教育</p>
-</li>
-<li><p>父权是狼性的，男人必须在社会中竞争，负责买房买车养家糊口，升官做官，光宗耀祖，拼搏职场，男人是不可以装楚楚可怜的，一些真正的兵法，只有在父亲的角色下，才受教育，只有父亲，才会教导你你诡计，竞争，突袭，埋伏，阴谋，野蛮人</p>
-</li>
-<li><p>思维分为阴性思维和阳性思维，阴性思维是穷人的思维，凡事总是我不行，永远只能在既有的大陆做盘算，注重于分配而不是创造，永远没有勇气，驶出探索一片新大陆，凡事躲避，借口，一切都是你的错，一切都是社会的错，99项资源，缺了一项，他就不敢出发</p>
-</li>
-<li><p>强者思维，没有资源去创造资源，没有机会去创造机会，限制是用来打破的，而不是限制你的行动，手里有了70项资源，缺足30项，就敢出门，站在岸上一百次，学不会游泳</p>
-<p>来源:<a target="_blank" rel="noopener" href="http://www.oushenwenji.net/thread-44164-1-1.html">http://www.oushenwenji.net/thread-44164-1-1.html</a></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/23/%E6%9D%82%E5%BF%B5/strong-thoughs/" data-id="ckju62st5006ahf4957c5egu8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -596,7 +588,15 @@
       <ul>
         
           <li>
-            <a href="/2021/01/29/%E5%80%92%E8%AE%A1%E6%97%B6/333/">334</a>
+            <a href="/2021/01/30/%E5%80%92%E8%AE%A1%E6%97%B6/332/">332</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/30/run/61-run/">跑步第61天</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/29/%E5%80%92%E8%AE%A1%E6%97%B6/333/">333</a>
           </li>
         
           <li>
@@ -605,14 +605,6 @@
         
           <li>
             <a href="/2021/01/28/%E5%80%92%E8%AE%A1%E6%97%B6/334/">334</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/28/run/59-run/">跑步第59天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/27/%E5%80%92%E8%AE%A1%E6%97%B6/335/">335</a>
           </li>
         
       </ul>
