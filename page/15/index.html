@@ -64,6 +64,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter/flutter-expanded/" class="article-date">
+  <time datetime="2020-11-19T14:30:23.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter/flutter-expanded/">flutter控件从上到下居中排列</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Column(</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            Expanded(child:</span><br><span class="line">            Image.asset(&#39;assets&#x2F;images&#x2F;$imageName.png&#39;)</span><br><span class="line">            ),</span><br><span class="line">            </span><br><span class="line">            Text(</span><br><span class="line">              this.model.title,</span><br><span class="line">              style: TextStyle(</span><br><span class="line">                fontSize: 15,</span><br><span class="line">                color: Colors.white,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br></pre></td></tr></table></figure>
+<p>注解：</p>
+<ul>
+<li>column是一个垂直的容器，子控件放在children里面</li>
+<li>要想让图片居中，需要放在expanded容器里面,官方定义：expanded is a widget that expands a child of a row,column,or flex so that the child fills the available space.</li>
+<li><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/expanded_column.png" alt="image"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-expanded/" data-id="ckju62sq7000xhf4921tpgqjg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-page-is-current" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter/flutter-page-is-current/" class="article-date">
+  <time datetime="2020-11-19T14:18:51.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter/flutter-page-is-current/">flutter判断页面是否在屏幕上</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ModalRoute.of(context).isCurrent</span><br></pre></td></tr></table></figure>
+<p>解析：由于页面的组合都是由路由管理的，所以把当前的context传给路由，让路由去判断是否在最顶端，这个路由叫做模态路由</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-page-is-current/" data-id="ckju62sqf0019hf49egdwhndi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-English/new-words" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/19/English/new-words/" class="article-date">
@@ -606,140 +695,11 @@
 
 
   
-    <article id="post-算法/find-next-numnber" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" class="article-date">
-  <time datetime="2020-11-15T15:03:38.000Z" itemprop="datePublished">2020-11-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/">寻找下一个数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>寻找下一个数字，例如输入345，输出354<blockquote>
-<p>思路：从最右边位和上一位对比，如果大，就往前移，移动完，尾数排序，从大到小，保证次大</p>
-</blockquote>
-</li>
-<li>代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;字符串逆序</span><br><span class="line">NSString *reverseStr(NSString *str)&#123;</span><br><span class="line">    NSMutableString *string&#x3D;[[NSMutableString alloc] init];</span><br><span class="line">    for(int i&#x3D;0;i&lt;str.length;i++)&#123;</span><br><span class="line">        [string appendString:[str substringWithRange:NSMakeRange(str.length-1-i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;字符串分成数组</span><br><span class="line">NSMutableArray *separateStringToArray(NSString *str)&#123;</span><br><span class="line">    NSMutableArray *marr &#x3D; [NSMutableArray array];</span><br><span class="line">    for (NSInteger i &#x3D; 0; i &lt; str.length; i++) &#123;</span><br><span class="line">        [marr addObject:[str substringWithRange:NSMakeRange(i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return marr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NSString *findNextLargerNum(NSString *oriNum)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    NSMutableString *finalStr &#x3D; [NSMutableString string];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    NSMutableArray *marr &#x3D; separateStringToArray(oriNum);</span><br><span class="line">    for (NSInteger i &#x3D; marr.count - 1; i &gt; 0; i--) &#123;</span><br><span class="line">        NSNumber *lastNum &#x3D; [marr objectAtIndex:i];</span><br><span class="line">        NSNumber *preNum &#x3D; [marr objectAtIndex:i-1];</span><br><span class="line">        if (lastNum.integerValue &gt; preNum.integerValue) &#123;</span><br><span class="line">            &#x2F;&#x2F;截取字符串</span><br><span class="line">            NSString *rightStr &#x3D; reverseStr([oriNum substringWithRange:NSMakeRange(i, oriNum.length - i)]);</span><br><span class="line">            NSString *leftStr &#x3D; [oriNum substringWithRange:NSMakeRange(0,i)];</span><br><span class="line">            &#x2F;&#x2F;第i-1位截取出来</span><br><span class="line">            NSString *leftCompareStr &#x3D; [oriNum substringWithRange:NSMakeRange(i-1, 1)];</span><br><span class="line">            &#x2F;&#x2F;和右边逐个对比</span><br><span class="line">            for (int j &#x3D; 0; j &lt; rightStr.length; j++) &#123;</span><br><span class="line">                NSString *rightCompareStr &#x3D; [rightStr substringWithRange:NSMakeRange(j, 1)];</span><br><span class="line">                if (leftCompareStr.integerValue &lt; rightCompareStr.integerValue) &#123;</span><br><span class="line">                    NSMutableArray *finalArr &#x3D; separateStringToArray([NSString stringWithFormat:@&quot;%@%@&quot;,leftStr,rightStr]);</span><br><span class="line">                    NSInteger leftIndex &#x3D; [finalArr indexOfObject:leftCompareStr];</span><br><span class="line">                    NSInteger rightIndex &#x3D; [finalArr indexOfObject:rightCompareStr];</span><br><span class="line">                    [finalArr exchangeObjectAtIndex:leftIndex withObjectAtIndex:rightIndex];</span><br><span class="line">                    for (NSString *str in finalArr) &#123;</span><br><span class="line">                        [finalStr appendString:str];</span><br><span class="line">                    &#125;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return finalStr.length?finalStr:oriNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NSString *str &#x3D; findNextLargerNum(@&quot;8976&quot;);</span><br><span class="line">NSLog(@&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;%@&quot;,str);</span><br><span class="line">&#x2F;&#x2F;打印结果</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;9678</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" data-id="ckju62sta006nhf49hfvzcw96" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-杂念/teachers" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/14/%E6%9D%82%E5%BF%B5/teachers/" class="article-date">
-  <time datetime="2020-11-14T15:40:59.000Z" itemprop="datePublished">2020-11-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/14/%E6%9D%82%E5%BF%B5/teachers/">生活中的老师们</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友"><a href="#洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友" class="headerlink" title="洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友"></a>洗澡的时候脑海里闪过了那些自己通过交流，阅读受过益的长辈，老师和朋友</h2><ul>
-<li>章老师</li>
-<li>许樱淑老师</li>
-<li>罗永浩</li>
-<li>李笑来</li>
-<li>座上客HR</li>
-<li>父母亲</li>
-<li>大姨</li>
-<li>武超大哥</li>
-<li>陈静姐</li>
-<li>亲姐 姐夫</li>
-<li>徐世委</li>
-<li>夫人</li>
-<li>夫人大伯</li>
-<li>朱存剑</li>
-<li>吴旭龙</li>
-<li>潘梁梁</li>
-<li>小蘑菇</li>
-<li>黄总</li>
-<li>冯唐</li>
-<li>shena</li>
-<li>大妖怪王杰</li>
-<li>翁恺老师</li>
-<li>左耳朵耗子陈皓</li>
-<li>王垠（垠神）</li>
-<li>张驰源</li>
-<li>张宏杰</li>
-<li>老张</li>
-<li>陆姐</li>
-<li>巴特勒</li>
-<li>scaler</li>
-<li>柳承敏</li>
-<li>徐宥</li>
-<li>陈思录</li>
-<li>阮一峰</li>
-<li>九边</li>
-<li>吉姆克拉克</li>
-<li>霍华德艾肯</li>
-<li>杰克伦敦</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/14/%E6%9D%82%E5%BF%B5/teachers/" data-id="ckju62st6006dhf4975k8dd3t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/14/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="extend next" rel="next" href="/page/16/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/14/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/16/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -778,6 +738,14 @@
       <ul>
         
           <li>
+            <a href="/2021/01/31/%E5%80%92%E8%AE%A1%E6%97%B6/331/">331</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/31/run/62-run/">跑步第62天</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/30/%E5%80%92%E8%AE%A1%E6%97%B6/332/">332</a>
           </li>
         
@@ -787,14 +755,6 @@
         
           <li>
             <a href="/2021/01/29/%E5%80%92%E8%AE%A1%E6%97%B6/333/">333</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/29/run/60-run/">跑步第60天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/28/%E5%80%92%E8%AE%A1%E6%97%B6/334/">334</a>
           </li>
         
       </ul>
