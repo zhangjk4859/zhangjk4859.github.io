@@ -64,6 +64,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-dio-net" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/flutter/flutter-dio-net/" class="article-date">
+  <time datetime="2021-01-05T02:54:40.000Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/05/flutter/flutter-dio-net/">flutter网络三方库Flutter-Net</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在给app的网络请求添加loading过程中，发现一个封装更加完善的网络三方库，里面有很多值得借鉴的细节，特此记录</p>
+<p>优点：</p>
+<ul>
+<li>默认自带loading，如果单个请求不想要loading，可以传递参不显示，自己封装的目前全部显示loading</li>
+<li>更加友好的控制台json打印</li>
+<li>封装了公共参数</li>
+<li>响应拦截</li>
+</ul>
+<p>来源：<a target="_blank" rel="noopener" href="https://github.com/po1arbear/Flutter-Net">https://github.com/po1arbear/Flutter-Net</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-dio-net/" data-id="ckju62sq6000whf49e9uxciur" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-loading" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/flutter/flutter-loading/" class="article-date">
+  <time datetime="2021-01-05T02:47:15.000Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/05/flutter/flutter-loading/">flutter中一个好用的三方库loading</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>地址：<a target="_blank" rel="noopener" href="https://github.com/kokohuang/flutter_easyloading">https://github.com/kokohuang/flutter_easyloading</a></p>
+<p>用法，添加到materialApp的builder属性中</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="comment">// This widget is the root of your application.</span></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> MaterialApp(</span><br><span class="line">      title: <span class="string">&#x27;Flutter EasyLoading&#x27;</span>,</span><br><span class="line">      theme: ThemeData(</span><br><span class="line">        primarySwatch: Colors.blue,</span><br><span class="line">      ),</span><br><span class="line">      home: MyHomePage(title: <span class="string">&#x27;Flutter EasyLoading&#x27;</span>),</span><br><span class="line">      builder: EasyLoading.init(),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>接下来在任何地方调用</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">EasyLoading.<span class="keyword">show</span>(status: <span class="string">&#x27;loading...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showProgress(<span class="number">0.3</span>, status: <span class="string">&#x27;downloading...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showSuccess(<span class="string">&#x27;Great Success!&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showError(<span class="string">&#x27;Failed with Error&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showInfo(<span class="string">&#x27;Useful Information.&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showToast(<span class="string">&#x27;Toast&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.dismiss();</span><br></pre></td></tr></table></figure>
+
+
+
+<p>示例图片</p>
+<p><img src="https://raw.githubusercontent.com/kokohuang/flutter_easyloading/master/images/gif01.gif" alt="image"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-loading/" data-id="ckju62sqc0015hf49cf0y64uk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-padding" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/05/flutter/flutter-padding/" class="article-date">
@@ -413,92 +511,6 @@
 
 
   
-    <article id="post-倒计时/359" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/03/%E5%80%92%E8%AE%A1%E6%97%B6/359/" class="article-date">
-  <time datetime="2021-01-03T15:35:51.000Z" itemprop="datePublished">2021-01-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/03/%E5%80%92%E8%AE%A1%E6%97%B6/359/">359</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>思考总结：网飞ceo公司原则：聚集高密度人才，用市场最高薪酬稳住，每年10-20percent增长，因为类似于编剧，讲书人，程序员，工程师等职业不同的人生产效率可能相差成千上万倍。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/03/%E5%80%92%E8%AE%A1%E6%97%B6/359/" data-id="ckju62ssu005ihf496gscdnpg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-run/34-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/03/run/34-run/" class="article-date">
-  <time datetime="2021-01-03T15:34:32.000Z" itemprop="datePublished">2021-01-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/03/run/34-run/">跑步第34天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：1km</li>
-<li>仰卧起坐：30</li>
-<li>俯卧撑：30</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/03/run/34-run/" data-id="ckju62ss00041hf49apdpgu1p" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -542,6 +554,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/03/%E5%80%92%E8%AE%A1%E6%97%B6/328/">328</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/03/run/65-run/">跑步第65天</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/02/%E5%80%92%E8%AE%A1%E6%97%B6/329/">329</a>
           </li>
         
@@ -551,14 +571,6 @@
         
           <li>
             <a href="/2021/02/01/%E5%80%92%E8%AE%A1%E6%97%B6/330/">330</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/01/run/63-run/">跑步第63天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/31/%E5%80%92%E8%AE%A1%E6%97%B6/331/">331</a>
           </li>
         
       </ul>
