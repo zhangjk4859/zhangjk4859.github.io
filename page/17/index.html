@@ -64,6 +64,135 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-layout" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/17/flutter/flutter-layout/" class="article-date">
+  <time datetime="2020-11-17T09:38:24.000Z" itemprop="datePublished">2020-11-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/17/flutter/flutter-layout/">flutter基础知识</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>基本上由widget组成，widget有stateless和stateful两种，常用的基础widget有</p>
+<ul>
+<li>container：矩形元素，可以设置背景边框阴影</li>
+<li>row，column：让子控件水平和垂直布局，flex布局原理</li>
+<li>stack：可以堆砌widget，用上下左右来定位</li>
+<li>text：一个文本显示容器</li>
+</ul>
+<p>多功能widget叫做material app widget，苹果风格的叫做CupertinoApp，常见的有：</p>
+<ul>
+<li>navigator，也叫routes</li>
+<li>appbar</li>
+<li>scaffold</li>
+</ul>
+<hr>
+<ul>
+<li>一个widget加gestureDetector便形成了按钮</li>
+<li>一个widget+state = statefull widget</li>
+<li>keys：类似于tableview中的cellid，重用机制</li>
+<li>全局key：用来标识全局唯一的widget</li>
+</ul>
+<p>关于widget组合的图：<br><img src="https://flutter.cn/assets/ui/layout/lakes-icons-visual-f9e45691d76ba85d4ea2160941f42c8a2ce1a17d41d6e6aac8f3feb89e679f99.png" alt="image"><br><img src="https://flutter.cn/assets/ui/layout/sample-flutter-layout-46c76f6ab08f94fa4204469dbcf6548a968052af102ae5a1ae3c78bc24e0d915.png" alt="image"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://flutter.cn/docs/development/ui/layout">https://flutter.cn/docs/development/ui/layout</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/17/flutter/flutter-layout/" data-id="ckju62sqa0011hf4978b5fga0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-unix工具/build-apk" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/" class="article-date">
+  <time datetime="2020-11-16T12:16:07.000Z" itemprop="datePublished">2020-11-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/unix/">unix</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/">mac android studio flutter 打包 apk</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Create a keystore</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore ~&#x2F;key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><app dir>/android文件夹下生成属性文件关联秘钥 key.properties</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">storePassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyPassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyAlias&#x3D;key</span><br><span class="line">storeFile&#x3D;&lt;location of the key store file, such as &#x2F;Users&#x2F;&lt;user name&gt;&#x2F;key.jks&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><app dir>/android/app/build.gradle文件里增加load代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def keystoreProperties &#x3D; new Properties()</span><br><span class="line">   def keystorePropertiesFile &#x3D; rootProject.file(&#39;key.properties&#39;)</span><br><span class="line">   if (keystorePropertiesFile.exists()) &#123;</span><br><span class="line">       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   android &#123;</span><br><span class="line">         ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在buildTypes之前增加签名配置代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           keyAlias keystoreProperties[&#39;keyAlias&#39;]</span><br><span class="line">           keyPassword keystoreProperties[&#39;keyPassword&#39;]</span><br><span class="line">           storeFile keystoreProperties[&#39;storeFile&#39;] ? file(keystoreProperties[&#39;storeFile&#39;]) : null</span><br><span class="line">           storePassword keystoreProperties[&#39;storePassword&#39;]</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   buildTypes &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           signingConfig signingConfigs.release</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行编译命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter build apk</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Running Gradle task &#39;assembleRelease&#39;... Done                     143.3s (!)</span><br><span class="line">✓ Built build&#x2F;app&#x2F;outputs&#x2F;flutter-apk&#x2F;app-release.apk (79.9MB).</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="完。"><a href="#完。" class="headerlink" title="完。"></a>完。</h4><p>参考：<a target="_blank" rel="noopener" href="https://flutter.dev/docs/deployment/android">https://flutter.dev/docs/deployment/android</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/" data-id="ckju62stc006shf49hkezb2o4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-算法/find-next-numnber" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" class="article-date">
@@ -486,121 +615,6 @@
 
 
   
-    <article id="post-iOS/cocoapods" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/12/iOS/cocoapods/" class="article-date">
-  <time datetime="2020-11-12T10:48:08.000Z" itemprop="datePublished">2020-11-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/12/iOS/cocoapods/">2020-11安装cocoapods问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天安装pods发生无法下载问题，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to download data from XXX</span><br></pre></td></tr></table></figure>
-
-<p>切换了镜像源解决</p>
-<ul>
-<li>查看镜像源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除淘宝镜像源 -r remove</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -r https:&#x2F;&#x2F;ruby.taobao.org&#x2F;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>添加新的镜像源  -a add</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -a https:&#x2F;&#x2F;rubygems.org</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>成功<br>Successfully installed cocoapods-1.10.0<br>Parsing documentation for cocoapods-1.10.0<br>Done installing documentation for cocoapods after 2 seconds </p>
-</li>
-</ul>
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/li_ph/article/details/43852845">https://blog.csdn.net/li_ph/article/details/43852845</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/12/iOS/cocoapods/" data-id="ckju62spm0005hf499x7l4eke" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-unix工具/zsh" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/12/unix%E5%B7%A5%E5%85%B7/zsh/" class="article-date">
-  <time datetime="2020-11-12T10:13:26.000Z" itemprop="datePublished">2020-11-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/unix/">unix</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/12/unix%E5%B7%A5%E5%85%B7/zsh/">catalina系统的zsh配置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>catalina系统默认的终端是zsh，如果没有找到配置文件，需要自己创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-<p>保存运行使之生效</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source $HOME&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>看一下是否成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
-<p>参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/10574684/where-to-place-path-variable-assertions-in-zsh">https://stackoverflow.com/questions/10574684/where-to-place-path-variable-assertions-in-zsh</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/12/unix%E5%B7%A5%E5%85%B7/zsh/" data-id="ckju62sth0077hf496dvc4m5g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -644,6 +658,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/06/run/68-run/">跑步第68天</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/06/%E5%80%92%E8%AE%A1%E6%97%B6/325/">325</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/05/run/67-run/">跑步第67天</a>
           </li>
         
@@ -653,14 +675,6 @@
         
           <li>
             <a href="/2021/02/04/%E5%80%92%E8%AE%A1%E6%97%B6/327/">327</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/04/run/66-run/">跑步第66天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/03/%E5%80%92%E8%AE%A1%E6%97%B6/328/">328</a>
           </li>
         
       </ul>
