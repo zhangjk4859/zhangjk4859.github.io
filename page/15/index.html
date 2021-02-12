@@ -64,6 +64,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-run/2-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/run/2-run/" class="article-date">
+  <time datetime="2020-12-02T15:13:48.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/run/2-run/">跑步第2天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>跑步：4公里</li>
+<li>仰卧起坐：60</li>
+<li>俯卧撑：60</li>
+</ul>
+<p>今天起床还是有点痛苦与困难，跑步有助于锻炼自己克服困难的能力，人活着的意义就是克服困难，hard times create strong man,keep going!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/run/2-run/" data-id="ckju62srg0035hf498y47hqff" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/dart-enum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/flutter/dart-enum/" class="article-date">
+  <time datetime="2020-12-02T00:03:53.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/flutter/dart-enum/">dart枚举</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> MediaType &#123;</span><br><span class="line">  movie,      <span class="comment">//0</span></span><br><span class="line">  shortVideo, <span class="comment">//1</span></span><br><span class="line">  other,      <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> videoType = MediaType.values[<span class="number">0</span>];</span><br><span class="line"><span class="comment">// videoType == movie</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>定义枚举和OC差别不大，取值的时候不可以直接和int比较，需要从枚举数组中根据index拿出来，比OC多了一步</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/flutter/dart-enum/" data-id="ckju62spv000ghf490ybu68s7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-计算机科学/what-is-bit-code" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/what-is-bit-code/" class="article-date">
@@ -641,102 +730,6 @@
 
 
   
-    <article id="post-flutter/fijkplayer-off" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/25/flutter/fijkplayer-off/" class="article-date">
-  <time datetime="2020-11-25T15:49:43.000Z" itemprop="datePublished">2020-11-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/flutter/fijkplayer-off/">fijkplayer播放期间屏幕熄灭处理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>两种方案</p>
-<p>1.借用第三方插件，让当前页面保持常量，别的页面跟随系统</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wakelock: ^0.1.4+2</span><br><span class="line"></span><br><span class="line">Wakelock.enable();</span><br><span class="line">Wakelock.disable();</span><br></pre></td></tr></table></figure>
-
-<p>2.调用fijkplayer自身的常量参数 二选一</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">await player.setOption(FijkOption.hostCategory, &quot;request-screen-on&quot;, 1);</span><br><span class="line">FijkPlugin.keepScreenOn ;</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8750de450850">https://www.jianshu.com/p/8750de450850</a></p>
-<p><a target="_blank" rel="noopener" href="https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0">https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/flutter/fijkplayer-off/" data-id="ckju62spx000khf49bewy5nv0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-flutter/pubspec-error" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/25/flutter/pubspec-error/" class="article-date">
-  <time datetime="2020-11-25T01:27:09.000Z" itemprop="datePublished">2020-11-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/flutter/pubspec-error/">pubspec.lock坑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨天以为pubspec.lock文件和cocoapods的profile.lock文件性质一样，可以生成，所以删除，结果遇见了编译报错，即使在执行了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
-
-<p>命令重新生成后，经过一番研究和队友协助，找到是这个问题，把老的恢复回来工程编译正常，下面是报错的关键字</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Execution failed for task &#39;:app:processDebugManifest&#39;. &gt; Manifest merger failed : Attribute provider...</span><br></pre></td></tr></table></figure>
-
-<p>做记录方便以后查阅。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/flutter/pubspec-error/" data-id="ckju62sr10028hf49h9fv8exs" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -780,6 +773,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/12/run/74-run/">跑步第74天</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/12/%E5%80%92%E8%AE%A1%E6%97%B6/319/">319</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/11/run/73-run/">跑步第73天</a>
           </li>
         
@@ -789,14 +790,6 @@
         
           <li>
             <a href="/2021/02/10/run/72-run/">跑步第72天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/10/%E5%80%92%E8%AE%A1%E6%97%B6/321/">321</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/09/run/71-run/">跑步第71天</a>
           </li>
         
       </ul>
