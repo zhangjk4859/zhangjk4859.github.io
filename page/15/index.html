@@ -64,6 +64,114 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-run/3-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/03/run/3-run/" class="article-date">
+  <time datetime="2020-12-03T15:50:48.000Z" itemprop="datePublished">2020-12-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/03/run/3-run/">跑步第3天</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>跑步：4公里</li>
+<li>仰卧起坐：60</li>
+<li>俯卧撑：65</li>
+</ul>
+<p>起床实在太痛苦了，捂脸流泪，不过运动效果开始有点体验到了，就是解决难题的时候多了一些耐心，不过需要减肥了，跑快了有些喘，继续加油</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/03/run/3-run/" data-id="ckju62srv003rhf49a2sk63ko" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-render-theory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/flutter/flutter-render-theory/" class="article-date">
+  <time datetime="2020-12-02T15:35:58.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/flutter/flutter-render-theory/">flutter渲染原理要点</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>渲染过程会生成三棵树</p>
+<ul>
+<li><p>widget树</p>
+</li>
+<li><p>element树</p>
+</li>
+<li><p>render object树</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>提高buid效率，在build方法中尽量少做事，层级越简单越好</li>
+<li>setState方法尽量下放到底层节点</li>
+<li>尽量减少重绘区域，使用repaint boundry</li>
+<li>减少离屏渲染 比如save layer，clip path，</li>
+<li>减少透明度使用，因为每一帧都会重建widget</li>
+<li>建立缓存池</li>
+<li>提升layout效率</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.freesion.com/article/8834628331/">https://www.freesion.com/article/8834628331/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/flutter/flutter-render-theory/" data-id="ckju62sqo001mhf496ro490vf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-run/2-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/02/run/2-run/" class="article-date">
@@ -633,103 +741,6 @@
 
 
   
-    <article id="post-flutter/flutter-action-sheet" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/26/flutter/flutter-action-sheet/" class="article-date">
-  <time datetime="2020-11-26T10:51:55.000Z" itemprop="datePublished">2020-11-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/26/flutter/flutter-action-sheet/">flutter actionSheet使用方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数</span></span><br><span class="line">_showCupertinoActionSheet() <span class="keyword">async</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">await</span> showCupertinoModalPopup(</span><br><span class="line">        context: context,</span><br><span class="line">        builder: (context) &#123;</span><br><span class="line">          <span class="keyword">return</span> CupertinoActionSheet(</span><br><span class="line"></span><br><span class="line">            title: Text(<span class="string">&#x27;标题&#x27;</span>),</span><br><span class="line">            message: Text(<span class="string">&#x27;内容&#x27;</span>),</span><br><span class="line">            actions: &lt;Widget&gt;[</span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(</span><br><span class="line">                    <span class="string">&#x27;标题一&#x27;</span>,</span><br><span class="line">                  style: TextStyle(</span><br><span class="line">                    color: Color(<span class="number">0xFF00C599</span>)</span><br><span class="line">                  ),</span><br><span class="line">                ),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDefaultAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">              </span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(<span class="string">&#x27;标题二&#x27;</span>),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;not delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDestructiveAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">            ],</span><br><span class="line">            cancelButton: CupertinoActionSheetAction(</span><br><span class="line">              child: Text(</span><br><span class="line">                  <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">                style: TextStyle(</span><br><span class="line">                  color: Colors.white</span><br><span class="line">                ),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () &#123;</span><br><span class="line">                Navigator.of(context).pop(<span class="string">&#x27;cancel&#x27;</span>);</span><br><span class="line">              &#125;,</span><br><span class="line">            ),</span><br><span class="line">          );</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;<span class="subst">$result</span>&#x27;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>总结：在showCupertinoModalPopup方法里返回CupertinoActionSheet，里面的元素由CupertinoActionSheetAction组成，有default和destructive类型可选，用法和UI和苹果大致一样</p>
-<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2828331492,1718232482&fm=15&gp=0.jpg" alt="image"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/26/flutter/flutter-action-sheet/" data-id="ckju62sq1000ohf49cphcg6z2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-unix工具/cannot-open-app-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/" class="article-date">
-  <time datetime="2020-11-25T15:55:41.000Z" itemprop="datePublished">2020-11-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/unix/">unix</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/">无法打开&#34;xxx&#34;,因为无法确认开发者的身份</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>处理方法</p>
-<ul>
-<li>加权限,同意任何来源</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br><span class="line">&#x2F;&#x2F;用完还原</span><br><span class="line">sudo spctl --master-enable</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>按住command键，鼠标右键菜单选择打开app，出现窗口会出现打开按钮，正常情况下不会出现</p>
-<p><img src="https://huajiakeji.com/Content/kindeditor/attached/image/20190725/20190725213552_3966.png" alt="image"></p>
-<p>参考：<a target="_blank" rel="noopener" href="https://huajiakeji.com/macos/2019-07/2793.html">https://huajiakeji.com/macos/2019-07/2793.html</a></p>
-</li>
-</ul>
-<p>完。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/" data-id="ckju62std006uhf4911o0ac5t" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -773,6 +784,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/13/run/75-run/">跑步第75天</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/13/%E5%80%92%E8%AE%A1%E6%97%B6/318/">318</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/12/run/74-run/">跑步第74天</a>
           </li>
         
@@ -782,14 +801,6 @@
         
           <li>
             <a href="/2021/02/11/run/73-run/">跑步第73天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/11/%E5%80%92%E8%AE%A1%E6%97%B6/320/">320</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/10/run/72-run/">跑步第72天</a>
           </li>
         
       </ul>
