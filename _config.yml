@@ -105,5 +105,6 @@ theme: landscape ##landscape
 
 deploy:
   type: git
-  repo: https://github.com/zhangjk4859/zhangjk4859.github.io.git
+  # repo: https://github.com/zhangjk4859/zhangjk4859.github.io.git
+  repo: git@github.com:zhangjk4859/zhangjk4859.github.io.git
   branch: master
