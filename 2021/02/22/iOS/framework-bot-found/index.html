@@ -5,17 +5,17 @@
   
 
   
-  <title>flutter随机颜色生成 | 加酷知识源</title>
+  <title>framework not found | 加酷知识源</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在listview或gridview中，用index去获颜色，挨个取一遍 1Colors.primaries[index % Colors.primaries.length]">
+  <meta name="description" content="问题：在build的时候framework not found 解决：  添加需要的framework 确定framework齐全的情况下，就是系统添加了冗余的framework编译需求，找到require列表删除即可  1project.xcodeproj文件---&gt;显示包内容---&gt;project.pbxproj文件 全局查找删除  ps:版本对不上处理方法同理，修改版本号和实际p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter随机颜色生成">
-<meta property="og:url" content="http://www.pluscool.cn/2021/01/05/flutter/flutter-random-color/index.html">
+<meta property="og:title" content="framework not found">
+<meta property="og:url" content="http://www.pluscool.cn/2021/02/22/iOS/framework-bot-found/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="在listview或gridview中，用index去获颜色，挨个取一遍 1Colors.primaries[index % Colors.primaries.length]">
+<meta property="og:description" content="问题：在build的时候framework not found 解决：  添加需要的framework 确定framework齐全的情况下，就是系统添加了冗余的framework编译需求，找到require列表删除即可  1project.xcodeproj文件---&gt;显示包内容---&gt;project.pbxproj文件 全局查找删除  ps:版本对不上处理方法同理，修改版本号和实际p">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-05T02:00:03.000Z">
-<meta property="article:modified_time" content="2021-01-12T15:40:01.447Z">
+<meta property="article:published_time" content="2021-02-22T08:04:55.000Z">
+<meta property="article:modified_time" content="2021-02-22T10:35:20.736Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
   
@@ -66,14 +66,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-flutter/flutter-random-color" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-iOS/framework-bot-found" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/05/flutter/flutter-random-color/" class="article-date">
-  <time datetime="2021-01-05T02:00:03.000Z" itemprop="datePublished">2021-01-05</time>
+    <a href="/2021/02/22/iOS/framework-bot-found/" class="article-date">
+  <time datetime="2021-02-22T08:04:55.000Z" itemprop="datePublished">2021-02-22</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
   </div>
 
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      flutter随机颜色生成
+      framework not found
     </h1>
   
 
@@ -92,14 +92,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在listview或gridview中，用index去获颜色，挨个取一遍</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Colors.primaries[index % Colors.primaries.length]</span><br></pre></td></tr></table></figure>
+        <p>问题：在build的时候framework not found</p>
+<p>解决：</p>
+<ul>
+<li>添加需要的framework</li>
+<li>确定framework齐全的情况下，就是系统添加了冗余的framework编译需求，找到require列表删除即可</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">project.xcodeproj文件---&gt;显示包内容---&gt;project.pbxproj文件 全局查找删除</span><br></pre></td></tr></table></figure>
 
+<p>ps:版本对不上处理方法同理，修改版本号和实际pods下载过来一致</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-random-color/" data-id="ckju62sqn001jhf499qe543mk" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/02/22/iOS/framework-bot-found/" data-id="cklgg7a6n0001p1k8f8z801lu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +114,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/05/flutter/flutter-only-border/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          flutter个别圆角切割
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/25/flutter/generate-gdart-file/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">flutter模型生成</div>
+      <div class="article-nav-title">hexo部署文章到github 443问题</div>
     </a>
   
 </nav>

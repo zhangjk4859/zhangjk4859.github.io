@@ -64,6 +64,105 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/splash-page" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/flutter/splash-page/" class="article-date">
+  <time datetime="2020-11-24T06:09:04.000Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/flutter/splash-page/">flutter启动页</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在main.dart文件的materialAPP.home属性返回一个UI，这个UI就是启动页，启动页的scanffold的body，返回一张图片</p>
+<ul>
+<li>in main.dart</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">return MaterialApp(</span><br><span class="line">          home: SplashPage(),</span><br><span class="line">        );</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>in SplashPage</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Scaffold(</span><br><span class="line">      body: Container(</span><br><span class="line">        child: Image.asset(</span><br><span class="line">          &#39;assets&#x2F;images&#x2F;launch_image.png&#39;,</span><br><span class="line">          fit: BoxFit.fill,</span><br><span class="line">          width: double.infinity,</span><br><span class="line">          height: double.infinity,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/24/flutter/splash-page/" data-id="ckju62sr00026hf499oe26epq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-tips" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/flutter/flutter-tips/" class="article-date">
+  <time datetime="2020-11-24T03:50:49.000Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/flutter/flutter-tips/">flutter工程注意事项</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>在工程文件夹内，git管理，忽略pubspec.lock文件 ，运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>/ios文件夹里，忽略Pods文件夹，Podfile.lock文件，*.xcworkspace文件,运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod install</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/24/flutter/flutter-tips/" data-id="ckju62sqt001rhf494v8x0wb2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/ssh-issue" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/24/unix%E5%B7%A5%E5%85%B7/ssh-issue/" class="article-date">
@@ -459,95 +558,6 @@
 
 
   
-    <article id="post-flutter/flutter-tabbar-click-bug" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/18/flutter/flutter-tabbar-click-bug/" class="article-date">
-  <time datetime="2020-11-18T08:14:48.000Z" itemprop="datePublished">2020-11-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/18/flutter/flutter-tabbar-click-bug/">flutter tabcontroller监听点击调用两次</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原因：点击本身出发一次监听，随之产生的动画效果再次出发监听，如果是滑动，仅触发一次监听<br>解决：看下点击的索引和动画值对不对，过滤掉点击的listen，只显示动画的listen</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">_tabController.addListener(() &#123;</span><br><span class="line">      if(_tabController.index &#x3D;&#x3D; _tabController.animation.value)&#123;</span><br><span class="line">        int index &#x3D; _tabController.index;</span><br><span class="line">        print(&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;当前点击了$index&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<p>代码拿过来自己分析一遍会记得牢。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/18/flutter/flutter-tabbar-click-bug/" data-id="ckju62sqp001ohf49gr2fezpk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-flutter/flutter-thread-delay" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/18/flutter/flutter-thread-delay/" class="article-date">
-  <time datetime="2020-11-18T04:21:12.000Z" itemprop="datePublished">2020-11-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/18/flutter/flutter-thread-delay/">flutter延迟执行方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>延迟加载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;延迟1秒加载</span><br><span class="line">Future.delayed(Duration(seconds: 1), ()&#123;</span><br><span class="line">      &#x2F;&#x2F;do sth</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<p>使用场景：</p>
-<blockquote>
-<p>同时执行toast和导航栏页面切换，会导致卡顿，可用延迟其中一个方法，避免同时执行</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/18/flutter/flutter-thread-delay/" data-id="ckju62sqv001whf49fa2ecut4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -591,6 +601,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/">hexo部署文章到github 443问题</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
           </li>
         
@@ -600,14 +618,6 @@
         
           <li>
             <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/rsa-add/">ssh避免重复输入密码</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/">jenkins安装</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/07/iOS/libstdc/">libstdc++缺失问题</a>
           </li>
         
       </ul>

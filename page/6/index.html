@@ -64,6 +64,122 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/pub-get-is-slow" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/12/flutter/pub-get-is-slow/" class="article-date">
+  <time datetime="2020-11-12T11:30:00.000Z" itemprop="datePublished">2020-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/12/flutter/pub-get-is-slow/">flutter pub get慢</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>分析：从开发者仓库网站下载依赖比较慢，网络问题</li>
+<li>解决：<br>更换数据源地址</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export PUB_HOSTED_URL&#x3D;https:&#x2F;&#x2F;pub.flutter-io.cn</span><br><span class="line">export FLUTTER_STORAGE_BASE_URL&#x3D;https:&#x2F;&#x2F;storage.flutter-io.cn</span><br></pre></td></tr></table></figure>
+<p>最后翻墙运行</p>
+<ul>
+<li>参考：<a target="_blank" rel="noopener" href="https://www.askmaclean.com/archives/flutter-pub-get-slow.html">https://www.askmaclean.com/archives/flutter-pub-get-slow.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/12/flutter/pub-get-is-slow/" data-id="ckju62sqw001yhf49as5s5xaa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-iOS/cocoapods" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/12/iOS/cocoapods/" class="article-date">
+  <time datetime="2020-11-12T10:48:08.000Z" itemprop="datePublished">2020-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/12/iOS/cocoapods/">2020-11安装cocoapods问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天安装pods发生无法下载问题，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to download data from XXX</span><br></pre></td></tr></table></figure>
+
+<p>切换了镜像源解决</p>
+<ul>
+<li>查看镜像源</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除淘宝镜像源 -r remove</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -r https:&#x2F;&#x2F;ruby.taobao.org&#x2F;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加新的镜像源  -a add</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem sources -a https:&#x2F;&#x2F;rubygems.org</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>成功<br>Successfully installed cocoapods-1.10.0<br>Parsing documentation for cocoapods-1.10.0<br>Done installing documentation for cocoapods after 2 seconds </p>
+</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/li_ph/article/details/43852845">https://blog.csdn.net/li_ph/article/details/43852845</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/12/iOS/cocoapods/" data-id="ckju62spm0005hf499x7l4eke" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/zsh" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/12/unix%E5%B7%A5%E5%85%B7/zsh/" class="article-date">
@@ -201,6 +317,14 @@
       <ul>
         
           <li>
+            <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
+          </li>
+        
+          <li>
+            <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/">hexo部署文章到github 443问题</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
           </li>
         
@@ -210,14 +334,6 @@
         
           <li>
             <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/rsa-add/">ssh避免重复输入密码</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/">jenkins安装</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/07/iOS/libstdc/">libstdc++缺失问题</a>
           </li>
         
       </ul>

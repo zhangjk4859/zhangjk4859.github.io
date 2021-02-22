@@ -5,17 +5,17 @@
   
 
   
-  <title>flutter模型生成 | 加酷知识源</title>
+  <title>hexo部署文章到github 443问题 | 加酷知识源</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先自己写好模型类模板代码 12345678910111213141516import &amp;#x27;package:json_annotation&#x2F;json_annotation.dart&amp;#x27;;part &amp;#x27;buy_record_data.g.dart&amp;#x27;;&#x2F;&#x2F;&#x2F;标志class需要实现json序列化功能@JsonSerializable()class BuyRecordDa">
+  <meta name="description" content="问题： 123456789fatal: unable to access &amp;#x27;https:&#x2F;&#x2F;github.com&#x2F;xxx&#x2F;xxx.github.io.git&#x2F;&amp;#x27;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 FATAL &amp;#123;  err: Error: Spawn fail">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter模型生成">
-<meta property="og:url" content="http://www.pluscool.cn/2020/12/25/flutter/generate-gdart-file/index.html">
+<meta property="og:title" content="hexo部署文章到github 443问题">
+<meta property="og:url" content="http://www.pluscool.cn/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="首先自己写好模型类模板代码 12345678910111213141516import &amp;#x27;package:json_annotation&#x2F;json_annotation.dart&amp;#x27;;part &amp;#x27;buy_record_data.g.dart&amp;#x27;;&#x2F;&#x2F;&#x2F;标志class需要实现json序列化功能@JsonSerializable()class BuyRecordDa">
+<meta property="og:description" content="问题： 123456789fatal: unable to access &amp;#x27;https:&#x2F;&#x2F;github.com&#x2F;xxx&#x2F;xxx.github.io.git&#x2F;&amp;#x27;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 FATAL &amp;#123;  err: Error: Spawn fail">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-12-25T05:17:10.000Z">
-<meta property="article:modified_time" content="2021-01-12T15:40:01.448Z">
+<meta property="article:published_time" content="2021-02-21T23:45:52.000Z">
+<meta property="article:modified_time" content="2021-02-22T10:39:37.621Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
   
@@ -66,14 +66,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-flutter/generate-gdart-file" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-计算机科学/hexo-github-443" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/25/flutter/generate-gdart-file/" class="article-date">
-  <time datetime="2020-12-25T05:17:10.000Z" itemprop="datePublished">2020-12-25</time>
+    <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/" class="article-date">
+  <time datetime="2021-02-21T23:45:52.000Z" itemprop="datePublished">2021-02-22</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
   </div>
 
   </div>
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      flutter模型生成
+      hexo部署文章到github 443问题
     </h1>
   
 
@@ -92,21 +92,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>首先自己写好模型类模板代码</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:json_annotation/json_annotation.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">part</span> <span class="string">&#x27;buy_record_data.g.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">///<span class="markdown">标志class需要实现json序列化功能</span></span></span><br><span class="line"><span class="meta">@JsonSerializable</span>()</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BuyRecordData</span> </span>&#123;</span><br><span class="line">  <span class="comment">///<span class="markdown">属性</span></span></span><br><span class="line">  <span class="built_in">List</span>&lt;BuyRecordEntity&gt; entities;</span><br><span class="line">  <span class="comment">/// <span class="markdown">构造函数</span></span></span><br><span class="line">  BuyRecordData(<span class="keyword">this</span>.entities);</span><br><span class="line">  <span class="comment">/// <span class="markdown">这个函数在.g.dart中，命名就是类名+FromJson</span></span></span><br><span class="line">  <span class="comment">/// <span class="markdown">直接写就行 报错也没关系 生成.g.dart文件之后就好了</span></span></span><br><span class="line">  <span class="keyword">factory</span> BuyRecordData.fromJson(<span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">dynamic</span>&gt; json) =&gt;</span><br><span class="line">      _$BuyRecordDataFromJson(json);</span><br><span class="line">  <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">dynamic</span>&gt; toJson() =&gt; _$BuyRecordDataToJson(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>问题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &#x27;https://github.com/xxx/xxx.github.io.git/&#x27;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 </span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (/Users/kevin/Desktop/xxx.github.io/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (events.js:315:20)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br></pre></td></tr></table></figure>
 
-<p>然后在终端运行，生成.g.dart文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter packages pub run build_runner build --delete-conflicting-outputs</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>解决：在_config.yml文件里把deploy的地址从http换成git</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="comment">#repo: https://github.com/xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>参考：1. <a target="_blank" rel="noopener" href="https://blog.csdn.net/YoYo_Newbie/article/details/90634878?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control">https://blog.csdn.net/YoYo_Newbie/article/details/90634878?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control</a></p>
-<ol start="2">
-<li><a target="_blank" rel="noopener" href="https://my.oschina.net/u/4326108/blog/3675231">https://my.oschina.net/u/4326108/blog/3675231</a></li>
-</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/12/25/flutter/generate-gdart-file/" data-id="ckju62sqy0023hf49455gbzsf" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/" data-id="cklgg7a6g0000p1k8hb0m1utq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -115,19 +111,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/05/flutter/flutter-random-color/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/02/22/iOS/framework-bot-found/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          flutter随机颜色生成
+          framework not found
         
       </div>
     </a>
   
   
-    <a href="/2020/12/02/flutter/flutter-render-theory/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">flutter渲染原理要点</div>
+      <div class="article-nav-title">h5优化策略总结</div>
     </a>
   
 </nav>
