@@ -64,6 +64,84 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-计算机科学/h5-optimize" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/" class="article-date">
+  <time datetime="2021-02-18T01:14:36.000Z" itemprop="datePublished">2021-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h3 id="原生webview加载耗时"><a href="#原生webview加载耗时" class="headerlink" title="原生webview加载耗时"></a>原生webview加载耗时</h3><ul>
+<li>预热webview，并且缓存多个对象进行复用</li>
+</ul>
+</li>
+<li><h3 id="webview网络请求页面内容，下载html"><a href="#webview网络请求页面内容，下载html" class="headerlink" title="webview网络请求页面内容，下载html"></a>webview网络请求页面内容，下载html</h3><ul>
+<li>在未点开网页时，用网络请求框架异步请求html内容，保存到本地缓存框架中</li>
+<li>在移动端启动local web server，同步服务器资源到本地，h5链接替换成localhost+port链接，例如swift版本的Telegraph</li>
+<li>本地网络框架请求zip资源并解压，供WKWebview的WKURLSchemeHandler拦截网络请求并调用(例如把http替换为自动以scheme)</li>
+</ul>
+</li>
+<li><h3 id="解析html"><a href="#解析html" class="headerlink" title="解析html"></a>解析html</h3><ul>
+<li>webview请求网络前先本地缓存查找已经下载好的html内容，直接进行加载渲染</li>
+</ul>
+</li>
+<li><h3 id="请求js、css资源"><a href="#请求js、css资源" class="headerlink" title="请求js、css资源"></a>请求js、css资源</h3><ul>
+<li>本地网络框架选择性下载较大图片文件</li>
+</ul>
+</li>
+<li><h3 id="正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染"><a href="#正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染" class="headerlink" title="正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染"></a>正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染</h3><ul>
+<li>后端直接加载好页面依赖的css，js和接口数据，拼接好一个最终版html返回给前端</li>
+</ul>
+</li>
+<li><h3 id="接口耗时长"><a href="#接口耗时长" class="headerlink" title="接口耗时长"></a>接口耗时长</h3><ul>
+<li>更新接口的处理方式</li>
+<li>增加占位图，优化体验</li>
+</ul>
+</li>
+<li><h3 id="内存泄露"><a href="#内存泄露" class="headerlink" title="内存泄露"></a>内存泄露</h3><ul>
+<li>及时释放图片和数组等资源</li>
+</ul>
+</li>
+</ul>
+<p>参考链接：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://tech.youzan.com/h5performancetest">https://tech.youzan.com/h5performancetest</a></li>
+<li><a target="_blank" rel="noopener" href="https://luyanan.com/news/info/19764028651650.html">https://luyanan.com/news/info/19764028651650.html</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/" data-id="cklfxpfq60000cfk8g72ce0so" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-run/77-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/02/15/run/77-run/" class="article-date">
@@ -452,51 +530,6 @@
 
 
   
-    <article id="post-run/72-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/10/run/72-run/" class="article-date">
-  <time datetime="2021-02-10T15:28:34.000Z" itemprop="datePublished">2021-02-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/10/run/72-run/">跑步第72天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：1km</li>
-<li>俯卧撑：30</li>
-<li>仰卧起坐：30</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/10/run/72-run/" data-id="ckkzff2ln000076k82bie3d94" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -540,6 +573,10 @@
       <ul>
         
           <li>
+            <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
+          </li>
+        
+          <li>
             <a href="/2021/02/15/run/77-run/">跑步第77天</a>
           </li>
         
@@ -553,10 +590,6 @@
         
           <li>
             <a href="/2021/02/13/run/75-run/">跑步第75天</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/13/%E5%80%92%E8%AE%A1%E6%97%B6/318/">318</a>
           </li>
         
       </ul>
