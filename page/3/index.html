@@ -64,14 +64,14 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-倒计时/325" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-flutter/generate-gdart-file" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/02/06/%E5%80%92%E8%AE%A1%E6%97%B6/325/" class="article-date">
-  <time datetime="2021-02-06T13:29:15.000Z" itemprop="datePublished">2021-02-06</time>
+    <a href="/2020/12/25/flutter/generate-gdart-file/" class="article-date">
+  <time datetime="2020-12-25T05:17:10.000Z" itemprop="datePublished">2020-12-25</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
   </div>
 
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/06/%E5%80%92%E8%AE%A1%E6%97%B6/325/">325</a>
+      <a class="article-title" href="/2020/12/25/flutter/generate-gdart-file/">flutter模型生成</a>
     </h1>
   
 
@@ -90,12 +90,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天心情一般，生活有点颓废。</p>
+        <p>首先自己写好模型类模板代码</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;package:json_annotation/json_annotation.dart&#x27;</span>;</span><br><span class="line"><span class="keyword">part</span> <span class="string">&#x27;buy_record_data.g.dart&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">///<span class="markdown">标志class需要实现json序列化功能</span></span></span><br><span class="line"><span class="meta">@JsonSerializable</span>()</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BuyRecordData</span> </span>&#123;</span><br><span class="line">  <span class="comment">///<span class="markdown">属性</span></span></span><br><span class="line">  <span class="built_in">List</span>&lt;BuyRecordEntity&gt; entities;</span><br><span class="line">  <span class="comment">/// <span class="markdown">构造函数</span></span></span><br><span class="line">  BuyRecordData(<span class="keyword">this</span>.entities);</span><br><span class="line">  <span class="comment">/// <span class="markdown">这个函数在.g.dart中，命名就是类名+FromJson</span></span></span><br><span class="line">  <span class="comment">/// <span class="markdown">直接写就行 报错也没关系 生成.g.dart文件之后就好了</span></span></span><br><span class="line">  <span class="keyword">factory</span> BuyRecordData.fromJson(<span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">dynamic</span>&gt; json) =&gt;</span><br><span class="line">      _$BuyRecordDataFromJson(json);</span><br><span class="line">  <span class="built_in">Map</span>&lt;<span class="built_in">String</span>, <span class="built_in">dynamic</span>&gt; toJson() =&gt; _$BuyRecordDataToJson(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在终端运行，生成.g.dart文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">flutter packages pub run build_runner build --delete-conflicting-outputs</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>参考：1. <a target="_blank" rel="noopener" href="https://blog.csdn.net/YoYo_Newbie/article/details/90634878?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control">https://blog.csdn.net/YoYo_Newbie/article/details/90634878?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control</a></p>
+<ol start="2">
+<li><a target="_blank" rel="noopener" href="https://my.oschina.net/u/4326108/blog/3675231">https://my.oschina.net/u/4326108/blog/3675231</a></li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/06/%E5%80%92%E8%AE%A1%E6%97%B6/325/" data-id="ckktucp920001o9k80zl30cs8" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2020/12/25/flutter/generate-gdart-file/" data-id="ckju62sqy0023hf49455gbzsf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -105,14 +114,14 @@
 
 
   
-    <article id="post-run/67-run" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-flutter/flutter-render-theory" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/02/05/run/67-run/" class="article-date">
-  <time datetime="2021-02-05T15:28:34.000Z" itemprop="datePublished">2021-02-05</time>
+    <a href="/2020/12/02/flutter/flutter-render-theory/" class="article-date">
+  <time datetime="2020-12-02T15:35:58.000Z" itemprop="datePublished">2020-12-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
   </div>
 
   </div>
@@ -123,7 +132,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/05/run/67-run/">跑步第67天</a>
+      <a class="article-title" href="/2020/12/02/flutter/flutter-render-theory/">flutter渲染原理要点</a>
     </h1>
   
 
@@ -132,355 +141,413 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>跑步：1km</li>
-<li>俯卧撑：30</li>
-<li>仰卧起坐：30</li>
+<li><p>渲染过程会生成三棵树</p>
+<ul>
+<li><p>widget树</p>
+</li>
+<li><p>element树</p>
+</li>
+<li><p>render object树</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>提高buid效率，在build方法中尽量少做事，层级越简单越好</li>
+<li>setState方法尽量下放到底层节点</li>
+<li>尽量减少重绘区域，使用repaint boundry</li>
+<li>减少离屏渲染 比如save layer，clip path，</li>
+<li>减少透明度使用，因为每一帧都会重建widget</li>
+<li>建立缓存池</li>
+<li>提升layout效率</li>
+</ul>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.freesion.com/article/8834628331/">https://www.freesion.com/article/8834628331/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/flutter/flutter-render-theory/" data-id="ckju62sqo001mhf496ro490vf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/dart-enum" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/flutter/dart-enum/" class="article-date">
+  <time datetime="2020-12-02T00:03:53.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/flutter/dart-enum/">dart枚举</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> MediaType &#123;</span><br><span class="line">  movie,      <span class="comment">//0</span></span><br><span class="line">  shortVideo, <span class="comment">//1</span></span><br><span class="line">  other,      <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> videoType = MediaType.values[<span class="number">0</span>];</span><br><span class="line"><span class="comment">// videoType == movie</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>定义枚举和OC差别不大，取值的时候不可以直接和int比较，需要从枚举数组中根据index拿出来，比OC多了一步</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/flutter/dart-enum/" data-id="ckju62spv000ghf490ybu68s7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-计算机科学/what-is-bit-code" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/what-is-bit-code/" class="article-date">
+  <time datetime="2020-12-01T23:45:52.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/what-is-bit-code/">什么是bitCode</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The process of compiling consists of three different steps:</p>
+<p>1.The compilier front-end converts the source code into some kind of intermediate representation.</p>
+<p>2.The optimizer performs a sequence of optimizing transformations on the IR to render it smaller and more performant:redundant code is removed,results are pretaculated,code is inlined, etc.This crucial step of the compilation process makes use of IR,rather than cource code or machine code,because it can more easily be interreted by the optimizer.</p>
+<ol start="3">
+<li>The compilier back-end generates machine code based on the optimized IR. </li>
+</ol>
+<p>When we are talking about bitcode,we are actually talking about the IR used by the Clang Compilier.</p>
+<p><img src="https://www.guardsquare.com/files/media/guardsquare2017/Compiling-with-bitcode-enabled.png" alt="image"></p>
+<p>With the bitcode embedded in the executable,Apple is able to recompile applications without interacting with the developer.This has a lot of advantages. </p>
+<p>source:<a target="_blank" rel="noopener" href="https://www.guardsquare.com/en/blog/enable-bitcode">https://www.guardsquare.com/en/blog/enable-bitcode</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/12/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/what-is-bit-code/" data-id="ckju62stj007chf4924pi7yuh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-components" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/27/flutter/flutter-components/" class="article-date">
+  <time datetime="2020-11-27T03:14:54.000Z" itemprop="datePublished">2020-11-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/27/flutter/flutter-components/">flutter组件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="sliverList"><a href="#sliverList" class="headerlink" title="sliverList"></a>sliverList</h3><blockquote>
+<p>A sliver that places multiple box children in a linear array along the main axis.</p>
+<p>Each child is forced to have the SliverConstraints.crossAxisExtent in the cross axis but determines its own main axis extent.</p>
+<p>SliverList determines its scroll offset by “dead <strong>reckoning</strong>“ because children outside the visible part of the sliver are not materialized, which means SliverList cannot learn their main axis extent.Instead,newly materialized children are placed <strong>adjacent</strong> to existing children.</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/27/flutter/flutter-components/" data-id="ckju62sq4000thf496x4y30e9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/flutter-action-sheet" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/26/flutter/flutter-action-sheet/" class="article-date">
+  <time datetime="2020-11-26T10:51:55.000Z" itemprop="datePublished">2020-11-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/26/flutter/flutter-action-sheet/">flutter actionSheet使用方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数</span></span><br><span class="line">_showCupertinoActionSheet() <span class="keyword">async</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">await</span> showCupertinoModalPopup(</span><br><span class="line">        context: context,</span><br><span class="line">        builder: (context) &#123;</span><br><span class="line">          <span class="keyword">return</span> CupertinoActionSheet(</span><br><span class="line"></span><br><span class="line">            title: Text(<span class="string">&#x27;标题&#x27;</span>),</span><br><span class="line">            message: Text(<span class="string">&#x27;内容&#x27;</span>),</span><br><span class="line">            actions: &lt;Widget&gt;[</span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(</span><br><span class="line">                    <span class="string">&#x27;标题一&#x27;</span>,</span><br><span class="line">                  style: TextStyle(</span><br><span class="line">                    color: Color(<span class="number">0xFF00C599</span>)</span><br><span class="line">                  ),</span><br><span class="line">                ),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDefaultAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">              </span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(<span class="string">&#x27;标题二&#x27;</span>),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;not delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDestructiveAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">            ],</span><br><span class="line">            cancelButton: CupertinoActionSheetAction(</span><br><span class="line">              child: Text(</span><br><span class="line">                  <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">                style: TextStyle(</span><br><span class="line">                  color: Colors.white</span><br><span class="line">                ),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () &#123;</span><br><span class="line">                Navigator.of(context).pop(<span class="string">&#x27;cancel&#x27;</span>);</span><br><span class="line">              &#125;,</span><br><span class="line">            ),</span><br><span class="line">          );</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;<span class="subst">$result</span>&#x27;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：在showCupertinoModalPopup方法里返回CupertinoActionSheet，里面的元素由CupertinoActionSheetAction组成，有default和destructive类型可选，用法和UI和苹果大致一样</p>
+<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2828331492,1718232482&fm=15&gp=0.jpg" alt="image"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/26/flutter/flutter-action-sheet/" data-id="ckju62sq1000ohf49cphcg6z2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-unix工具/cannot-open-app-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/" class="article-date">
+  <time datetime="2020-11-25T15:55:41.000Z" itemprop="datePublished">2020-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/unix/">unix</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/">无法打开&#34;xxx&#34;,因为无法确认开发者的身份</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>处理方法</p>
+<ul>
+<li>加权限,同意任何来源</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br><span class="line">&#x2F;&#x2F;用完还原</span><br><span class="line">sudo spctl --master-enable</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>按住command键，鼠标右键菜单选择打开app，出现窗口会出现打开按钮，正常情况下不会出现</p>
+<p><img src="https://huajiakeji.com/Content/kindeditor/attached/image/20190725/20190725213552_3966.png" alt="image"></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://huajiakeji.com/macos/2019-07/2793.html">https://huajiakeji.com/macos/2019-07/2793.html</a></p>
+</li>
+</ul>
+<p>完。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/" data-id="ckju62std006uhf4911o0ac5t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/fijkplayer-off" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/25/flutter/fijkplayer-off/" class="article-date">
+  <time datetime="2020-11-25T15:49:43.000Z" itemprop="datePublished">2020-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/25/flutter/fijkplayer-off/">fijkplayer播放期间屏幕熄灭处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>两种方案</p>
+<p>1.借用第三方插件，让当前页面保持常量，别的页面跟随系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wakelock: ^0.1.4+2</span><br><span class="line"></span><br><span class="line">Wakelock.enable();</span><br><span class="line">Wakelock.disable();</span><br></pre></td></tr></table></figure>
+
+<p>2.调用fijkplayer自身的常量参数 二选一</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">await player.setOption(FijkOption.hostCategory, &quot;request-screen-on&quot;, 1);</span><br><span class="line">FijkPlugin.keepScreenOn ;</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8750de450850">https://www.jianshu.com/p/8750de450850</a></p>
+<p><a target="_blank" rel="noopener" href="https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0">https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/25/flutter/fijkplayer-off/" data-id="ckju62spx000khf49bewy5nv0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/pubspec-error" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/25/flutter/pubspec-error/" class="article-date">
+  <time datetime="2020-11-25T01:27:09.000Z" itemprop="datePublished">2020-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/25/flutter/pubspec-error/">pubspec.lock坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天以为pubspec.lock文件和cocoapods的profile.lock文件性质一样，可以生成，所以删除，结果遇见了编译报错，即使在执行了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter pub get</span><br></pre></td></tr></table></figure>
+
+<p>命令重新生成后，经过一番研究和队友协助，找到是这个问题，把老的恢复回来工程编译正常，下面是报错的关键字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Execution failed for task &#39;:app:processDebugManifest&#39;. &gt; Manifest merger failed : Attribute provider...</span><br></pre></td></tr></table></figure>
+
+<p>做记录方便以后查阅。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/25/flutter/pubspec-error/" data-id="ckju62sr10028hf49h9fv8exs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-flutter/splash-page" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/flutter/splash-page/" class="article-date">
+  <time datetime="2020-11-24T06:09:04.000Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/flutter/splash-page/">flutter启动页</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在main.dart文件的materialAPP.home属性返回一个UI，这个UI就是启动页，启动页的scanffold的body，返回一张图片</p>
+<ul>
+<li>in main.dart</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">return MaterialApp(</span><br><span class="line">          home: SplashPage(),</span><br><span class="line">        );</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>in SplashPage</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Scaffold(</span><br><span class="line">      body: Container(</span><br><span class="line">        child: Image.asset(</span><br><span class="line">          &#39;assets&#x2F;images&#x2F;launch_image.png&#39;,</span><br><span class="line">          fit: BoxFit.fill,</span><br><span class="line">          width: double.infinity,</span><br><span class="line">          height: double.infinity,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/05/run/67-run/" data-id="ckksfntol0000trk89bz1e0kt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/326" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/05/%E5%80%92%E8%AE%A1%E6%97%B6/326/" class="article-date">
-  <time datetime="2021-02-05T13:29:15.000Z" itemprop="datePublished">2021-02-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/05/%E5%80%92%E8%AE%A1%E6%97%B6/326/">326</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>生活的胆子越来越重!</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/05/%E5%80%92%E8%AE%A1%E6%97%B6/326/" data-id="ckksfntoq0001trk8fae1fbq6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/327" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/04/%E5%80%92%E8%AE%A1%E6%97%B6/327/" class="article-date">
-  <time datetime="2021-02-04T15:29:15.000Z" itemprop="datePublished">2021-02-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/%E5%80%92%E8%AE%A1%E6%97%B6/327/">327</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>生活的胆子越来越重</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/04/%E5%80%92%E8%AE%A1%E6%97%B6/327/" data-id="ckkr0ndpr00013ek8bi5fevuj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-run/66-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/04/run/66-run/" class="article-date">
-  <time datetime="2021-02-04T15:28:34.000Z" itemprop="datePublished">2021-02-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/04/run/66-run/">跑步第66天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：1km</li>
-<li>俯卧撑：30</li>
-<li>仰卧起坐：30</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/04/run/66-run/" data-id="ckkr0ndpm00003ek82dgz7rak" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/328" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/03/%E5%80%92%E8%AE%A1%E6%97%B6/328/" class="article-date">
-  <time datetime="2021-02-03T15:29:15.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/%E5%80%92%E8%AE%A1%E6%97%B6/328/">328</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>夫人腰伤赶紧好起来！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/03/%E5%80%92%E8%AE%A1%E6%97%B6/328/" data-id="ckkpjfelt00013mse126ea0bx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-run/65-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/03/run/65-run/" class="article-date">
-  <time datetime="2021-02-03T15:28:34.000Z" itemprop="datePublished">2021-02-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/03/run/65-run/">跑步第65天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：1km</li>
-<li>俯卧撑：30</li>
-<li>仰卧起坐：30</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/03/run/65-run/" data-id="ckkpjfelo00003mse3rqe91kk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/329" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/02/%E5%80%92%E8%AE%A1%E6%97%B6/329/" class="article-date">
-  <time datetime="2021-02-02T15:29:15.000Z" itemprop="datePublished">2021-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/02/%E5%80%92%E8%AE%A1%E6%97%B6/329/">329</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>无言，睡觉成了大问题</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/02/%E5%80%92%E8%AE%A1%E6%97%B6/329/" data-id="ckko3daxn0001f6k80x0y8qve" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-run/64-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/02/run/64-run/" class="article-date">
-  <time datetime="2021-02-02T15:28:34.000Z" itemprop="datePublished">2021-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/02/run/64-run/">跑步第64天</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>跑步：1km</li>
-<li>俯卧撑：30</li>
-<li>仰卧起坐：30</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/02/run/64-run/" data-id="ckko3daxi0000f6k844jl66mb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-倒计时/330" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/01/%E5%80%92%E8%AE%A1%E6%97%B6/330/" class="article-date">
-  <time datetime="2021-02-01T15:29:15.000Z" itemprop="datePublished">2021-02-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/01/%E5%80%92%E8%AE%A1%E6%97%B6/330/">330</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>脆弱！如何反脆弱</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/01/%E5%80%92%E8%AE%A1%E6%97%B6/330/" data-id="ckkmpd7900001mpsecle06qwc" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2020/11/24/flutter/splash-page/" data-id="ckju62sr00026hf499oe26epq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -494,7 +561,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -505,7 +572,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%80%92%E8%AE%A1%E6%97%B6/">倒计时</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B7%91%E6%AD%A5/">跑步</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li></ul>
     </div>
   </div>
 
@@ -537,19 +604,19 @@
           </li>
         
           <li>
-            <a href="/2021/02/15/run/77-run/">跑步第77天</a>
+            <a href="/2021/02/09/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/toutiao-webview/">今日头条app iOS打开网页速度快特征分析</a>
           </li>
         
           <li>
-            <a href="/2021/02/14/run/76-run/">跑步第76天</a>
+            <a href="/2021/01/27/flutter/rongcloud-cannot-receive-message-ios/">融云iOS无法接受语音视频消息</a>
           </li>
         
           <li>
-            <a href="/2021/02/14/%E5%80%92%E8%AE%A1%E6%97%B6/317/">317</a>
+            <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/rsa-add/">ssh避免重复输入密码</a>
           </li>
         
           <li>
-            <a href="/2021/02/13/run/75-run/">跑步第75天</a>
+            <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/">jenkins安装</a>
           </li>
         
       </ul>
