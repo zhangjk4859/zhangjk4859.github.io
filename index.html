@@ -64,6 +64,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-static-variable" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/02/flutter/flutter-static-variable/" class="article-date">
+  <time datetime="2021-03-02T02:50:49.000Z" itemprop="datePublished">2021-03-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/02/flutter/flutter-static-variable/">flutter无法访问另一个类的全局变量</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>错误描述:在A类访问B类里的static 变量，永远是初始值，即使已经设置过新值</p>
+<p>解决办法：A类import B类头文件时使用绝对路径，不使用系统默认</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//错误</span><br><span class="line">import &#x27;package:xxx_app/utils/app_helper.dart&#x27;;</span><br><span class="line">//正确</span><br><span class="line">import &#x27;../utils/app_helper.dart&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>B类结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class AppHelper &#123;</span><br><span class="line">  static String name &#x3D; &quot;&quot;;</span><br><span class="line">  </span><br><span class="line">  someFunction()&#123;</span><br><span class="line">    name &#x3D; &quot;testName&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/45772318/flutter-dart-static-variables-lost-keep-getting-reinitialized">https://stackoverflow.com/questions/45772318/flutter-dart-static-variables-lost-keep-getting-reinitialized</a></p>
+<p>新词：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toy around</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/03/02/flutter/flutter-static-variable/" data-id="cklrqnfcf0000q6k8h6kh3bkx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-pod-nil-class" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/02/23/flutter/flutter-pod-nil-class/" class="article-date">
@@ -573,52 +626,6 @@
 
 
   
-    <article id="post-unix工具/mac-dictionary" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/07/unix%E5%B7%A5%E5%85%B7/mac-dictionary/" class="article-date">
-  <time datetime="2021-01-07T03:55:31.000Z" itemprop="datePublished">2021-01-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/unix/">unix</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/07/unix%E5%B7%A5%E5%85%B7/mac-dictionary/">Mac环境下朗文词典</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原理：原生的dictionary加朗文的词库，词库需要转换，转换过程见参考链接2</p>
-<p>参考：1. <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21964466">https://www.zhihu.com/question/21964466</a></p>
-<ol start="2">
-<li><a target="_blank" rel="noopener" href="https://kaihao.io/2018/mdict-to-macos-dictionary/">https://kaihao.io/2018/mdict-to-macos-dictionary/</a></li>
-</ol>
-<p>3.<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20428599/answer/223511099">https://www.zhihu.com/question/20428599/answer/223511099</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/07/unix%E5%B7%A5%E5%85%B7/mac-dictionary/" data-id="ckju62ste006zhf498iau5y23" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -649,7 +656,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -660,6 +667,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/03/02/flutter/flutter-static-variable/">flutter无法访问另一个类的全局变量</a>
+          </li>
         
           <li>
             <a href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
@@ -675,10 +686,6 @@
         
           <li>
             <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/27/flutter/rongcloud-cannot-receive-message-ios/">融云iOS无法接受语音视频消息</a>
           </li>
         
       </ul>

@@ -64,6 +64,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-radio" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/flutter/flutter-radio/" class="article-date">
+  <time datetime="2021-01-05T02:10:26.000Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/05/flutter/flutter-radio/">flutter中radio单选使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在一个数组容器里放置两个及其以上radio，当radio的group value和自己value相等时，便是选中状态</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> groupValue = <span class="number">1</span>;</span><br><span class="line">_onChange(value)&#123;</span><br><span class="line">    <span class="keyword">if</span>(mounted)</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        groupValue = value;</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">Row(</span><br><span class="line">             </span><br><span class="line">      mainAxisAlignment: MainAxisAlignment.center,</span><br><span class="line">      children: &lt;Widget&gt;[</span><br><span class="line">        Radio(</span><br><span class="line">          value: <span class="number">1</span>,</span><br><span class="line">          groupValue: groupValue,</span><br><span class="line">          onChanged: (T) =&gt; _onChange(T),</span><br><span class="line">        ),</span><br><span class="line">        Radio(</span><br><span class="line">          value: <span class="number">2</span>,</span><br><span class="line">          groupValue: groupValue,</span><br><span class="line">          onChanged: (T) =&gt; _onChange(T),</span><br><span class="line">        ),</span><br><span class="line">        Radio(</span><br><span class="line">          value: <span class="number">3</span>,</span><br><span class="line">          groupValue: groupValue,</span><br><span class="line">          onChanged: (T) =&gt; _onChange(T),</span><br><span class="line">        ),</span><br><span class="line">      ],</span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangwes/article/details/104978660">https://blog.csdn.net/zhangwes/article/details/104978660</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-radio/" data-id="ckju62sqm001hhf496y5lc9yi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-only-border" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/05/flutter/flutter-only-border/" class="article-date">
@@ -500,55 +544,6 @@
 
 
   
-    <article id="post-flutter/fijkplayer-off" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/25/flutter/fijkplayer-off/" class="article-date">
-  <time datetime="2020-11-25T15:49:43.000Z" itemprop="datePublished">2020-11-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/25/flutter/fijkplayer-off/">fijkplayer播放期间屏幕熄灭处理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>两种方案</p>
-<p>1.借用第三方插件，让当前页面保持常量，别的页面跟随系统</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wakelock: ^0.1.4+2</span><br><span class="line"></span><br><span class="line">Wakelock.enable();</span><br><span class="line">Wakelock.disable();</span><br></pre></td></tr></table></figure>
-
-<p>2.调用fijkplayer自身的常量参数 二选一</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">await player.setOption(FijkOption.hostCategory, &quot;request-screen-on&quot;, 1);</span><br><span class="line">FijkPlugin.keepScreenOn ;</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/8750de450850">https://www.jianshu.com/p/8750de450850</a></p>
-<p><a target="_blank" rel="noopener" href="https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0">https://fijkplayer.befovy.com/docs/zh/host-option.html#gsc.tab=0</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/25/flutter/fijkplayer-off/" data-id="ckju62spx000khf49bewy5nv0" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -579,7 +574,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -590,6 +585,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/03/02/flutter/flutter-static-variable/">flutter无法访问另一个类的全局变量</a>
+          </li>
         
           <li>
             <a href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
@@ -605,10 +604,6 @@
         
           <li>
             <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
-          </li>
-        
-          <li>
-            <a href="/2021/01/27/flutter/rongcloud-cannot-receive-message-ios/">融云iOS无法接受语音视频消息</a>
           </li>
         
       </ul>
