@@ -64,6 +64,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/" class="article-date">
+  <time datetime="2021-01-07T04:38:38.000Z" itemprop="datePublished">2021-01-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/">Xcode12,iOS14，app启动慢</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>问题：启动app会白屏很长一段时间，即使是一个全新的app</p>
+<p>解决方案：</p>
+<ul>
+<li>In the Xcode menu,go to product &gt; scheme &gt; edit scheme</li>
+<li>open the info tab</li>
+<li>Uncheck the debug executables checkbox</li>
+</ul>
+<p>参考：1. <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/63929122/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12">https://stackoverflow.com/questions/63929122/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://developer.apple.com/forums/thread/651012">https://developer.apple.com/forums/thread/651012</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/" data-id="ckju62spq0008hf49cc5ycfr0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/mac-dictionary" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/07/unix%E5%B7%A5%E5%85%B7/mac-dictionary/" class="article-date">
@@ -555,49 +604,6 @@
 
 
   
-    <article id="post-flutter/flutter-card-widget" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/05/flutter/flutter-card-widget/" class="article-date">
-  <time datetime="2021-01-05T02:27:30.000Z" itemprop="datePublished">2021-01-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/05/flutter/flutter-card-widget/">flutter card组件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在开发过程中，Container组件使用多了，会有一些重复的代码，比如矩形边框和圆角，需要额外加decoration,使用card已经默认加上了边框和阴影</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Card(</span><br><span class="line">  margin: EdgeInsets.all(<span class="number">10</span>),</span><br><span class="line">  child: ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-card-widget/" data-id="ckju62sq3000shf496cad7lxm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -613,7 +619,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li></ul>
     </div>
   </div>
 
@@ -641,6 +647,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/24/English/new-words/">new words</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/02/flutter/flutter-static-variable/">flutter无法访问另一个类的全局变量</a>
           </li>
         
@@ -654,10 +664,6 @@
         
           <li>
             <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/">hexo部署文章到github 443问题</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
           </li>
         
       </ul>

@@ -64,6 +64,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter/flutter-expanded/" class="article-date">
+  <time datetime="2020-11-19T14:30:23.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter/flutter-expanded/">flutter控件从上到下居中排列</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Column(</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            Expanded(child:</span><br><span class="line">            Image.asset(&#39;assets&#x2F;images&#x2F;$imageName.png&#39;)</span><br><span class="line">            ),</span><br><span class="line">            </span><br><span class="line">            Text(</span><br><span class="line">              this.model.title,</span><br><span class="line">              style: TextStyle(</span><br><span class="line">                fontSize: 15,</span><br><span class="line">                color: Colors.white,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br></pre></td></tr></table></figure>
+<p>注解：</p>
+<ul>
+<li>column是一个垂直的容器，子控件放在children里面</li>
+<li>要想让图片居中，需要放在expanded容器里面,官方定义：expanded is a widget that expands a child of a row,column,or flex so that the child fills the available space.</li>
+<li><img src="https://flutter.github.io/assets-for-api-docs/assets/widgets/expanded_column.png" alt="image"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-expanded/" data-id="ckju62sq7000xhf4921tpgqjg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-page-is-current" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/19/flutter/flutter-page-is-current/" class="article-date">
@@ -518,52 +565,6 @@
 
 
   
-    <article id="post-iOS/dic-nil" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/iOS/dic-nil/" class="article-date">
-  <time datetime="2020-11-13T02:24:39.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/13/iOS/dic-nil/">字典取值为空崩溃问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天后台报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[_NSPlaceholderData initWithBase64Encoding:]: nil string argument</span><br><span class="line">Foundation	-[NSData(NSData) base64Encoding]</span><br></pre></td></tr></table></figure>
-<p>经过检查问题发生在字典取出值没有判空就传递给方法使用，细节也要注意，养成良好的编码习惯</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSString *urlstr &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br></pre></td></tr></table></figure>
-<p>正确的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">id obj &#x3D; dic[@&quot;imgBase64&quot;];</span><br><span class="line">if (obj &amp;&amp; [obj isKindOfClass:[NSString class]]) &#123;</span><br><span class="line">    NSString *urlstr &#x3D; (NSString *)obj;</span><br><span class="line">    NSData *data &#x3D; [[NSData alloc] initWithBase64Encoding:urlstr];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/13/iOS/dic-nil/" data-id="ckju62spn0006hf495ect5r2x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -579,7 +580,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/English/">English</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/flutter/">flutter</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/unix/">unix</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a></li></ul>
     </div>
   </div>
 
@@ -607,6 +608,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/24/English/new-words/">new words</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/02/flutter/flutter-static-variable/">flutter无法访问另一个类的全局变量</a>
           </li>
         
@@ -620,10 +625,6 @@
         
           <li>
             <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/">hexo部署文章到github 443问题</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
           </li>
         
       </ul>
