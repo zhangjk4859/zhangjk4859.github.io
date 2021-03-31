@@ -64,6 +64,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-action-sheet" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/26/flutter/flutter-action-sheet/" class="article-date">
+  <time datetime="2020-11-26T10:51:55.000Z" itemprop="datePublished">2020-11-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/26/flutter/flutter-action-sheet/">flutter actionSheet使用方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//函数</span></span><br><span class="line">_showCupertinoActionSheet() <span class="keyword">async</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">await</span> showCupertinoModalPopup(</span><br><span class="line">        context: context,</span><br><span class="line">        builder: (context) &#123;</span><br><span class="line">          <span class="keyword">return</span> CupertinoActionSheet(</span><br><span class="line"></span><br><span class="line">            title: Text(<span class="string">&#x27;标题&#x27;</span>),</span><br><span class="line">            message: Text(<span class="string">&#x27;内容&#x27;</span>),</span><br><span class="line">            actions: &lt;Widget&gt;[</span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(</span><br><span class="line">                    <span class="string">&#x27;标题一&#x27;</span>,</span><br><span class="line">                  style: TextStyle(</span><br><span class="line">                    color: Color(<span class="number">0xFF00C599</span>)</span><br><span class="line">                  ),</span><br><span class="line">                ),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDefaultAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">              </span><br><span class="line">              CupertinoActionSheetAction(</span><br><span class="line">                child: Text(<span class="string">&#x27;标题二&#x27;</span>),</span><br><span class="line">                onPressed: () &#123;</span><br><span class="line">                  Navigator.of(context).pop(<span class="string">&#x27;not delete&#x27;</span>);</span><br><span class="line">                &#125;,</span><br><span class="line">                isDestructiveAction: <span class="keyword">true</span>,</span><br><span class="line">              ),</span><br><span class="line">            ],</span><br><span class="line">            cancelButton: CupertinoActionSheetAction(</span><br><span class="line">              child: Text(</span><br><span class="line">                  <span class="string">&#x27;取消&#x27;</span>,</span><br><span class="line">                style: TextStyle(</span><br><span class="line">                  color: Colors.white</span><br><span class="line">                ),</span><br><span class="line">              ),</span><br><span class="line">              onPressed: () &#123;</span><br><span class="line">                Navigator.of(context).pop(<span class="string">&#x27;cancel&#x27;</span>);</span><br><span class="line">              &#125;,</span><br><span class="line">            ),</span><br><span class="line">          );</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;<span class="subst">$result</span>&#x27;</span>);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：在showCupertinoModalPopup方法里返回CupertinoActionSheet，里面的元素由CupertinoActionSheetAction组成，有default和destructive类型可选，用法和UI和苹果大致一样</p>
+<p><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2828331492,1718232482&fm=15&gp=0.jpg" alt="image"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/26/flutter/flutter-action-sheet/" data-id="ckju62sq1000ohf49cphcg6z2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/cannot-open-app-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/25/unix%E5%B7%A5%E5%85%B7/cannot-open-app-on-mac/" class="article-date">
@@ -528,51 +572,6 @@
 
 
   
-    <article id="post-flutter/flutter-btn-delegate" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/19/flutter/flutter-btn-delegate/" class="article-date">
-  <time datetime="2020-11-19T14:43:34.000Z" itemprop="datePublished">2020-11-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/19/flutter/flutter-btn-delegate/">flutter按钮点击事件传给delegate</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在ios中，通常用block或者代理去实现，在flutter中，外部实现一个方法，把这个方法传给按钮，按钮内部用callback接受，ontap方法调用即可，实现如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import &#39;package:flutter&#x2F;cupertino.dart&#39;;</span><br><span class="line">import &#39;package:flutter&#x2F;material.dart&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义函数类型</span><br><span class="line">typedef StringValue &#x3D; void Function(String);</span><br><span class="line"></span><br><span class="line">class ImageBtn extends StatelessWidget &#123;</span><br><span class="line"> &#x2F;&#x2F;作为属性</span><br><span class="line">  StringValue callback;</span><br><span class="line"></span><br><span class="line">  ImageBtn(&#123;Key key,this.callback&#125;) : super(key: key);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">   </span><br><span class="line">    return new GestureDetector(</span><br><span class="line">      onTap: () &#123;</span><br><span class="line">        print(&#39;MyButton was tappedq!&#39;);</span><br><span class="line">        &#x2F;&#x2F;调用</span><br><span class="line">        this.callback(&quot;testString&quot;);</span><br><span class="line">      &#125;,</span><br><span class="line">      child: ...</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>外部使用方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;顶部按钮点击事件</span><br><span class="line">void _ontap(String name)&#123;</span><br><span class="line">  print(name);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;实例对象时传进去</span><br><span class="line">ImageBtn(callback:_ontap)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;另外一种写法，不传参数也可以，仅仅是invoke外部函数，</span><br><span class="line">ImageBtn(callback:()&#123;</span><br><span class="line">   &#x2F;&#x2F;do sth...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>注意:callback和外部的方法，参数类型要保持一致<br>总结：外部函数传给按钮，让按钮内部可以调用，通过无参数函数调用有参数也可以</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-btn-delegate/" data-id="ckju62sq2000phf49abl71gdi" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -616,6 +615,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/31/flutter/flutter-app-optimize/">flutter App optimization</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/24/English/new-words/">new words</a>
           </li>
         
@@ -629,10 +632,6 @@
         
           <li>
             <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/">hexo部署文章到github 443问题</a>
           </li>
         
       </ul>

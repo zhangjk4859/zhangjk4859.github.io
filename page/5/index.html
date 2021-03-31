@@ -64,6 +64,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-btn-delegate" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/19/flutter/flutter-btn-delegate/" class="article-date">
+  <time datetime="2020-11-19T14:43:34.000Z" itemprop="datePublished">2020-11-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/19/flutter/flutter-btn-delegate/">flutter按钮点击事件传给delegate</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在ios中，通常用block或者代理去实现，在flutter中，外部实现一个方法，把这个方法传给按钮，按钮内部用callback接受，ontap方法调用即可，实现如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import &#39;package:flutter&#x2F;cupertino.dart&#39;;</span><br><span class="line">import &#39;package:flutter&#x2F;material.dart&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;定义函数类型</span><br><span class="line">typedef StringValue &#x3D; void Function(String);</span><br><span class="line"></span><br><span class="line">class ImageBtn extends StatelessWidget &#123;</span><br><span class="line"> &#x2F;&#x2F;作为属性</span><br><span class="line">  StringValue callback;</span><br><span class="line"></span><br><span class="line">  ImageBtn(&#123;Key key,this.callback&#125;) : super(key: key);</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">   </span><br><span class="line">    return new GestureDetector(</span><br><span class="line">      onTap: () &#123;</span><br><span class="line">        print(&#39;MyButton was tappedq!&#39;);</span><br><span class="line">        &#x2F;&#x2F;调用</span><br><span class="line">        this.callback(&quot;testString&quot;);</span><br><span class="line">      &#125;,</span><br><span class="line">      child: ...</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>外部使用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;顶部按钮点击事件</span><br><span class="line">void _ontap(String name)&#123;</span><br><span class="line">  print(name);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;实例对象时传进去</span><br><span class="line">ImageBtn(callback:_ontap)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;另外一种写法，不传参数也可以，仅仅是invoke外部函数，</span><br><span class="line">ImageBtn(callback:()&#123;</span><br><span class="line">   &#x2F;&#x2F;do sth...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注意:callback和外部的方法，参数类型要保持一致<br>总结：外部函数传给按钮，让按钮内部可以调用，通过无参数函数调用有参数也可以</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/19/flutter/flutter-btn-delegate/" data-id="ckju62sq2000phf49abl71gdi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-expanded" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/19/flutter/flutter-expanded/" class="article-date">
@@ -513,58 +558,6 @@
 
 
   
-    <article id="post-计算机科学/video" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/video/" class="article-date">
-  <time datetime="2020-11-13T11:08:08.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/video/">关于视频的概念</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>多张图片快速播放形成动画</li>
-<li>动画加上声音形成视频</li>
-<li>每一秒播放多少张图片叫做帧，fps,frame per sencode</li>
-<li>原始的视频非常大，大在于两个方面，单张图片像素高，每秒播放的图片多，为了方便存储和传输，故需要对原始的视频进行编码</li>
-<li>编码是把视频文件进行转换，在保证质量的前提下越小越好，不同的理念诞生不同的算法，分为重质量和重大小，看不同的需求</li>
-<li>与编码对应的是解码，尽量还原视频</li>
-<li>拍摄视频压缩上传到服务器叫做推流</li>
-<li>从服务器获取视频解码播放叫拉流</li>
-<li>音频文件也有编码和解码</li>
-<li>ffmpeg是目前业界最成熟的一套解决方案</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/13/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/video/" data-id="ckju62sti0079hf492nnn5pfl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -608,6 +601,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/31/flutter/flutter-app-optimize/">flutter App optimization</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/24/English/new-words/">new words</a>
           </li>
         
@@ -621,10 +618,6 @@
         
           <li>
             <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/hexo-github-443/">hexo部署文章到github 443问题</a>
           </li>
         
       </ul>
