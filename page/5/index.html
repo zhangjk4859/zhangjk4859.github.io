@@ -64,6 +64,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/listview-headerview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/20/flutter/listview-headerview/" class="article-date">
+  <time datetime="2020-11-20T15:24:35.000Z" itemprop="datePublished">2020-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/20/flutter/listview-headerview/">flutter中list view加一个header view</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">body:   CustomScrollView(</span><br><span class="line">        slivers: &lt;Widget&gt;[</span><br><span class="line"></span><br><span class="line">          SliverGrid.count(</span><br><span class="line">           &#x2F;&#x2F;具体的配置</span><br><span class="line">          ),</span><br><span class="line">          </span><br><span class="line">          </span><br><span class="line">          &#x2F;&#x2F;列表</span><br><span class="line">          SliverFixedExtentList(</span><br><span class="line">            delegate: SliverChildBuilderDelegate(</span><br><span class="line">                  (context, index) &#x3D;&gt; ConversationListItem(</span><br><span class="line">                      delegate: this, conversation: conList[index]</span><br><span class="line">                  ),</span><br><span class="line">              childCount: conList.length,</span><br><span class="line">            ),</span><br><span class="line">            itemExtent: 100,</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br></pre></td></tr></table></figure>
+
+<p>解析：大的容器叫做custom scroll view,子控件叫做slivers，是一个数组，在数组里面从上到下排布sliver控件，有sliver grid，有sliver fixed extent list</p>
+<ul>
+<li>效果大概长这样<img src="https://img-blog.csdnimg.cn/20191101164249461.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dvcnNoaXBfS2lsbA==,size_16,color_FFFFFF,t_70" alt="image"></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/20/flutter/listview-headerview/" data-id="ckju62sqy0021hf498rusat3m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-btn-delegate" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/19/flutter/flutter-btn-delegate/" class="article-date">
@@ -509,55 +555,6 @@
 
 
   
-    <article id="post-算法/find-next-numnber" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" class="article-date">
-  <time datetime="2020-11-15T15:03:38.000Z" itemprop="datePublished">2020-11-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/">寻找下一个数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>寻找下一个数字，例如输入345，输出354<blockquote>
-<p>思路：从最右边位和上一位对比，如果大，就往前移，移动完，尾数排序，从大到小，保证次大</p>
-</blockquote>
-</li>
-<li>代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;字符串逆序</span><br><span class="line">NSString *reverseStr(NSString *str)&#123;</span><br><span class="line">    NSMutableString *string&#x3D;[[NSMutableString alloc] init];</span><br><span class="line">    for(int i&#x3D;0;i&lt;str.length;i++)&#123;</span><br><span class="line">        [string appendString:[str substringWithRange:NSMakeRange(str.length-1-i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;字符串分成数组</span><br><span class="line">NSMutableArray *separateStringToArray(NSString *str)&#123;</span><br><span class="line">    NSMutableArray *marr &#x3D; [NSMutableArray array];</span><br><span class="line">    for (NSInteger i &#x3D; 0; i &lt; str.length; i++) &#123;</span><br><span class="line">        [marr addObject:[str substringWithRange:NSMakeRange(i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return marr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NSString *findNextLargerNum(NSString *oriNum)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    NSMutableString *finalStr &#x3D; [NSMutableString string];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    NSMutableArray *marr &#x3D; separateStringToArray(oriNum);</span><br><span class="line">    for (NSInteger i &#x3D; marr.count - 1; i &gt; 0; i--) &#123;</span><br><span class="line">        NSNumber *lastNum &#x3D; [marr objectAtIndex:i];</span><br><span class="line">        NSNumber *preNum &#x3D; [marr objectAtIndex:i-1];</span><br><span class="line">        if (lastNum.integerValue &gt; preNum.integerValue) &#123;</span><br><span class="line">            &#x2F;&#x2F;截取字符串</span><br><span class="line">            NSString *rightStr &#x3D; reverseStr([oriNum substringWithRange:NSMakeRange(i, oriNum.length - i)]);</span><br><span class="line">            NSString *leftStr &#x3D; [oriNum substringWithRange:NSMakeRange(0,i)];</span><br><span class="line">            &#x2F;&#x2F;第i-1位截取出来</span><br><span class="line">            NSString *leftCompareStr &#x3D; [oriNum substringWithRange:NSMakeRange(i-1, 1)];</span><br><span class="line">            &#x2F;&#x2F;和右边逐个对比</span><br><span class="line">            for (int j &#x3D; 0; j &lt; rightStr.length; j++) &#123;</span><br><span class="line">                NSString *rightCompareStr &#x3D; [rightStr substringWithRange:NSMakeRange(j, 1)];</span><br><span class="line">                if (leftCompareStr.integerValue &lt; rightCompareStr.integerValue) &#123;</span><br><span class="line">                    NSMutableArray *finalArr &#x3D; separateStringToArray([NSString stringWithFormat:@&quot;%@%@&quot;,leftStr,rightStr]);</span><br><span class="line">                    NSInteger leftIndex &#x3D; [finalArr indexOfObject:leftCompareStr];</span><br><span class="line">                    NSInteger rightIndex &#x3D; [finalArr indexOfObject:rightCompareStr];</span><br><span class="line">                    [finalArr exchangeObjectAtIndex:leftIndex withObjectAtIndex:rightIndex];</span><br><span class="line">                    for (NSString *str in finalArr) &#123;</span><br><span class="line">                        [finalStr appendString:str];</span><br><span class="line">                    &#125;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return finalStr.length?finalStr:oriNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NSString *str &#x3D; findNextLargerNum(@&quot;8976&quot;);</span><br><span class="line">NSLog(@&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;%@&quot;,str);</span><br><span class="line">&#x2F;&#x2F;打印结果</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;9678</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" data-id="ckju62sta006nhf49hfvzcw96" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -588,7 +585,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -599,6 +596,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/04/11/flutter/flutter-relese-apk-do-not-work/">flutter安卓release包代码无法执行</a>
+          </li>
         
           <li>
             <a href="/2021/03/31/flutter/flutter-app-optimize/">flutter App optimization</a>
@@ -614,10 +615,6 @@
         
           <li>
             <a href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
           </li>
         
       </ul>

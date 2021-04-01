@@ -64,6 +64,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-relese-apk-do-not-work" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/04/11/flutter/flutter-relese-apk-do-not-work/" class="article-date">
+  <time datetime="2021-04-11T01:18:49.000Z" itemprop="datePublished">2021-04-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/11/flutter/flutter-relese-apk-do-not-work/">flutter安卓release包代码无法执行</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>flutter工程打包apk文件后</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> method = javaClass.getDeclaredMethod(call.method, MethodCall::<span class="keyword">class</span>.java, MethodChannel.Result::<span class="keyword">class</span>.java)</span><br><span class="line">    method.invoke(<span class="keyword">this</span>, call, result)</span><br><span class="line">&#125; <span class="keyword">catch</span> (e: NoSuchMethodException) &#123;</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125; <span class="keyword">catch</span> (e: IllegalAccessException) &#123;</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125; <span class="keyword">catch</span> (e: InvocationTargetException) &#123;</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码无法执行</p>
+<h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><p>经过咨询，安卓release包会代码混淆，使用反射会让代码无法精确匹配</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h2><ul>
+<li>使用反射的类不参与混淆，降低安全性</li>
+<li>不使用反射，改用if判断或者switch case</li>
+</ul>
+<p>参考：1. <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/41525867/reflection-not-working-on-android-release-apk-even-with-proguard-minify-disable">https://stackoverflow.com/questions/41525867/reflection-not-working-on-android-release-apk-even-with-proguard-minify-disable</a></p>
+<p>2.<a target="_blank" rel="noopener" href="https://blog.csdn.net/guohesheng/article/details/53696652">https://blog.csdn.net/guohesheng/article/details/53696652</a></p>
+<p>3.<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b5b2a5dfaaf4">https://www.jianshu.com/p/b5b2a5dfaaf4</a></p>
+<p>感谢王志浩同学提供帮助！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/04/11/flutter/flutter-relese-apk-do-not-work/" data-id="ckmy89zdg00006tk82uoghs9v" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-app-optimize" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/03/31/flutter/flutter-app-optimize/" class="article-date">
@@ -663,74 +716,6 @@
 
 
   
-    <article id="post-unix工具/jenkins-installation" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/" class="article-date">
-  <time datetime="2021-01-20T02:33:31.000Z" itemprop="datePublished">2021-01-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/unix/">unix</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/">jenkins安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services stop jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services restart jenkins-lts</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew upgrade jenkins-lts</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>局域网访问配置</p>
-<p><code>homebrew.mxcl.jenkins.plist</code>里面<code>httpListenAddress</code>从<code>127.0.0.1</code>更改为<code>0.0.0.0</code></p>
-<p>两个地方</p>
-<ul>
-<li><code> ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist</code></li>
-<li><code>/usr/local/Cellar/jenkins/版本号/homebrew.mxcl.jenkins.plist</code></li>
-</ul>
-<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/10041e79ac6f">https://www.jianshu.com/p/10041e79ac6f</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/" data-id="ckk4wbk2l0000a0k89pk76of9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -761,7 +746,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -772,6 +757,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/04/11/flutter/flutter-relese-apk-do-not-work/">flutter安卓release包代码无法执行</a>
+          </li>
         
           <li>
             <a href="/2021/03/31/flutter/flutter-app-optimize/">flutter App optimization</a>
@@ -787,10 +776,6 @@
         
           <li>
             <a href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
           </li>
         
       </ul>

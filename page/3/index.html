@@ -64,6 +64,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-padding" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/05/flutter/flutter-padding/" class="article-date">
+  <time datetime="2021-01-05T02:43:56.000Z" itemprop="datePublished">2021-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/05/flutter/flutter-padding/">flutter padding组件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>如果一个组件没有调整内边距的属性，那么可以在它的外层加一层Padding，达到调整位置的效果，效果等同于放到Container里，比Container更轻量级</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Padding(</span><br><span class="line">  padding: EdgeInsets.all(<span class="number">10</span>),</span><br><span class="line">  child: Text(<span class="string">&#x27;这是一段测试文字&#x27;</span>),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-padding/" data-id="ckju62sqj001chf495lgb9wbw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-flutter/flutter-list-title" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/05/flutter/flutter-list-title/" class="article-date">
@@ -489,51 +532,6 @@
 
 
   
-    <article id="post-flutter/flutter-components" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/27/flutter/flutter-components/" class="article-date">
-  <time datetime="2020-11-27T03:14:54.000Z" itemprop="datePublished">2020-11-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/27/flutter/flutter-components/">flutter组件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="sliverList"><a href="#sliverList" class="headerlink" title="sliverList"></a>sliverList</h3><blockquote>
-<p>A sliver that places multiple box children in a linear array along the main axis.</p>
-<p>Each child is forced to have the SliverConstraints.crossAxisExtent in the cross axis but determines its own main axis extent.</p>
-<p>SliverList determines its scroll offset by “dead <strong>reckoning</strong>“ because children outside the visible part of the sliver are not materialized, which means SliverList cannot learn their main axis extent.Instead,newly materialized children are placed <strong>adjacent</strong> to existing children.</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2020/11/27/flutter/flutter-components/" data-id="ckju62sq4000thf496x4y30e9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -564,7 +562,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -575,6 +573,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/04/11/flutter/flutter-relese-apk-do-not-work/">flutter安卓release包代码无法执行</a>
+          </li>
         
           <li>
             <a href="/2021/03/31/flutter/flutter-app-optimize/">flutter App optimization</a>
@@ -590,10 +592,6 @@
         
           <li>
             <a href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/22/iOS/framework-bot-found/">framework not found</a>
           </li>
         
       </ul>
