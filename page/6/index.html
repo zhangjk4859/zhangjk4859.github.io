@@ -64,6 +64,73 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-unix工具/build-apk" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/" class="article-date">
+  <time datetime="2020-11-16T12:16:07.000Z" itemprop="datePublished">2020-11-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/unix/">unix</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/">mac android studio flutter 打包 apk</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Create a keystore</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -v -keystore ~&#x2F;key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias key</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li><app dir>/android文件夹下生成属性文件关联秘钥 key.properties</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">storePassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyPassword&#x3D;&lt;password from previous step&gt;</span><br><span class="line">keyAlias&#x3D;key</span><br><span class="line">storeFile&#x3D;&lt;location of the key store file, such as &#x2F;Users&#x2F;&lt;user name&gt;&#x2F;key.jks&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><app dir>/android/app/build.gradle文件里增加load代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def keystoreProperties &#x3D; new Properties()</span><br><span class="line">   def keystorePropertiesFile &#x3D; rootProject.file(&#39;key.properties&#39;)</span><br><span class="line">   if (keystorePropertiesFile.exists()) &#123;</span><br><span class="line">       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   android &#123;</span><br><span class="line">         ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在buildTypes之前增加签名配置代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           keyAlias keystoreProperties[&#39;keyAlias&#39;]</span><br><span class="line">           keyPassword keystoreProperties[&#39;keyPassword&#39;]</span><br><span class="line">           storeFile keystoreProperties[&#39;storeFile&#39;] ? file(keystoreProperties[&#39;storeFile&#39;]) : null</span><br><span class="line">           storePassword keystoreProperties[&#39;storePassword&#39;]</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   buildTypes &#123;</span><br><span class="line">       release &#123;</span><br><span class="line">           signingConfig signingConfigs.release</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>运行编译命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flutter build apk</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Running Gradle task &#39;assembleRelease&#39;... Done                     143.3s (!)</span><br><span class="line">✓ Built build&#x2F;app&#x2F;outputs&#x2F;flutter-apk&#x2F;app-release.apk (79.9MB).</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="完。"><a href="#完。" class="headerlink" title="完。"></a>完。</h4><p>参考：<a target="_blank" rel="noopener" href="https://flutter.dev/docs/deployment/android">https://flutter.dev/docs/deployment/android</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2020/11/16/unix%E5%B7%A5%E5%85%B7/build-apk/" data-id="ckju62stc006shf49hkezb2o4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-算法/find-next-numnber" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/15/%E7%AE%97%E6%B3%95/find-next-numnber/" class="article-date">
@@ -561,15 +628,15 @@
           </li>
         
           <li>
+            <a href="/2021/03/31/flutter/flutter-app-optimization-example/">flutter App 优化实操</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/24/English/new-words/">new words</a>
           </li>
         
           <li>
             <a href="/2021/03/02/flutter/flutter-static-variable/">flutter无法访问另一个类的全局变量</a>
-          </li>
-        
-          <li>
-            <a href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
           </li>
         
       </ul>
