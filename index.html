@@ -64,6 +64,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-iOS/UI-WK-differences" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/04/13/iOS/UI-WK-differences/" class="article-date">
+  <time datetime="2021-04-13T04:35:48.000Z" itemprop="datePublished">2021-04-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/13/iOS/UI-WK-differences/">Why use WKWebview</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​       WK is run in a separate process so that it can draw on native Safari JavaScript optimizations,this means WK loads web pages faster than UIWeb,UIWeb uses traditional JS engines which are basic interpreters,Apple’s Nitro engine uses a 4 tier compiling strategy which can execute JS 40 times faster than a traditional JS interpreter.</p>
+<p>Nitro means Nitromethane, is a kind of fuel for car engine.</p>
+<p>source：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.hackingwithswift.com/example-code/wkwebview/whats-the-difference-between-uiwebview-and-wkwebview#:~:text=Second%2C%20WKWebView%20is%20run%20in,much%20memory%20overhead%20for%20you">https://www.hackingwithswift.com/example-code/wkwebview/whats-the-difference-between-uiwebview-and-wkwebview#:~:text=Second%2C%20WKWebView%20is%20run%20in,much%20memory%20overhead%20for%20you</a></li>
+<li><a target="_blank" rel="noopener" href="https://zoompf.com/blog/2014/06/apples-nitro-javascript-engine-available-to-all-apps/">https://zoompf.com/blog/2014/06/apples-nitro-javascript-engine-available-to-all-apps/</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/04/13/iOS/UI-WK-differences/" data-id="ckneuhvjy0000kc499vq44chi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-算法/find-next-numnbe-advance" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/04/12/%E7%AE%97%E6%B3%95/find-next-numnbe-advance/" class="article-date">
@@ -676,84 +723,6 @@
 
 
   
-    <article id="post-计算机科学/h5-optimize" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/" class="article-date">
-  <time datetime="2021-02-18T01:14:36.000Z" itemprop="datePublished">2021-02-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/">h5优化策略总结</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><h3 id="原生webview加载耗时"><a href="#原生webview加载耗时" class="headerlink" title="原生webview加载耗时"></a>原生webview加载耗时</h3><ul>
-<li>预热webview，并且缓存多个对象进行复用</li>
-</ul>
-</li>
-<li><h3 id="webview网络请求页面内容，下载html"><a href="#webview网络请求页面内容，下载html" class="headerlink" title="webview网络请求页面内容，下载html"></a>webview网络请求页面内容，下载html</h3><ul>
-<li>在未点开网页时，用网络请求框架异步请求html内容，保存到本地缓存框架中</li>
-<li>在移动端启动local web server，同步服务器资源到本地，h5链接替换成localhost+port链接，例如swift版本的Telegraph</li>
-<li>本地网络框架请求zip资源并解压，供WKWebview的WKURLSchemeHandler拦截网络请求并调用(例如把http替换为自动以scheme)</li>
-</ul>
-</li>
-<li><h3 id="解析html"><a href="#解析html" class="headerlink" title="解析html"></a>解析html</h3><ul>
-<li>webview请求网络前先本地缓存查找已经下载好的html内容，直接进行加载渲染</li>
-</ul>
-</li>
-<li><h3 id="请求js、css资源"><a href="#请求js、css资源" class="headerlink" title="请求js、css资源"></a>请求js、css资源</h3><ul>
-<li>本地网络框架选择性下载较大图片文件</li>
-</ul>
-</li>
-<li><h3 id="正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染"><a href="#正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染" class="headerlink" title="正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染"></a>正常页面加载顺序为拿到html，计算布局，识别外链资源，绘制渲染</h3><ul>
-<li>后端直接加载好页面依赖的css，js和接口数据，拼接好一个最终版html返回给前端</li>
-</ul>
-</li>
-<li><h3 id="接口耗时长"><a href="#接口耗时长" class="headerlink" title="接口耗时长"></a>接口耗时长</h3><ul>
-<li>更新接口的处理方式</li>
-<li>增加占位图，优化体验</li>
-</ul>
-</li>
-<li><h3 id="内存泄露"><a href="#内存泄露" class="headerlink" title="内存泄露"></a>内存泄露</h3><ul>
-<li>及时释放图片和数组等资源</li>
-</ul>
-</li>
-</ul>
-<p>参考链接：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://tech.youzan.com/h5performancetest">https://tech.youzan.com/h5performancetest</a></li>
-<li><a target="_blank" rel="noopener" href="https://luyanan.com/news/info/19764028651650.html">https://luyanan.com/news/info/19764028651650.html</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/18/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/h5-optimize/" data-id="cklfxpfq60000cfk8g72ce0so" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -797,6 +766,10 @@
       <ul>
         
           <li>
+            <a href="/2021/04/13/iOS/UI-WK-differences/">Why use WKWebview</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/12/%E7%AE%97%E6%B3%95/find-next-numnbe-advance/">寻找下一个数</a>
           </li>
         
@@ -810,10 +783,6 @@
         
           <li>
             <a href="/2021/03/31/flutter/flutter-app-optimize/">flutter App optimization</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/24/English/new-words/">new words</a>
           </li>
         
       </ul>
