@@ -5,17 +5,17 @@
   
 
   
-  <title>Xcode12,iOS14，app启动慢 | 加酷知识源</title>
+  <title>pod下载三方库github 443问题 | 加酷知识源</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题：启动app会白屏很长一段时间，即使是一个全新的app 解决方案：  In the Xcode menu,go to product &gt; scheme &gt; edit scheme open the info tab Uncheck the debug executables checkbox  参考：1. https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;63">
+  <meta name="description" content="报错原文： 12Cloning into &amp;#x27;&#x2F;var&#x2F;folders&#x2F;nd&#x2F;n2mbp09n1lqbyyf586wntcww0000gn&#x2F;T&#x2F;d20210428-5764-pwxnoe&amp;#x27;...fatal: unable to access &amp;#x27;https:&#x2F;&#x2F;github.com&#x2F;SDWebImage&#x2F;SDWebImage.git&#x2F;&amp;#x27;: LibreSSL SS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode12,iOS14，app启动慢">
-<meta property="og:url" content="http://www.pluscool.cn/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/index.html">
+<meta property="og:title" content="pod下载三方库github 443问题">
+<meta property="og:url" content="http://www.pluscool.cn/2021/04/28/iOS/github-443-problem/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="问题：启动app会白屏很长一段时间，即使是一个全新的app 解决方案：  In the Xcode menu,go to product &gt; scheme &gt; edit scheme open the info tab Uncheck the debug executables checkbox  参考：1. https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;63">
+<meta property="og:description" content="报错原文： 12Cloning into &amp;#x27;&#x2F;var&#x2F;folders&#x2F;nd&#x2F;n2mbp09n1lqbyyf586wntcww0000gn&#x2F;T&#x2F;d20210428-5764-pwxnoe&amp;#x27;...fatal: unable to access &amp;#x27;https:&#x2F;&#x2F;github.com&#x2F;SDWebImage&#x2F;SDWebImage.git&#x2F;&amp;#x27;: LibreSSL SS">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-07T04:38:38.000Z">
-<meta property="article:modified_time" content="2021-01-12T15:40:01.452Z">
+<meta property="article:published_time" content="2021-04-28T01:59:55.000Z">
+<meta property="article:modified_time" content="2021-04-28T02:13:32.271Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-iOS/github-443-problem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/" class="article-date">
-  <time datetime="2021-01-07T04:38:38.000Z" itemprop="datePublished">2021-01-07</time>
+    <a href="/2021/04/28/iOS/github-443-problem/" class="article-date">
+  <time datetime="2021-04-28T01:59:55.000Z" itemprop="datePublished">2021-04-28</time>
 </a>
     
   <div class="article-category">
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Xcode12,iOS14，app启动慢
+      pod下载三方库github 443问题
     </h1>
   
 
@@ -92,20 +92,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>问题：启动app会白屏很长一段时间，即使是一个全新的app</p>
-<p>解决方案：</p>
-<ul>
-<li>In the Xcode menu,go to product &gt; scheme &gt; edit scheme</li>
-<li>open the info tab</li>
-<li>Uncheck the debug executables checkbox</li>
-</ul>
-<p>参考：1. <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/63929122/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12">https://stackoverflow.com/questions/63929122/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12</a></p>
-<p>2.<a target="_blank" rel="noopener" href="https://developer.apple.com/forums/thread/651012">https://developer.apple.com/forums/thread/651012</a></p>
+        <p>报错原文：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &#x27;/var/folders/nd/n2mbp09n1lqbyyf586wntcww0000gn/T/d20210428-5764-pwxnoe&#x27;...</span><br><span class="line">fatal: unable to access &#x27;https://github.com/SDWebImage/SDWebImage.git/&#x27;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 </span><br></pre></td></tr></table></figure>
+
+<p>原因分析：</p>
+<blockquote>
+<p> 本地git使用代理连接github，代理出了问题</p>
+</blockquote>
+<p>问题解决：</p>
+<blockquote>
+<p>让代理恢复正常或者不使用代理</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.https://github.com.proxy</span><br><span class="line">git config --global --unset https.https://github.com.proxy</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>去除了http 和 https的代理</p>
+</blockquote>
+<p>完。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/388c2914f22a">https://www.jianshu.com/p/388c2914f22a</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/" data-id="ckju62spq0008hf49cc5ycfr0" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/04/28/iOS/github-443-problem/" data-id="cko0tr0rd0000e8k8dn8h4mq2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -114,19 +123,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/07/iOS/libstdc/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          libstdc++缺失问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/07/unix%E5%B7%A5%E5%85%B7/mac-dictionary/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/04/13/iOS/UI-WK-differences/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Mac环境下朗文词典</div>
+      <div class="article-nav-title">Why use WKWebview</div>
     </a>
   
 </nav>
