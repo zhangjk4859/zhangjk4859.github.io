@@ -5,17 +5,17 @@
   
 
   
-  <title>flutter中radio单选使用 | 加酷知识源</title>
+  <title>flutter安卓开启第二引擎跑网页 | 加酷知识源</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在一个数组容器里放置两个及其以上radio，当radio的group value和自己value相等时，便是选中状态 1234567891011121314151617181920212223242526272829int groupValue &#x3D; 1;_onChange(value)&amp;#123;    if(mounted)      setState(() &amp;#123;        grou">
+  <meta name="description" content="​    在纯flutter应用里打开网页，目前流行两个插件:  flutter_webview_plugin (以下简称三方web)  特点  1.实测中滑动相对流畅 2.bug较少 3.不在flutter的widget tree中，视图在app最顶层，通过channel通知来实现显示和隐藏，全局是一个单例 4.非官方     webview_flutter(以下简称官方web)  特点  1.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter中radio单选使用">
-<meta property="og:url" content="http://www.pluscool.cn/2021/01/05/flutter/flutter-radio/index.html">
+<meta property="og:title" content="flutter安卓开启第二引擎跑网页">
+<meta property="og:url" content="http://www.pluscool.cn/2021/07/02/flutter/flutter-double-engine/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="在一个数组容器里放置两个及其以上radio，当radio的group value和自己value相等时，便是选中状态 1234567891011121314151617181920212223242526272829int groupValue &#x3D; 1;_onChange(value)&amp;#123;    if(mounted)      setState(() &amp;#123;        grou">
+<meta property="og:description" content="​    在纯flutter应用里打开网页，目前流行两个插件:  flutter_webview_plugin (以下简称三方web)  特点  1.实测中滑动相对流畅 2.bug较少 3.不在flutter的widget tree中，视图在app最顶层，通过channel通知来实现显示和隐藏，全局是一个单例 4.非官方     webview_flutter(以下简称官方web)  特点  1.">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-05T02:10:26.000Z">
-<meta property="article:modified_time" content="2021-01-12T15:40:01.447Z">
+<meta property="article:published_time" content="2021-07-02T03:43:01.000Z">
+<meta property="article:modified_time" content="2021-07-02T08:11:54.677Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-flutter/flutter-radio" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-flutter/flutter-double-engine" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2021/01/05/flutter/flutter-radio/" class="article-date">
-  <time datetime="2021-01-05T02:10:26.000Z" itemprop="datePublished">2021-01-05</time>
+    <a href="/2021/07/02/flutter/flutter-double-engine/" class="article-date">
+  <time datetime="2021-07-02T03:43:01.000Z" itemprop="datePublished">2021-07-02</time>
 </a>
     
   <div class="article-category">
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      flutter中radio单选使用
+      flutter安卓开启第二引擎跑网页
     </h1>
   
 
@@ -92,15 +92,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在一个数组容器里放置两个及其以上radio，当radio的group value和自己value相等时，便是选中状态</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> groupValue = <span class="number">1</span>;</span><br><span class="line">_onChange(value)&#123;</span><br><span class="line">    <span class="keyword">if</span>(mounted)</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        groupValue = value;</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">Row(</span><br><span class="line">             </span><br><span class="line">      mainAxisAlignment: MainAxisAlignment.center,</span><br><span class="line">      children: &lt;Widget&gt;[</span><br><span class="line">        Radio(</span><br><span class="line">          value: <span class="number">1</span>,</span><br><span class="line">          groupValue: groupValue,</span><br><span class="line">          onChanged: (T) =&gt; _onChange(T),</span><br><span class="line">        ),</span><br><span class="line">        Radio(</span><br><span class="line">          value: <span class="number">2</span>,</span><br><span class="line">          groupValue: groupValue,</span><br><span class="line">          onChanged: (T) =&gt; _onChange(T),</span><br><span class="line">        ),</span><br><span class="line">        Radio(</span><br><span class="line">          value: <span class="number">3</span>,</span><br><span class="line">          groupValue: groupValue,</span><br><span class="line">          onChanged: (T) =&gt; _onChange(T),</span><br><span class="line">        ),</span><br><span class="line">      ],</span><br><span class="line">        )</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhangwes/article/details/104978660">https://blog.csdn.net/zhangwes/article/details/104978660</a></p>
+        <p>​    在纯flutter应用里打开网页，目前流行两个插件:</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/flutter_webview_plugin">flutter_webview_plugin</a> (以下简称<strong>三方web</strong>)</p>
+<ul>
+<li><p>特点</p>
+<blockquote>
+<p>1.实测中滑动相对流畅</p>
+<p>2.bug较少</p>
+<p>3.不在flutter的widget tree中，视图在app最顶层，通过channel通知来实现显示和隐藏，全局是一个单例</p>
+<p>4.非官方</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/webview_flutter">webview_flutter</a>(以下简称<strong>官方web</strong>)</p>
+<ul>
+<li><p>特点</p>
+<blockquote>
+<p>1.镶嵌在widget tree中，方便在flutter中控制</p>
+<p>2.键盘弹出有部分bug</p>
+<p>3.官方支持</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>由于历史原因和开发成本考虑，继续沿用三方web作为浏览器，遇到一个需求，就是需要打开网页的时候秒开，实现类似<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhenghhgz/article/details/112302985">今日头条的效果</a>，经过调研和结合flutter特性，最终方案定型为下图</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/01/05/flutter/flutter-radio/" data-id="ckju62sqm001hhf496y5lc9yi" class="article-share-link">Share</a>
+      <a data-url="http://www.pluscool.cn/2021/07/02/flutter/flutter-double-engine/" data-id="ckqm27rbp00004ck8htpn2w4c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -109,19 +132,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/01/05/flutter/flutter-card-widget/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          flutter card组件
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/05/flutter/flutter-only-border/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/05/07/unix%E5%B7%A5%E5%85%B7/mac-keyboard-not-working/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">flutter个别圆角切割</div>
+      <div class="article-nav-title">mac触摸板和键盘失灵</div>
     </a>
   
 </nav>

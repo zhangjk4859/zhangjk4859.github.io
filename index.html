@@ -64,6 +64,73 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-flutter/flutter-double-engine" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/07/02/flutter/flutter-double-engine/" class="article-date">
+  <time datetime="2021-07-02T03:43:01.000Z" itemprop="datePublished">2021-07-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/flutter/">flutter</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/02/flutter/flutter-double-engine/">flutter安卓开启第二引擎跑网页</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​    在纯flutter应用里打开网页，目前流行两个插件:</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/flutter_webview_plugin">flutter_webview_plugin</a> (以下简称<strong>三方web</strong>)</p>
+<ul>
+<li><p>特点</p>
+<blockquote>
+<p>1.实测中滑动相对流畅</p>
+<p>2.bug较少</p>
+<p>3.不在flutter的widget tree中，视图在app最顶层，通过channel通知来实现显示和隐藏，全局是一个单例</p>
+<p>4.非官方</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pub.flutter-io.cn/packages/webview_flutter">webview_flutter</a>(以下简称<strong>官方web</strong>)</p>
+<ul>
+<li><p>特点</p>
+<blockquote>
+<p>1.镶嵌在widget tree中，方便在flutter中控制</p>
+<p>2.键盘弹出有部分bug</p>
+<p>3.官方支持</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>由于历史原因和开发成本考虑，继续沿用三方web作为浏览器，遇到一个需求，就是需要打开网页的时候秒开，实现类似<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhenghhgz/article/details/112302985">今日头条的效果</a>，经过调研和结合flutter特性，最终方案定型为下图</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pluscool.cn/2021/07/02/flutter/flutter-double-engine/" data-id="ckqm27rbp00004ck8htpn2w4c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-unix工具/mac-keyboard-not-working" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/05/07/unix%E5%B7%A5%E5%85%B7/mac-keyboard-not-working/" class="article-date">
@@ -723,53 +790,6 @@
 
 
   
-    <article id="post-flutter/flutter-pod-nil-class" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/02/23/flutter/flutter-pod-nil-class/" class="article-date">
-  <time datetime="2021-02-23T02:50:49.000Z" itemprop="datePublished">2021-02-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/flutter/">flutter</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/23/flutter/flutter-pod-nil-class/">flutter NoMethodError - undefined method `size&#39; for nil:NilClass错误排查</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>错误描述: pod install时发生错误</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## Error</span></span></span><br><span class="line"></span><br><span class="line">​```</span><br><span class="line">NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:455:in `populate_mach_header&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:233:in `populate_fields&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:55:in `initialize_from_bin&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:33:in `new_from_bin&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:365:in `block in populate_machos&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:364:in `each&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:364:in `populate_machos&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:156:in `populate_fields&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:95:in `initialize&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho.rb:31:in `new&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho.rb:31:in `open&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/xcode/linkage_analyzer.rb:16:in `dynamic_binary?&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:171:in `block in vendored_dynamic_frameworks&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:170:in `select&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:170:in `vendored_dynamic_frameworks&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:179:in `vendored_static_frameworks&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:292:in `vendored_static_artifacts&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:82:in `each&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:82:in `flat_map&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:82:in `block (2 levels) in verify_no_static_framework_transitive_dependencies&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:74:in `each_key&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:74:in `block in verify_no_static_framework_transitive_dependencies&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:73:in `each&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:73:in `verify_no_static_framework_transitive_dependencies&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:38:in `validate!&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer.rb:595:in `validate_targets&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer.rb:162:in `install!&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/command/install.rb:52:in `run&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/claide-1.0.3/lib/claide/command.rb:334:in `run&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/command.rb:52:in `run&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/bin/pod:55:in `&lt;top (required)&gt;&#x27;</span><br><span class="line">/usr/local/bin/pod:23:in `load&#x27;</span><br><span class="line">/usr/local/bin/pod:23:in `&lt;main&gt;&#x27;</span><br><span class="line">​```</span><br><span class="line"></span><br><span class="line">――― TEMPLATE END ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</span><br><span class="line"></span><br><span class="line">[!] Oh no, an error occurred.</span><br><span class="line"></span><br><span class="line">Search for existing GitHub issues similar to yours:</span><br><span class="line">https://github.com/CocoaPods/CocoaPods/search?q=undefined+method+%60size%27+for+nil%3ANilClass&amp;type=Issues</span><br><span class="line"></span><br><span class="line">If none exists, create a ticket, with the template displayed above, on:</span><br><span class="line">https://github.com/CocoaPods/CocoaPods/issues/new</span><br><span class="line"></span><br><span class="line">Be sure to first read the contributing guide for details on how to properly submit a ticket:</span><br><span class="line">https://github.com/CocoaPods/CocoaPods/blob/master/CONTRIBUTING.md</span><br><span class="line"></span><br><span class="line">Don&#x27;t forget to anonymize any private data!</span><br><span class="line"></span><br><span class="line">Looking for related issues on cocoapods/cocoapods...</span><br><span class="line"> -  NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">   https://github.com/CocoaPods/CocoaPods/issues/10426 [closed] [3 comments]</span><br><span class="line">   a week ago</span><br><span class="line"></span><br><span class="line"> - NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">   https://github.com/CocoaPods/CocoaPods/issues/10273 [closed] [3 comments]</span><br><span class="line">   7 weeks ago</span><br><span class="line"></span><br><span class="line"> - NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">   https://github.com/CocoaPods/CocoaPods/issues/8377 [closed] [24 comments]</span><br><span class="line">   a week ago</span><br><span class="line"></span><br><span class="line">and 8 more at:</span><br><span class="line">https://github.com/cocoapods/cocoapods/search?q=undefined%20method%20%60size%27%20for%20nil&amp;type=Issues&amp;utf8=✓</span><br></pre></td></tr></table></figure>
-
-<p>解决办法：在flutter目录运行以下命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">flutter clean</span><br><span class="line">rm -Rf ios/Pods</span><br><span class="line">rm -Rf ios/.symlinks</span><br><span class="line">rm -Rf ios/Flutter/Flutter.framework</span><br><span class="line">rm -Rf ios/Flutter/Flutter.podspec</span><br></pre></td></tr></table></figure>
-
-<p>参考：<a target="_blank" rel="noopener" href="https://github.com/CocoaPods/CocoaPods/issues/8377">https://github.com/CocoaPods/CocoaPods/issues/8377</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pluscool.cn/2021/02/23/flutter/flutter-pod-nil-class/" data-id="cklher6qf00001rk8bh8q2dg5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -800,7 +820,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -811,6 +831,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/07/02/flutter/flutter-double-engine/">flutter安卓开启第二引擎跑网页</a>
+          </li>
         
           <li>
             <a href="/2021/05/07/unix%E5%B7%A5%E5%85%B7/mac-keyboard-not-working/">mac触摸板和键盘失灵</a>
@@ -826,10 +850,6 @@
         
           <li>
             <a href="/2021/04/12/%E7%AE%97%E6%B3%95/find-next-numnbe-advance/">寻找下一个数</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/11/flutter/flutter-app-optimization-example/">flutter App 优化实操</a>
           </li>
         
       </ul>
