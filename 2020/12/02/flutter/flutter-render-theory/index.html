@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.pluscool.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"zhangjk4859.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="渲染过程会生成三棵树  widget树  element树  render object树      提高buid效率，在build方法中尽量少做事，层级越简单越好 setState方法尽量下放到底层节点 尽量减少重绘区域，使用repaint boundry 减少离屏渲染 比如save layer，clip path， 减少透明度使用，因为每一帧都会重建widget 建立缓存池 提升layout">
 <meta property="og:type" content="article">
 <meta property="og:title" content="flutter渲染原理要点">
-<meta property="og:url" content="https://www.pluscool.cn/2020/12/02/flutter/flutter-render-theory/index.html">
+<meta property="og:url" content="https://zhangjk4859.github.io/2020/12/02/flutter/flutter-render-theory/index.html">
 <meta property="og:site_name" content="加酷知识源">
 <meta property="og:description" content="渲染过程会生成三棵树  widget树  element树  render object树      提高buid效率，在build方法中尽量少做事，层级越简单越好 setState方法尽量下放到底层节点 尽量减少重绘区域，使用repaint boundry 减少离屏渲染 比如save layer，clip path， 减少透明度使用，因为每一帧都会重建widget 建立缓存池 提升layout">
 <meta property="og:locale" content="en_US">
@@ -32,7 +32,7 @@
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://www.pluscool.cn/2020/12/02/flutter/flutter-render-theory/">
+<link rel="canonical" href="https://zhangjk4859.github.io/2020/12/02/flutter/flutter-render-theory/">
 
 
 <script id="page-configurations">
@@ -150,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://www.pluscool.cn/2020/12/02/flutter/flutter-render-theory/">
+    <link itemprop="mainEntityOfPage" href="https://zhangjk4859.github.io/2020/12/02/flutter/flutter-render-theory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
