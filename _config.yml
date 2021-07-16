@@ -5,7 +5,7 @@
 # Site
 title: 加酷知识源
 subtitle: ''
-description: ''
+description: '种点粮食'
 keywords:
 author: 张俊凯
 language: en
@@ -98,7 +98,17 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape ##landscape
+#theme: landscape ##landscape
+
+# Demo: https://utteranc.es/  http://trumandu.github.io/about/
+utteranc:
+  enable: true
+  repo: zhangjk4859/zhangjk4859.github.io #Github repo such as :TrumanDu/comments
+  pathname: pathname
+  # theme: github-light,github-dark,github-dark-orange
+  theme: github-light
+  cdn: https://utteranc.es/client.js
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
