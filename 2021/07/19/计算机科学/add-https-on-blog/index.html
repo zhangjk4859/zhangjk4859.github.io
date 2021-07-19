@@ -20,19 +20,23 @@
     var CONFIG = {"hostname":"zhangjk4859.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="问题：libstdc++ not found 原因：libstdc++ was deprecated 5 years ago,we should update project to use libc++ 解决：更新工程或者下载库到当前工程，下载地址 https:&#x2F;&#x2F;github.com&#x2F;zhangjk4859&#x2F;zhangjk4859.github.io&#x2F;raw&#x2F;zjk&#x2F;files&#x2F;libstdc-">
+  <meta name="description" content="​    一开始想添加一个博客评论系统，方便交流，参考的是kid的博客，选择最简单的方案 utteranc.es，hexo已经有插件集成，使用的是npm安装。安装完成后在博客底部成功出现评论框  点击github登录时出现了访问失败，找不到资源  经过测试，确定原因是自己域名没有https的原因，链接添加参数后默认以https访问出现请求失败情况。首先想到的是去阿里万网看自带的服务，价格有些小贵">
 <meta property="og:type" content="article">
-<meta property="og:title" content="libstdc++缺失问题">
-<meta property="og:url" content="https://zhangjk4859.github.io/2021/01/07/iOS/libstdc/index.html">
+<meta property="og:title" content="给自己的博客域名加https">
+<meta property="og:url" content="https://zhangjk4859.github.io/2021/07/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/add-https-on-blog/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="问题：libstdc++ not found 原因：libstdc++ was deprecated 5 years ago,we should update project to use libc++ 解决：更新工程或者下载库到当前工程，下载地址 https:&#x2F;&#x2F;github.com&#x2F;zhangjk4859&#x2F;zhangjk4859.github.io&#x2F;raw&#x2F;zjk&#x2F;files&#x2F;libstdc-">
+<meta property="og:description" content="​    一开始想添加一个博客评论系统，方便交流，参考的是kid的博客，选择最简单的方案 utteranc.es，hexo已经有插件集成，使用的是npm安装。安装完成后在博客底部成功出现评论框  点击github登录时出现了访问失败，找不到资源  经过测试，确定原因是自己域名没有https的原因，链接添加参数后默认以https访问出现请求失败情况。首先想到的是去阿里万网看自带的服务，价格有些小贵">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-07T08:04:55.000Z">
-<meta property="article:modified_time" content="2021-01-12T15:40:01.451Z">
+<meta property="og:image" content="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/comment-box.jpg?raw=true">
+<meta property="og:image" content="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/domain404.jpg?raw=true">
+<meta property="og:image" content="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/wanwangprice.png?raw=true">
+<meta property="article:published_time" content="2021-07-19T01:51:15.000Z">
+<meta property="article:modified_time" content="2021-07-19T02:33:53.472Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/comment-box.jpg?raw=true">
 
-<link rel="canonical" href="https://zhangjk4859.github.io/2021/01/07/iOS/libstdc/">
+<link rel="canonical" href="https://zhangjk4859.github.io/2021/07/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/add-https-on-blog/">
 
 
 <script id="page-configurations">
@@ -45,7 +49,7 @@
   };
 </script>
 
-  <title>libstdc++缺失问题 | 加酷知识源</title>
+  <title>给自己的博客域名加https | 加酷知识源</title>
   
 
 
@@ -150,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://zhangjk4859.github.io/2021/01/07/iOS/libstdc/">
+    <link itemprop="mainEntityOfPage" href="https://zhangjk4859.github.io/2021/07/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/add-https-on-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -163,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          libstdc++缺失问题
+          给自己的博客域名加https
         </h1>
 
         <div class="post-meta">
@@ -172,23 +176,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-01-07 16:04:55" itemprop="dateCreated datePublished" datetime="2021-01-07T16:04:55+08:00">2021-01-07</time>
+              <time title="Created: 2021-07-19 09:51:15 / Modified: 10:33:53" itemprop="dateCreated datePublished" datetime="2021-07-19T09:51:15+08:00">2021-07-19</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-12 23:40:01" itemprop="dateModified" datetime="2021-01-12T23:40:01+08:00">2021-01-12</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
                 </span>
             </span>
 
@@ -203,11 +201,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>问题：libstdc++ not found</p>
-<p>原因：libstdc++ was deprecated 5 years ago,we should update project to use libc++</p>
-<p>解决：更新工程或者下载库到当前工程，下载地址 <a target="_blank" rel="noopener" href="https://github.com/zhangjk4859/zhangjk4859.github.io/raw/zjk/files/libstdc--master.zip">https://github.com/zhangjk4859/zhangjk4859.github.io/raw/zjk/files/libstdc--master.zip</a> 下载完成以后执行对应.sh文件即可</p>
-<p>参考：1.<a target="_blank" rel="noopener" href="https://github.com/devdawei/libstdc-">https://github.com/devdawei/libstdc-</a></p>
-<p>2.<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e694782b8740">https://www.jianshu.com/p/e694782b8740</a></p>
+        <p>​    一开始想添加一个博客评论系统，方便交流，参考的是<a target="_blank" rel="noopener" href="https://freemind.pluskid.org/technology/github-based-comment-system-and-the-death-of-independent-blog/">kid的博客</a>，选择最简单的方案 <a target="_blank" rel="noopener" href="https://utteranc.es/">utteranc.es</a>，hexo已经有<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/76237379">插件集成</a>，使用的是npm安装。安装完成后在博客底部成功出现评论框</p>
+<p><img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/comment-box.jpg?raw=true" alt="comment-box.jpg"></p>
+<p>点击github登录时出现了访问失败，找不到资源</p>
+<p><img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/domain404.jpg?raw=true" alt="image"></p>
+<p>经过测试，确定原因是自己域名没有https的原因，链接添加参数后默认以https访问出现请求失败情况。首先想到的是去阿里万网看自带的服务，价格有些小贵<img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/wanwangprice.png?raw=true" alt="image"></p>
+<p>为了秉持互联网免费原则，确定了<a target="_blank" rel="noopener" href="https://jaeger.itscoder.com/web/2017/08/30/github-page-https.html">Netlify方案</a>,根据教程配置完成后大概等了半天时间，https域名就可以正常使用了。</p>
+<p>没有尝试的方案：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zaq0123/article/details/79880838">阿里云一年免费</a></li>
+<li><a target="_blank" rel="noopener" href="https://tzhou2018.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/">cloud flare免费方案</a></li>
+</ul>
+<p>最后，感谢<a target="_blank" rel="noopener" href="https://blog.lanweihong.com/posts/24011/">蓝伟洪</a>和<a target="_blank" rel="noopener" href="https://yanqizhao.com/">小蘑菇</a>配合测试评论系统。</p>
 
     </div>
 
@@ -223,13 +228,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/01/07/iOS/slow-app-launch-time-after-updating-to-ios-14-and-xcode-12/" rel="prev" title="Xcode12,iOS14，app启动慢">
-      <i class="fa fa-chevron-left"></i> Xcode12,iOS14，app启动慢
+    <a href="/2021/07/02/flutter/flutter-double-engine/" rel="prev" title="flutter安卓开启第二引擎跑网页">
+      <i class="fa fa-chevron-left"></i> flutter安卓开启第二引擎跑网页
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/01/20/unix%E5%B7%A5%E5%85%B7/jenkins-installation/" rel="next" title="jenkins安装">
-      jenkins安装 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
