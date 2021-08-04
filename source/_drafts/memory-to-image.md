@@ -32,6 +32,10 @@ tags:
 
 现在我们想在这些格子里显示一些文本，一次性能显示多少内容呢？这个取决于每一个字符用多少个像素来实现。下图是一个8*8像素的实现
 
+![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/grid.png?raw=true)
+
+上图中显示的是常用的一些ASCII码，在内存中，占用的大小是7bit，如果要显示，对应占用的大小就是64bit，这64bit所代表的数值也可以看作是字符的一种码。按照这种定义，我们可以在320*200分辨率的屏幕上显示每行40字，一共25行的文本内容。
+
 
 
 https://www.quora.com/How-does-a-computer-display-characters
