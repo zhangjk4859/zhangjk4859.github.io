@@ -36,9 +36,17 @@ tags:
 
 上图中显示的是常用的一些ASCII码，在内存中，占用的大小是7bit，如果要显示，对应占用的大小就是64bit，这64bit所代表的数值也可以看作是字符的一种码。按照这种定义，我们可以在320*200分辨率的屏幕上显示每行40字，一共25行的文本内容。
 
+![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/grid-poem.png?raw=true)
+
+为了动态显示，显示适配器配备一个RAM来存要显示的内容，CPU可以访问更新数据，也包含一个字符串生成器，里面记录着ASCII码对应的像素排列格式，只读形式，字符的像素排列一旦定下里，不能随意改动(ROM)。
+
+![image](https://www.seasip.info/VintagePC/Images/hgcplus1.jpg)
+
+在八十年代，硬件成本非常昂贵，7bit字符对应64bit显示，会显得有点大，为了节约成本，进化出了另一种对应的显示方式
 
 
-https://www.quora.com/How-does-a-computer-display-characters
+
+.https://www.quora.com/How-does-a-computer-display-characters
 
 https://www.quora.com/How-is-data-displayed-on-the-screen-of-a-computer
 
