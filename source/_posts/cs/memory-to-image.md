@@ -173,6 +173,12 @@ GPU方面：减少渲染量
 
 
 
+完。
+
+PS：如果文中某些图片加载失败，请参考[这里](https://zhuanlan.zhihu.com/p/107691233)设置host文件
+
+
+
 参考链接：
 
 https://en.wikipedia.org/wiki/Code:_The_Hidden_Language_of_Computer_Hardware_and_Software
