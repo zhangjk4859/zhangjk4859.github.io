@@ -147,6 +147,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/03/31/flutter/flutter-app-optimize/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="种点粮食">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/31/flutter/flutter-app-optimize/" class="post-title-link" itemprop="url">flutter App optimization</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-31 10:50:49 / Modified: 15:28:34" itemprop="dateCreated datePublished" datetime="2021-03-31T10:50:49+08:00">2021-03-31</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/flutter/" itemprop="url" rel="index"><span itemprop="name">flutter</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>avoid costly work in build() since build() can be invoked frequently when ancestor Widgets rebuild</p>
+</li>
+<li><p>avoid calling setState() high up in the tree</p>
+</li>
+<li><p>Use the lazy methods, with callbacks,when building large grids or lists, that way only the visible portion of the screen is built at startup time</p>
+</li>
+<li><p>avoid invoke saveLayer(),including</p>
+<ul>
+<li>opacity widget</li>
+<li>shaderMask</li>
+<li>colorFilter</li>
+<li>Clip</li>
+<li>Text</li>
+<li>addition:Clipping doesn’t call saveLayer() but is still costly</li>
+</ul>
+<p>Ways to avoid calls to saveLayer():</p>
+<ul>
+<li>To implement fading in an image, consider using the FadeInImage</li>
+<li>using the border Radius property instead of applying a clipping rectangle</li>
+</ul>
+</li>
+<li><p>build and display frames in 16ms</p>
+</li>
+<li><p>build  subtree widget once and pass it as a child to the AnimatedBuilder</p>
+</li>
+<li><p>pre-clip image before animating it</p>
+</li>
+<li><p>avoid using constructors with a concrete List of children if most of the children are not visible on  screen</p>
+</li>
+</ul>
+<p>source:<a target="_blank" rel="noopener" href="https://flutter.dev/docs/perf/rendering/best-practices">https://flutter.dev/docs/perf/rendering/best-practices</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/03/24/English/new-words/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1032,84 +1131,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/01/07/iOS/libstdc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="种点粮食">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/07/iOS/libstdc/" class="post-title-link" itemprop="url">libstdc++缺失问题</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-07 16:04:55" itemprop="dateCreated datePublished" datetime="2021-01-07T16:04:55+08:00">2021-01-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-12 23:40:01" itemprop="dateModified" datetime="2021-01-12T23:40:01+08:00">2021-01-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>问题：libstdc++ not found</p>
-<p>原因：libstdc++ was deprecated 5 years ago,we should update project to use libc++</p>
-<p>解决：更新工程或者下载库到当前工程，下载地址 <a target="_blank" rel="noopener" href="https://github.com/zhangjk4859/zhangjk4859.github.io/raw/zjk/files/libstdc--master.zip">https://github.com/zhangjk4859/zhangjk4859.github.io/raw/zjk/files/libstdc--master.zip</a> 下载完成以后执行对应.sh文件即可</p>
-<p>参考：1.<a target="_blank" rel="noopener" href="https://github.com/devdawei/libstdc-">https://github.com/devdawei/libstdc-</a></p>
-<p>2.<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/e694782b8740">https://www.jianshu.com/p/e694782b8740</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1179,7 +1200,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">67</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
