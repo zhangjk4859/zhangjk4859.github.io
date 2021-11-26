@@ -61,4 +61,70 @@ tags:
   
   ```
 
-  效果：
+  效果：![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-2.jpg?raw=true)
+  
+  
+  
+  ![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-1.jpg?raw=true)
+  
+  
+
+- 代码获取值
+
+  ```objective-c
+  - (void)registerDefaultsFromSettingsBundle{
+      NSString *settingsBundle = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"bundle"];
+  
+      if(!settingsBundle) {
+          NSLog(@"Could not find Settings.bundle");
+          return;
+      }
+  
+      NSDictionary *settings = [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@"Root.plist"]];
+  
+      NSArray *preferences = [settings objectForKey:@"PreferenceSpecifiers"];
+  
+      NSMutableDictionary *defaultsToRegister = [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];
+  
+      for(NSDictionary *prefSpecification in preferences) {
+          NSString *key = [prefSpecification objectForKey:@"Key"];
+  
+           if(key) {
+              [defaultsToRegister setObject:[prefSpecification objectForKey:@"DefaultValue"] forKey:key];
+          }
+  
+      }
+  
+      [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];
+  }
+  
+  
+  -(NSString *)getNetworkOption{
+  #if DEBUG
+      id obj = [[NSUserDefaults standardUserDefaults] objectForKey:@"env_key"];
+      if ([obj isKindOfClass:[NSString class]]) {
+          return (NSString *)obj;
+      }
+      return @"";
+  
+  #else
+      return @"";
+  
+  #endif
+      
+  }
+  ```
+
+
+
+
+
+- 设置release状态不包含bundle文件
+
+  Xcode---->Project---->Build Settings---->Build Options---->Exclude Source Files Names---->Release 把文件拖进去
+
+
+
+完。
+
+参考：https://blog.csdn.net/nogodoss/article/details/21938771
