@@ -6,7 +6,7 @@
   <link href="https://pluscool.cn/atom.xml" rel="self"/>
   
   <link href="https://pluscool.cn/"/>
-  <updated>2021-11-26T04:04:35.938Z</updated>
+  <updated>2021-11-26T04:18:16.501Z</updated>
   <id>https://pluscool.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何生活</title>
+    <link href="https://pluscool.cn/2021/11/26/know/how-to-live/"/>
+    <id>https://pluscool.cn/2021/11/26/know/how-to-live/</id>
+    <published>2021-11-26T04:06:46.000Z</published>
+    <updated>2021-11-26T04:18:16.501Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="每天晒20分钟太阳"><a href="#每天晒20分钟太阳" class="headerlink" title="每天晒20分钟太阳"></a>每天晒20分钟太阳</h3><ul><li>治疗近视</li><li>治疗骨质疏松</li><li>治疗抑郁</li></ul><h3 id="十点以前睡觉"><a href="#十点以前睡觉" class="headerlink" title="十点以前睡觉"></a>十点以前睡觉</h3><h3 id="吃素"><a href="#吃素" class="headerlink" title="吃素"></a>吃素</h3><ul><li>摄取植物蛋白</li><li>天然植物脂肪</li><li>天然植物糖</li><li>少吃肉</li></ul><h3 id="运动"><a href="#运动" class="headerlink" title="运动"></a>运动</h3><ul><li>每天走路20分钟</li><li>每天跑步10分钟</li></ul><h3 id="手写记录新发现"><a href="#手写记录新发现" class="headerlink" title="手写记录新发现"></a>手写记录新发现</h3><ul><li>手写，不是打字</li></ul><h3 id="不做成瘾性高的事情"><a href="#不做成瘾性高的事情" class="headerlink" title="不做成瘾性高的事情"></a>不做成瘾性高的事情</h3><ul><li>刷手机视频</li><li>刷头条新闻</li><li>吃油炸食品</li><li>重辣食物</li><li>高盐分</li><li>高糖</li><li>赌博</li><li>游戏</li><li>色情</li><li>晚餐吃大餐</li><li>撸串</li><li>喝酒</li><li>抽烟</li></ul><h3 id="做有难度的事情获取成就感"><a href="#做有难度的事情获取成就感" class="headerlink" title="做有难度的事情获取成就感"></a>做有难度的事情获取成就感</h3><ul><li>跑步</li><li>仰卧起坐</li><li>引体向上</li><li>专心解决工作难题</li><li>打乒乓球</li><li>做数学题</li><li>学习新语言</li><li>学习新技能</li></ul><h3 id="大自然探险"><a href="#大自然探险" class="headerlink" title="大自然探险"></a>大自然探险</h3><ul><li><p>逛公园</p></li><li><p>爬山</p></li><li><p>穿越峡谷</p></li><li><p>森林公园</p></li><li><p>湿地</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;每天晒20分钟太阳&quot;&gt;&lt;a href=&quot;#每天晒20分钟太阳&quot; class=&quot;headerlink&quot; title=&quot;每天晒20分钟太阳&quot;&gt;&lt;/a&gt;每天晒20分钟太阳&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;治疗近视&lt;/li&gt;
+&lt;li&gt;治疗骨质疏松&lt;/li&gt;
+&lt;li&gt;治疗抑郁&lt;/</summary>
+      
+    
+    
+    
+    <category term="发觉" scheme="https://pluscool.cn/categories/%E5%8F%91%E8%A7%89/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>iOS APP切换网络环境</title>
@@ -464,32 +489,6 @@
     
     
     <category term="flutter" scheme="https://pluscool.cn/categories/flutter/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>framework not found</title>
-    <link href="https://pluscool.cn/2021/02/22/iOS/framework-bot-found/"/>
-    <id>https://pluscool.cn/2021/02/22/iOS/framework-bot-found/</id>
-    <published>2021-02-22T08:04:55.000Z</published>
-    <updated>2021-02-22T10:35:20.736Z</updated>
-    
-    <content type="html"><![CDATA[<p>问题：在build的时候framework not found</p><p>解决：</p><ul><li>添加需要的framework</li><li>确定framework齐全的情况下，就是系统添加了冗余的framework编译需求，找到require列表删除即可</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">project.xcodeproj文件---&gt;显示包内容---&gt;project.pbxproj文件 全局查找删除</span><br></pre></td></tr></table></figure><p>ps:版本对不上处理方法同理，修改版本号和实际pods下载过来一致</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;问题：在build的时候framework not found&lt;/p&gt;
-&lt;p&gt;解决：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;添加需要的framework&lt;/li&gt;
-&lt;li&gt;确定framework齐全的情况下，就是系统添加了冗余的framework编译需求，找到require列表删除即可</summary>
-      
-    
-    
-    
-    <category term="iOS" scheme="https://pluscool.cn/categories/iOS/"/>
     
     
   </entry>
