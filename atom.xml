@@ -6,7 +6,7 @@
   <link href="https://pluscool.cn/atom.xml" rel="self"/>
   
   <link href="https://pluscool.cn/"/>
-  <updated>2021-11-25T07:50:28.885Z</updated>
+  <updated>2021-11-26T03:52:59.964Z</updated>
   <id>https://pluscool.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS APP切换网络环境</title>
+    <link href="https://pluscool.cn/2021/11/26/iOS/add-setting-bundle/"/>
+    <id>https://pluscool.cn/2021/11/26/iOS/add-setting-bundle/</id>
+    <published>2021-11-26T03:12:48.000Z</published>
+    <updated>2021-11-26T03:52:59.964Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="需求描述："><a href="#需求描述：" class="headerlink" title="需求描述："></a>需求描述：</h3><p>打一次包，用户可以自由切换开发和生产环境</p><h3 id="实现原理"><a href="#实现原理" class="headerlink" title="实现原理"></a>实现原理</h3><p>每一个app在设置界面可以增加配置选项，存的数据可以通过user default读取，根据存储的数据来甄别切换网络</p><h3 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h3><ul><li><p>新增setting bundle <img src="https://img-blog.csdn.net/20140324110122843?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9nb2Rvc3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"></p><p><img src="https://img-blog.csdn.net/20140324110154343?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9nb2Rvc3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="image"></p><p>root.plist source code 如下</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;StringsTable&lt;/key&gt;</span><br><span class="line">&lt;string&gt;Root&lt;/string&gt;</span><br><span class="line">&lt;key&gt;PreferenceSpecifiers&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">&lt;key&gt;Type&lt;/key&gt;</span><br><span class="line">&lt;string&gt;PSMultiValueSpecifier&lt;/string&gt;</span><br><span class="line">&lt;key&gt;Title&lt;/key&gt;</span><br><span class="line">&lt;string&gt;环境&lt;/string&gt;</span><br><span class="line">&lt;key&gt;Key&lt;/key&gt;</span><br><span class="line">&lt;string&gt;env_key&lt;/string&gt;</span><br><span class="line">&lt;key&gt;DefaultValue&lt;/key&gt;</span><br><span class="line">&lt;string&gt;1&lt;/string&gt;</span><br><span class="line">&lt;key&gt;Titles&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;string&gt;DEV&lt;/string&gt;</span><br><span class="line">&lt;string&gt;TEST&lt;/string&gt;</span><br><span class="line">&lt;string&gt;PROD&lt;/string&gt;</span><br><span class="line">&lt;string&gt;SAAS&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;key&gt;Values&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">&lt;string&gt;1&lt;/string&gt;</span><br><span class="line">&lt;string&gt;2&lt;/string&gt;</span><br><span class="line">&lt;string&gt;3&lt;/string&gt;</span><br><span class="line">&lt;string&gt;4&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/array&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>效果：<img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-2.jpg?raw=true" alt="image"></p></li></ul><p>  <img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-1.jpg?raw=true" alt="image"></p><ul><li><p>代码获取值</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">- (void)registerDefaultsFromSettingsBundle&#123;</span><br><span class="line">    NSString *settingsBundle &#x3D; [[NSBundle mainBundle] pathForResource:@&quot;Settings&quot; ofType:@&quot;bundle&quot;];</span><br><span class="line"></span><br><span class="line">    if(!settingsBundle) &#123;</span><br><span class="line">        NSLog(@&quot;Could not find Settings.bundle&quot;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    NSDictionary *settings &#x3D; [NSDictionary dictionaryWithContentsOfFile:[settingsBundle stringByAppendingPathComponent:@&quot;Root.plist&quot;]];</span><br><span class="line"></span><br><span class="line">    NSArray *preferences &#x3D; [settings objectForKey:@&quot;PreferenceSpecifiers&quot;];</span><br><span class="line"></span><br><span class="line">    NSMutableDictionary *defaultsToRegister &#x3D; [[NSMutableDictionary alloc] initWithCapacity:[preferences count]];</span><br><span class="line"></span><br><span class="line">    for(NSDictionary *prefSpecification in preferences) &#123;</span><br><span class="line">        NSString *key &#x3D; [prefSpecification objectForKey:@&quot;Key&quot;];</span><br><span class="line"></span><br><span class="line">         if(key) &#123;</span><br><span class="line">            [defaultsToRegister setObject:[prefSpecification objectForKey:@&quot;DefaultValue&quot;] forKey:key];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultsToRegister];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">-(NSString *)getNetworkOption&#123;</span><br><span class="line">#if DEBUG</span><br><span class="line">    id obj &#x3D; [[NSUserDefaults standardUserDefaults] objectForKey:@&quot;env_key&quot;];</span><br><span class="line">    if ([obj isKindOfClass:[NSString class]]) &#123;</span><br><span class="line">        return (NSString *)obj;</span><br><span class="line">    &#125;</span><br><span class="line">    return @&quot;&quot;;</span><br><span class="line"></span><br><span class="line">#else</span><br><span class="line">    return @&quot;&quot;;</span><br><span class="line"></span><br><span class="line">#endif</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul><ul><li><p>设置release状态不包含bundle文件</p><p>Xcode—-&gt;Project—-&gt;Build Settings—-&gt;Build Options—-&gt;Exclude Source Files Names—-&gt;Release 把文件拖进去</p></li></ul><p>完。</p><p>参考：<a href="https://blog.csdn.net/nogodoss/article/details/21938771">https://blog.csdn.net/nogodoss/article/details/21938771</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;需求描述：&quot;&gt;&lt;a href=&quot;#需求描述：&quot; class=&quot;headerlink&quot; title=&quot;需求描述：&quot;&gt;&lt;/a&gt;需求描述：&lt;/h3&gt;&lt;p&gt;打一次包，用户可以自由切换开发和生产环境&lt;/p&gt;
+&lt;h3 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; cla</summary>
+      
+    
+    
+    
+    <category term="iOS" scheme="https://pluscool.cn/categories/iOS/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>如何通过英语获取信息（持续更新）</title>
@@ -467,29 +490,6 @@
     
     
     <category term="iOS" scheme="https://pluscool.cn/categories/iOS/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo部署文章到github 443问题</title>
-    <link href="https://pluscool.cn/2021/02/22/cs/hexo-github-443/"/>
-    <id>https://pluscool.cn/2021/02/22/cs/hexo-github-443/</id>
-    <published>2021-02-21T23:45:52.000Z</published>
-    <updated>2021-02-22T10:39:37.621Z</updated>
-    
-    <content type="html"><![CDATA[<p>问题：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &#x27;https://github.com/xxx/xxx.github.io.git/&#x27;: LibreSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443 </span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (/Users/kevin/Desktop/xxx.github.io/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (events.js:315:20)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal/child_process.js:277:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br></pre></td></tr></table></figure><p>解决：在_config.yml文件里把deploy的地址从http换成git</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="comment">#repo: https://github.com/xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:xxx/xxx.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;问题：&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="计算机" scheme="https://pluscool.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
     
   </entry>
