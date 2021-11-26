@@ -16,9 +16,11 @@ tags:
 
 ### 实现步骤
 
-- 新增setting bundle ![image](https://img-blog.csdn.net/20140324110122843?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9nb2Rvc3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+- 新增setting bundle ![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-3.png?raw=true)
 
-  ![image](https://img-blog.csdn.net/20140324110154343?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbm9nb2Rvc3M=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+  
+
+  
 
   root.plist source code 如下
 
@@ -62,11 +64,11 @@ tags:
   ```
 
   效果：![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-2.jpg?raw=true)
+
   
-  
-  
+
   ![image](https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/setting-bundle-1.jpg?raw=true)
-  
+
   
 
 - 代码获取值
