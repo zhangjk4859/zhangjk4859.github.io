@@ -148,6 +148,80 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/02/23/flutter/flutter-pod-nil-class/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/23/flutter/flutter-pod-nil-class/" class="post-title-link" itemprop="url">flutter NoMethodError - undefined method `size' for nil:NilClass错误排查</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-23 10:50:49 / Modified: 10:46:51" itemprop="dateCreated datePublished" datetime="2021-02-23T10:50:49+08:00">2021-02-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/flutter/" itemprop="url" rel="index"><span itemprop="name">flutter</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>错误描述: pod install时发生错误</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment">## Error</span></span></span><br><span class="line"></span><br><span class="line">​```</span><br><span class="line">NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:455:in `populate_mach_header&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:233:in `populate_fields&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:55:in `initialize_from_bin&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/macho_file.rb:33:in `new_from_bin&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:365:in `block in populate_machos&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:364:in `each&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:364:in `populate_machos&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:156:in `populate_fields&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho/fat_file.rb:95:in `initialize&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho.rb:31:in `new&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/ruby-macho-1.4.0/lib/macho.rb:31:in `open&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/xcode/linkage_analyzer.rb:16:in `dynamic_binary?&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:171:in `block in vendored_dynamic_frameworks&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:170:in `select&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:170:in `vendored_dynamic_frameworks&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:179:in `vendored_static_frameworks&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/sandbox/file_accessor.rb:292:in `vendored_static_artifacts&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:82:in `each&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:82:in `flat_map&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:82:in `block (2 levels) in verify_no_static_framework_transitive_dependencies&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:74:in `each_key&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:74:in `block in verify_no_static_framework_transitive_dependencies&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:73:in `each&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:73:in `verify_no_static_framework_transitive_dependencies&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer/xcode/target_validator.rb:38:in `validate!&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer.rb:595:in `validate_targets&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/installer.rb:162:in `install!&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/command/install.rb:52:in `run&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/claide-1.0.3/lib/claide/command.rb:334:in `run&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/lib/cocoapods/command.rb:52:in `run&#x27;</span><br><span class="line">/Library/Ruby/Gems/2.6.0/gems/cocoapods-1.10.0/bin/pod:55:in `&lt;top (required)&gt;&#x27;</span><br><span class="line">/usr/local/bin/pod:23:in `load&#x27;</span><br><span class="line">/usr/local/bin/pod:23:in `&lt;main&gt;&#x27;</span><br><span class="line">​```</span><br><span class="line"></span><br><span class="line">――― TEMPLATE END ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――</span><br><span class="line"></span><br><span class="line">[!] Oh no, an error occurred.</span><br><span class="line"></span><br><span class="line">Search for existing GitHub issues similar to yours:</span><br><span class="line">https://github.com/CocoaPods/CocoaPods/search?q=undefined+method+%60size%27+for+nil%3ANilClass&amp;type=Issues</span><br><span class="line"></span><br><span class="line">If none exists, create a ticket, with the template displayed above, on:</span><br><span class="line">https://github.com/CocoaPods/CocoaPods/issues/new</span><br><span class="line"></span><br><span class="line">Be sure to first read the contributing guide for details on how to properly submit a ticket:</span><br><span class="line">https://github.com/CocoaPods/CocoaPods/blob/master/CONTRIBUTING.md</span><br><span class="line"></span><br><span class="line">Don&#x27;t forget to anonymize any private data!</span><br><span class="line"></span><br><span class="line">Looking for related issues on cocoapods/cocoapods...</span><br><span class="line"> -  NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">   https://github.com/CocoaPods/CocoaPods/issues/10426 [closed] [3 comments]</span><br><span class="line">   a week ago</span><br><span class="line"></span><br><span class="line"> - NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">   https://github.com/CocoaPods/CocoaPods/issues/10273 [closed] [3 comments]</span><br><span class="line">   7 weeks ago</span><br><span class="line"></span><br><span class="line"> - NoMethodError - undefined method `size&#x27; for nil:NilClass</span><br><span class="line">   https://github.com/CocoaPods/CocoaPods/issues/8377 [closed] [24 comments]</span><br><span class="line">   a week ago</span><br><span class="line"></span><br><span class="line">and 8 more at:</span><br><span class="line">https://github.com/cocoapods/cocoapods/search?q=undefined%20method%20%60size%27%20for%20nil&amp;type=Issues&amp;utf8=✓</span><br></pre></td></tr></table></figure>
+
+<p>解决办法：在flutter目录运行以下命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">flutter clean</span><br><span class="line">rm -Rf ios/Pods</span><br><span class="line">rm -Rf ios/.symlinks</span><br><span class="line">rm -Rf ios/Flutter/Flutter.framework</span><br><span class="line">rm -Rf ios/Flutter/Flutter.podspec</span><br></pre></td></tr></table></figure>
+
+<p>参考：<a target="_blank" rel="noopener" href="https://github.com/CocoaPods/CocoaPods/issues/8377">https://github.com/CocoaPods/CocoaPods/issues/8377</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/02/22/iOS/framework-bot-found/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -925,113 +999,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/01/06/iOS/what-is-link-list/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/06/iOS/what-is-link-list/" class="post-title-link" itemprop="url">链表是什么</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-01-06 00:23:22" itemprop="dateCreated datePublished" datetime="2021-01-06T00:23:22+08:00">2021-01-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-12 23:40:01" itemprop="dateModified" datetime="2021-01-12T23:40:01+08:00">2021-01-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>链表了解吗</strong></p>
-<ul>
-<li><p>Linked list is a sequence of links which contains items</p>
-</li>
-<li><p>Link - Each link of a linked list can store a data called an element</p>
-</li>
-<li><p>Next - Each link of a linked list contains a link to the next link called Next</p>
-</li>
-<li><p>LinkedList - A Linked List contains the connection link to the first link called First</p>
-</li>
-<li><p>Linked list can be visualized as a chain of nodes,where every node points to hte next node</p>
-<p>![image](<img src="https://www.tutorialspoint.com/data_structures_algorithms/images/linked_list.jpg" alt="Linked List"></p>
-<ul>
-<li>Simple linked list -item navigation is forward only</li>
-<li>doubly linked list - items can be navigated forward and backward</li>
-<li>circular linked list - last item contains link of the first element as next and the first element has a link to the last element as previous.</li>
-</ul>
-</li>
-</ul>
-<p><strong>双向链表是什么</strong></p>
-<p>同上，节点有前后指针</p>
-<p><strong>跟数组的区别</strong></p>
-<ul>
-<li>数组在编译时已经分配好连续内存</li>
-<li>链表在运行时添加数据时分配内存</li>
-<li>数组在栈，链表在堆</li>
-</ul>
-<p><strong>数组为什么快</strong></p>
-<ul>
-<li>数组查找快，因为可以根据索引直接获得，复杂度O(1),链表复杂度O(N)</li>
-<li>数组插入和删除慢，因为空间连续，插入删除后需要整理内存大小，链表插入删除快，只要改变指针指向即可</li>
-</ul>
-<p>参考：1. <a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm">https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm</a></p>
-<p>2.<a target="_blank" rel="noopener" href="https://www.studytonight.com/data-structures/linked-list-vs-array">https://www.studytonight.com/data-structures/linked-list-vs-array</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1101,7 +1068,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">74</span>
+          <span class="site-state-item-count">75</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
