@@ -6,7 +6,7 @@
   <link href="https://pluscool.cn/atom.xml" rel="self"/>
   
   <link href="https://pluscool.cn/"/>
-  <updated>2021-11-29T06:50:37.580Z</updated>
+  <updated>2021-11-30T01:46:10.338Z</updated>
   <id>https://pluscool.cn/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>unix commands</title>
+    <link href="https://pluscool.cn/2021/11/30/unix-tool/unix-commands/"/>
+    <id>https://pluscool.cn/2021/11/30/unix-tool/unix-commands/</id>
+    <published>2021-11-30T10:13:26.000Z</published>
+    <updated>2021-11-30T01:46:10.338Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><ul><li><p>short for “concatenate”</p></li><li><p>allows us to create single or multiple files,view content of a file, concatenate files and redirect output in terminal or files</p><p><img src="https://linuxhandbook.com/content/images/2021/09/join-strings-bash.webp" alt="image"></p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;cat&quot;&gt;&lt;a href=&quot;#cat&quot; class=&quot;headerlink&quot; title=&quot;cat&quot;&gt;&lt;/a&gt;cat&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;short for “concatenate”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;allows us to cre</summary>
+      
+    
+    
+    
+    <category term="unix" scheme="https://pluscool.cn/categories/unix/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>更换mac java版本</title>
+    <link href="https://pluscool.cn/2021/11/30/unix-tool/change-mac-java-version/"/>
+    <id>https://pluscool.cn/2021/11/30/unix-tool/change-mac-java-version/</id>
+    <published>2021-11-30T02:09:42.000Z</published>
+    <updated>2021-11-30T02:10:17.183Z</updated>
+    
+    <content type="html"><![CDATA[<p>电脑默认安装java 16，需要更换为java 8</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open /Library/Java/JavaVirtualMachines/</span><br></pre></td></tr></table></figure><p>选择想要删除的版本，输入管理员密码</p><p>点击<a href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载java8</a>dmg安装</p> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">openjdk version &quot;1.8.0_312&quot;</span><br><span class="line">OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)</span><br><span class="line">OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)</span><br></pre></td></tr></table></figure><p>完。</p><p>参考：<a href="https://www.anotheriosdevblog.com/installing-homebrew-and-jenkins-on-my-m1-mac-mini/">https://www.anotheriosdevblog.com/installing-homebrew-and-jenkins-on-my-m1-mac-mini/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;电脑默认安装java 16，需要更换为java 8&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/t</summary>
+      
+    
+    
+    
+    <category term="unix" scheme="https://pluscool.cn/categories/unix/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>jenkins安装失败</title>
@@ -30,29 +78,6 @@
       
     <summary type="html">&lt;p&gt;今日安装jenkins，出现报错&lt;/p&gt;
 &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;</summary>
-      
-    
-    
-    
-    <category term="unix" scheme="https://pluscool.cn/categories/unix/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>jenkins安装失败</title>
-    <link href="https://pluscool.cn/2021/11/29/jenkins-installation-error/"/>
-    <id>https://pluscool.cn/2021/11/29/jenkins-installation-error/</id>
-    <published>2021-11-29T06:37:56.000Z</published>
-    <updated>2021-11-29T06:38:53.847Z</updated>
-    
-    <content type="html"><![CDATA[<p>今日安装jenkins，出现报错</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今日安装jenkins，出现报错&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td cla</summary>
       
     
     
@@ -463,30 +488,6 @@
     
     
     <category term="English" scheme="https://pluscool.cn/categories/English/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>flutter无法访问另一个类的全局变量</title>
-    <link href="https://pluscool.cn/2021/03/02/flutter/flutter-static-variable/"/>
-    <id>https://pluscool.cn/2021/03/02/flutter/flutter-static-variable/</id>
-    <published>2021-03-02T02:50:49.000Z</published>
-    <updated>2021-03-02T08:17:27.565Z</updated>
-    
-    <content type="html"><![CDATA[<p>错误描述:在A类访问B类里的static 变量，永远是初始值，即使已经设置过新值</p><p>解决办法：A类import B类头文件时使用绝对路径，不使用系统默认</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//错误</span><br><span class="line">import &#x27;package:xxx_app/utils/app_helper.dart&#x27;;</span><br><span class="line">//正确</span><br><span class="line">import &#x27;../utils/app_helper.dart&#x27;;</span><br></pre></td></tr></table></figure><p>B类结构</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class AppHelper &#123;</span><br><span class="line">  static String name &#x3D; &quot;&quot;;</span><br><span class="line">  </span><br><span class="line">  someFunction()&#123;</span><br><span class="line">    name &#x3D; &quot;testName&quot;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>参考：<a href="https://stackoverflow.com/questions/45772318/flutter-dart-static-variables-lost-keep-getting-reinitialized">https://stackoverflow.com/questions/45772318/flutter-dart-static-variables-lost-keep-getting-reinitialized</a></p><p>新词：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toy around</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;错误描述:在A类访问B类里的static 变量，永远是初始值，即使已经设置过新值&lt;/p&gt;
-&lt;p&gt;解决办法：A类import B类头文件时使用绝对路径，不使用系统默认&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cla</summary>
-      
-    
-    
-    
-    <category term="flutter" scheme="https://pluscool.cn/categories/flutter/"/>
     
     
   </entry>

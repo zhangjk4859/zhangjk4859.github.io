@@ -148,6 +148,156 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/11/30/unix-tool/unix-commands/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/30/unix-tool/unix-commands/" class="post-title-link" itemprop="url">unix commands</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-30 18:13:26 / Modified: 09:46:10" itemprop="dateCreated datePublished" datetime="2021-11-30T18:13:26+08:00">2021-11-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unix/" itemprop="url" rel="index"><span itemprop="name">unix</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><ul>
+<li><p>short for “concatenate”</p>
+</li>
+<li><p>allows us to create single or multiple files,view content of a file, concatenate files and redirect output in terminal or files</p>
+<p><img src="https://linuxhandbook.com/content/images/2021/09/join-strings-bash.webp" alt="image"></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/11/30/unix-tool/change-mac-java-version/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/30/unix-tool/change-mac-java-version/" class="post-title-link" itemprop="url">更换mac java版本</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-30 10:09:42 / Modified: 10:10:17" itemprop="dateCreated datePublished" datetime="2021-11-30T10:09:42+08:00">2021-11-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/unix/" itemprop="url" rel="index"><span itemprop="name">unix</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>电脑默认安装java 16，需要更换为java 8</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open /Library/Java/JavaVirtualMachines/</span><br></pre></td></tr></table></figure>
+
+<p>选择想要删除的版本，输入管理员密码</p>
+<p>点击<a target="_blank" rel="noopener" href="https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk">下载java8</a>dmg安装</p>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">openjdk version &quot;1.8.0_312&quot;</span><br><span class="line">OpenJDK Runtime Environment (Zulu 8.58.0.13-CA-macos-aarch64) (build 1.8.0_312-b07)</span><br><span class="line">OpenJDK 64-Bit Server VM (Zulu 8.58.0.13-CA-macos-aarch64) (build 25.312-b07, mixed mode)</span><br></pre></td></tr></table></figure>
+
+<p>完。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.anotheriosdevblog.com/installing-homebrew-and-jenkins-on-my-m1-mac-mini/">https://www.anotheriosdevblog.com/installing-homebrew-and-jenkins-on-my-m1-mac-mini/</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/11/29/unix-tool/jenkins-installation-error/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -208,76 +358,6 @@
 <p>可以看到是中科大的镜像，未和官网完成同步，五月一号起官网已不再支持bintray服务，把域名切换为空即可</p>
 <p>完。</p>
 <p>参考：<a target="_blank" rel="noopener" href="https://www.tinkol.com/372">https://www.tinkol.com/372</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/11/29/jenkins-installation-error/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/29/jenkins-installation-error/" class="post-title-link" itemprop="url">jenkins安装失败</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-11-29 14:37:56 / Modified: 14:38:53" itemprop="dateCreated datePublished" datetime="2021-11-29T14:37:56+08:00">2021-11-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/unix/" itemprop="url" rel="index"><span itemprop="name">unix</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>今日安装jenkins，出现报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -1757,86 +1837,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/07/19/cs/add-https-on-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/07/19/cs/add-https-on-blog/" class="post-title-link" itemprop="url">给自己的博客域名加https</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-07-19 09:51:15 / Modified: 18:09:03" itemprop="dateCreated datePublished" datetime="2021-07-19T09:51:15+08:00">2021-07-19</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>​    一开始想添加一个博客评论系统，方便交流，参考的是<a target="_blank" rel="noopener" href="https://freemind.pluskid.org/technology/github-based-comment-system-and-the-death-of-independent-blog/">kid的博客</a>，选择最简单的方案 <a target="_blank" rel="noopener" href="https://utteranc.es/">utteranc.es</a>，hexo已经有<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/76237379">插件集成</a>，使用的是npm安装。安装完成后在博客底部成功出现评论框</p>
-<p><img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/comment-box.jpg?raw=true" alt="comment-box.jpg"></p>
-<p>点击github登录时出现了访问失败，找不到资源</p>
-<p><img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/domain404.jpg?raw=true" alt="image"></p>
-<p>经过测试，确定原因是自己域名没有https的原因，链接添加参数后默认以https访问出现请求失败情况。首先想到的是去阿里万网看自带的服务，价格有些小贵<img src="https://github.com/zhangjk4859/zhangjk4859.github.io/blob/zjk/pics/wanwangprice.png?raw=true" alt="image"></p>
-<p>为了秉持互联网免费原则，确定了<a target="_blank" rel="noopener" href="https://jaeger.itscoder.com/web/2017/08/30/github-page-https.html">Netlify方案</a>,根据教程配置完成后大概等了半天时间，https域名就可以正常使用了。</p>
-<p>没有尝试的方案：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zaq0123/article/details/79880838">阿里云一年免费</a></li>
-<li><a target="_blank" rel="noopener" href="https://tzhou2018.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/">cloud flare免费方案</a></li>
-<li><a target="_blank" rel="noopener" href="http://fangzh.top/2018/2018090918/">一个比较有趣的评论系统</a>，需要登录社交账号</li>
-</ul>
-<p>最后，感谢<a target="_blank" rel="noopener" href="https://blog.lanweihong.com/posts/24011/">蓝伟洪</a>和<a target="_blank" rel="noopener" href="https://yanqizhao.com/">小蘑菇</a>配合测试评论系统。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1906,7 +1906,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">75</span>
+          <span class="site-state-item-count">76</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
