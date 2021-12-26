@@ -6,7 +6,7 @@
   <link href="https://pluscool.cn/atom.xml" rel="self"/>
   
   <link href="https://pluscool.cn/"/>
-  <updated>2021-12-24T08:09:21.829Z</updated>
+  <updated>2021-12-26T01:21:44.055Z</updated>
   <id>https://pluscool.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://pluscool.cn/2021/12/24/vue/structure%20of%20vue/"/>
     <id>https://pluscool.cn/2021/12/24/vue/structure%20of%20vue/</id>
     <published>2021-12-24T11:15:35.000Z</published>
-    <updated>2021-12-24T08:09:21.829Z</updated>
+    <updated>2021-12-26T01:21:44.055Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=MmgswF5GFf8">Introduction to Vue.js</a></p><p><a href="https://www.youtube.com/watch?v=nKg_p89Hzos">What is Vue Router</a></p><p><a href="https://www.youtube.com/watch?v=oxUyIzDbZts">Learn vuex in 15 minutes</a></p><p><img src="https://miro.medium.com/max/1400/1*ypvWdsbWb18Hl-xq016ytA.png" alt="image"></p><p>Tips:</p><ul><li>In a traditional app that is not using client-side routing,the browser is essentially going out and fetching the different content that we need from those different urls</li><li>With a Single Page Application,we’re really only looking at one page,the <strong>index.html</strong>,and as we click around in it, we’re adjusting which view we’re seeing of that app, hence we call it a single page application, because all of these pages come from that one <strong>index.html</strong> page.</li><li><router-view /> is a placeholder replaced by route’s component</li><li>In client-side routing,when navigation happens, Vue with the help of Vue router compares and renders the differences without ever having to reload the page</li></ul><p><img src="https://static.javatpoint.com/tutorial/vue-js/images/vue-js-reactivity-system.png" alt="image"></p><p><img src="https://miro.medium.com/max/1400/1*QN4Gf4ZCJNi4-C60Q4L5SQ.png" alt="image"></p><p><img src="https://miro.medium.com/max/1400/1*xr6nDJ7gy4glRZe_lAfHrQ.png" alt="image"></p><p><img src="https://codingexplained.com/wp-content/uploads/2017/04/Vue-instance-lifecycle-Page-1.png" alt="image"></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.youtube.com/watch?v=MmgswF5GFf8">Introduction to Vue.js</a></p><p><a href="https://www.youtube.com/watch?v=nKg_p89Hzos">What is Vue Router</a></p><p><a href="https://www.youtube.com/watch?v=oxUyIzDbZts">Learn vuex in 15 minutes</a></p><p><a href="https://vuejs.org/v2/guide/reactivity.html">Reactivity in Depth</a></p><p><img src="https://miro.medium.com/max/1400/1*ypvWdsbWb18Hl-xq016ytA.png" alt="image"></p><p>Tips:</p><ul><li>In a traditional app that is not using client-side routing,the browser is essentially going out and fetching the different content that we need from those different urls</li><li>With a Single Page Application,we’re really only looking at one page,the <strong>index.html</strong>,and as we click around in it, we’re adjusting which view we’re seeing of that app, hence we call it a single page application, because all of these pages come from that one <strong>index.html</strong> page.</li><li><router-view /> is a placeholder replaced by route’s component</li><li>In client-side routing,when navigation happens, Vue with the help of Vue router compares and renders the differences without ever having to reload the page</li></ul><p><img src="https://static.javatpoint.com/tutorial/vue-js/images/vue-js-reactivity-system.png" alt="image"></p><p><img src="https://miro.medium.com/max/1400/1*QN4Gf4ZCJNi4-C60Q4L5SQ.png" alt="image"></p><p><img src="https://miro.medium.com/max/1400/1*xr6nDJ7gy4glRZe_lAfHrQ.png" alt="image"></p><p><img src="https://codingexplained.com/wp-content/uploads/2017/04/Vue-instance-lifecycle-Page-1.png" alt="image"></p>]]></content>
     
     
       
