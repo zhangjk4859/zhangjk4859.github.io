@@ -148,6 +148,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2022/01/10/vue/js-single-thread-async/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/01/10/vue/js-single-thread-async/" class="post-title-link" itemprop="url">If Javascript Is Single Threaded, How Is It Asynchronous?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-01-10 14:26:30 / Modified: 14:28:43" itemprop="dateCreated datePublished" datetime="2022-01-10T14:26:30+08:00">2022-01-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the next. It’s synchronous, but at times that can be harmful. For example, if a function takes awhile to execute or has to wait on something, it freezes everything up in the meanwhile.</p>
+<p>A good example of this happening is the window alert function. <code>alert(&quot;Hello World&quot;)</code></p>
+<p>You can’t interact with the webpage at all until you hit OK and dismiss the alert. You’re stuck.</p>
+<p>So how do we get asynchronous code with Javascript then?</p>
+<p>Well, we can thank the Javascript engine (V8, Spidermonkey, JavaScriptCore, etc…) for that, which has Web API that handle these tasks in the background. The call stack recognizes functions of the Web API and hands them off to be handled by the browser. Once those tasks are finished by the browser, they return and are pushed onto the stack as a callback.</p>
+<p>Open your console and type <code>window</code> then press enter. You’ll see most everything the Web API has to offer. This includes things like ajax calls, event listeners, the fetch API, and setTimeout. Javascript uses low level programming languages like C++ to perform these behind the scenes.</p>
+<p>Let’s look at a simple example, run this code your console:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;first&quot;)</span><br><span class="line">setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&quot;second&quot;)</span><br><span class="line">&#125;, 1000)</span><br><span class="line">console.log(&quot;third&quot;)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>What did we get back?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first</span><br><span class="line">third</span><br><span class="line">undefined</span><br><span class="line">second</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Feels odd, right? Well, let’s break this down line by line:</p>
+<p><code>console.log(&quot;first&quot;)</code> is on the stack first, so it gets printed. <strong>Next, the engine notices setTimeout, which isn’t handled by Javascript and pushes it off to the WebAPI to be done asynchronously.</strong> The call stack moves on without caring about the code handed off to the Web APIs and <code>console.log(&quot;three&quot;)</code> is printed.</p>
+<p>Next, the Javascript engine’s event loop kicks in, like a little kid asking “Are we there yet?” on a road trip. It starts firing, waiting for events to be pushed into it. Since the <code>setTimeout</code> isn’t finished, it returns <code>undefined</code>, as the default, well because it hasn’t been given the value yet. Once the callback finally does hits we get <code>console.log(&quot;second&quot;)</code> printed.</p>
+<p>There’s a really good site that slows this all down and shows this happening.</p>
+<p><a target="_blank" rel="noopener" href="http://latentflip.com/loupe">http://latentflip.com/loupe</a></p>
+<p>I suggest playing around in this sandbox to help solidify your understanding. It helped me get a feel for how asynchronous code can work with Javascript being single threaded.</p>
+<p>Ref:<a target="_blank" rel="noopener" href="https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd">https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2022/01/10/vue/concurrency-model-event-loop/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1710,81 +1800,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/08/06/know/fabien-sanglard/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/08/06/know/fabien-sanglard/" class="post-title-link" itemprop="url">一个法国程序员</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-08-06 14:28:46 / Modified: 14:46:27" itemprop="dateCreated datePublished" datetime="2021-08-06T14:28:46+08:00">2021-08-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8F%91%E8%A7%89/" itemprop="url" rel="index"><span itemprop="name">发觉</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>​     今天找《code》封面时看到一个<a target="_blank" rel="noopener" href="https://fabiensanglard.net/books_recommendations/index.php">个人博客</a>，推荐了作者自己读过的最好的几本技术书籍，其中包括了《code》，还有大名鼎鼎的《The C Programming Language》,在此收藏一下，日后有时间去拜读一遍，也许是never，:-）</p>
-<p>​    看完书籍推荐，顺便看了下作者的about，法国Lyon(里昂？)出生，Romans-Sur-Isere长大，2004在Grenoble University获得CS Master学位，在巴黎做了一年程序员后，为了逐梦和学英语，使用Work Holiday Visa去了多伦多，计划呆五个月，最终呆了9年。在多伦多的第一份工作是busboy</p>
-<p><img src="data:image/jpeg;base64,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" alt="image"></p>
-<p>不久后回归程序员，在Rogers和QuickPlay供职，然后成为一家创业公司Memset Software的老板。</p>
-<p>2012年获得加拿大国籍，拥有加拿大和法国双国籍。</p>
-<p>2014年入职谷歌，在加州落脚。</p>
-<p>出过两本书，<a target="_blank" rel="noopener" href="https://fabiensanglard.net/gebbwolf3d">Game Engine Black Book: Wolfenstein 3D</a>和<a target="_blank" rel="noopener" href="https://fabiensanglard.net/gebbdoom">Game Engine Black Book: DOOM</a></p>
-<p>完。  </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1854,7 +1869,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

@@ -6,7 +6,7 @@
   <link href="https://pluscool.cn/atom.xml" rel="self"/>
   
   <link href="https://pluscool.cn/"/>
-  <updated>2022-01-10T06:16:57.641Z</updated>
+  <updated>2022-01-10T06:28:43.135Z</updated>
   <id>https://pluscool.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>If Javascript Is Single Threaded, How Is It Asynchronous?</title>
+    <link href="https://pluscool.cn/2022/01/10/vue/js-single-thread-async/"/>
+    <id>https://pluscool.cn/2022/01/10/vue/js-single-thread-async/</id>
+    <published>2022-01-10T06:26:30.000Z</published>
+    <updated>2022-01-10T06:28:43.135Z</updated>
+    
+    <content type="html"><![CDATA[<p>Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the next. It’s synchronous, but at times that can be harmful. For example, if a function takes awhile to execute or has to wait on something, it freezes everything up in the meanwhile.</p><p>A good example of this happening is the window alert function. <code>alert(&quot;Hello World&quot;)</code></p><p>You can’t interact with the webpage at all until you hit OK and dismiss the alert. You’re stuck.</p><p>So how do we get asynchronous code with Javascript then?</p><p>Well, we can thank the Javascript engine (V8, Spidermonkey, JavaScriptCore, etc…) for that, which has Web API that handle these tasks in the background. The call stack recognizes functions of the Web API and hands them off to be handled by the browser. Once those tasks are finished by the browser, they return and are pushed onto the stack as a callback.</p><p>Open your console and type <code>window</code> then press enter. You’ll see most everything the Web API has to offer. This includes things like ajax calls, event listeners, the fetch API, and setTimeout. Javascript uses low level programming languages like C++ to perform these behind the scenes.</p><p>Let’s look at a simple example, run this code your console:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;first&quot;)</span><br><span class="line">setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&quot;second&quot;)</span><br><span class="line">&#125;, 1000)</span><br><span class="line">console.log(&quot;third&quot;)</span><br></pre></td></tr></table></figure><p>What did we get back?</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first</span><br><span class="line">third</span><br><span class="line">undefined</span><br><span class="line">second</span><br></pre></td></tr></table></figure><p>Feels odd, right? Well, let’s break this down line by line:</p><p><code>console.log(&quot;first&quot;)</code> is on the stack first, so it gets printed. <strong>Next, the engine notices setTimeout, which isn’t handled by Javascript and pushes it off to the WebAPI to be done asynchronously.</strong> The call stack moves on without caring about the code handed off to the Web APIs and <code>console.log(&quot;three&quot;)</code> is printed.</p><p>Next, the Javascript engine’s event loop kicks in, like a little kid asking “Are we there yet?” on a road trip. It starts firing, waiting for events to be pushed into it. Since the <code>setTimeout</code> isn’t finished, it returns <code>undefined</code>, as the default, well because it hasn’t been given the value yet. Once the callback finally does hits we get <code>console.log(&quot;second&quot;)</code> printed.</p><p>There’s a really good site that slows this all down and shows this happening.</p><p><a href="http://latentflip.com/loupe">http://latentflip.com/loupe</a></p><p>I suggest playing around in this sandbox to help solidify your understanding. It helped me get a feel for how asynchronous code can work with Javascript being single threaded.</p><p>Ref:<a href="https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd">https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order an</summary>
+      
+    
+    
+    
+    <category term="vue" scheme="https://pluscool.cn/categories/vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Concurrency Model and The Event Loop</title>
@@ -458,29 +480,6 @@
     <summary type="html">&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;抽取widget，尽量成为一个stateless widget&lt;/p&gt;
 &lt;figure class=&quot;highlight dart&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span</summary>
-      
-    
-    
-    
-    <category term="flutter" scheme="https://pluscool.cn/categories/flutter/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>flutter安卓release包代码无法执行</title>
-    <link href="https://pluscool.cn/2021/04/11/flutter/flutter-relese-apk-do-not-work/"/>
-    <id>https://pluscool.cn/2021/04/11/flutter/flutter-relese-apk-do-not-work/</id>
-    <published>2021-04-11T01:18:49.000Z</published>
-    <updated>2021-04-01T01:57:13.795Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>flutter工程打包apk文件后</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">val</span> method = javaClass.getDeclaredMethod(call.method, MethodCall::<span class="keyword">class</span>.java, MethodChannel.Result::<span class="keyword">class</span>.java)</span><br><span class="line">    method.invoke(<span class="keyword">this</span>, call, result)</span><br><span class="line">&#125; <span class="keyword">catch</span> (e: NoSuchMethodException) &#123;</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125; <span class="keyword">catch</span> (e: IllegalAccessException) &#123;</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125; <span class="keyword">catch</span> (e: InvocationTargetException) &#123;</span><br><span class="line">    e.printStackTrace()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这段代码无法执行</p><h2 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h2><p>经过咨询，安卓release包会代码混淆，使用反射会让代码无法精确匹配</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决:"></a>解决:</h2><ul><li>使用反射的类不参与混淆，降低安全性</li><li>不使用反射，改用if判断或者switch case</li></ul><p>参考：1. <a href="https://stackoverflow.com/questions/41525867/reflection-not-working-on-android-release-apk-even-with-proguard-minify-disable">https://stackoverflow.com/questions/41525867/reflection-not-working-on-android-release-apk-even-with-proguard-minify-disable</a></p><p>2.<a href="https://blog.csdn.net/guohesheng/article/details/53696652">https://blog.csdn.net/guohesheng/article/details/53696652</a></p><p>3.<a href="https://www.jianshu.com/p/b5b2a5dfaaf4">https://www.jianshu.com/p/b5b2a5dfaaf4</a></p><p>感谢王志浩同学提供帮助！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;问题描述：&quot;&gt;&lt;a href=&quot;#问题描述：&quot; class=&quot;headerlink&quot; title=&quot;问题描述：&quot;&gt;&lt;/a&gt;问题描述：&lt;/h2&gt;&lt;p&gt;flutter工程打包apk文件后&lt;/p&gt;
-&lt;figure class=&quot;highlight kotlin&quot;&gt;&lt;ta</summary>
       
     
     

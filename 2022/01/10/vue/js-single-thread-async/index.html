@@ -20,21 +20,19 @@
     var CONFIG = {"hostname":"pluscool.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="地址：https:&#x2F;&#x2F;github.com&#x2F;kokohuang&#x2F;flutter_easyloading 用法，添加到materialApp的builder属性中 1234567891011121314class MyApp extends StatelessWidget &amp;#123;  &#x2F;&#x2F; This widget is the root of your application.  @overri">
+  <meta name="description" content="Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the nex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="flutter中一个好用的三方库loading">
-<meta property="og:url" content="https://pluscool.cn/2021/01/05/flutter/flutter-loading/index.html">
+<meta property="og:title" content="If Javascript Is Single Threaded, How Is It Asynchronous?">
+<meta property="og:url" content="https://pluscool.cn/2022/01/10/vue/js-single-thread-async/index.html">
 <meta property="og:site_name" content="加酷知识源">
-<meta property="og:description" content="地址：https:&#x2F;&#x2F;github.com&#x2F;kokohuang&#x2F;flutter_easyloading 用法，添加到materialApp的builder属性中 1234567891011121314class MyApp extends StatelessWidget &amp;#123;  &#x2F;&#x2F; This widget is the root of your application.  @overri">
+<meta property="og:description" content="Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the nex">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/kokohuang/flutter_easyloading/master/images/gif01.gif">
-<meta property="article:published_time" content="2021-01-05T02:47:15.000Z">
-<meta property="article:modified_time" content="2021-01-12T15:40:01.446Z">
+<meta property="article:published_time" content="2022-01-10T06:26:30.000Z">
+<meta property="article:modified_time" content="2022-01-10T06:28:43.135Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/kokohuang/flutter_easyloading/master/images/gif01.gif">
 
-<link rel="canonical" href="https://pluscool.cn/2021/01/05/flutter/flutter-loading/">
+<link rel="canonical" href="https://pluscool.cn/2022/01/10/vue/js-single-thread-async/">
 
 
 <script id="page-configurations">
@@ -47,7 +45,7 @@
   };
 </script>
 
-  <title>flutter中一个好用的三方库loading | 加酷知识源</title>
+  <title>If Javascript Is Single Threaded, How Is It Asynchronous? | 加酷知识源</title>
   
 
 
@@ -153,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/01/05/flutter/flutter-loading/">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2022/01/10/vue/js-single-thread-async/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          flutter中一个好用的三方库loading
+          If Javascript Is Single Threaded, How Is It Asynchronous?
         </h1>
 
         <div class="post-meta">
@@ -175,16 +173,19 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-01-05 10:47:15" itemprop="dateCreated datePublished" datetime="2021-01-05T10:47:15+08:00">2021-01-05</time>
+              <time title="Created: 2022-01-10 14:26:30 / Modified: 14:28:43" itemprop="dateCreated datePublished" datetime="2022-01-10T14:26:30+08:00">2022-01-10</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-12 23:40:01" itemprop="dateModified" datetime="2021-01-12T23:40:01+08:00">2021-01-12</time>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
               </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
+                </span>
+            </span>
 
           
 
@@ -197,19 +198,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>地址：<a target="_blank" rel="noopener" href="https://github.com/kokohuang/flutter_easyloading">https://github.com/kokohuang/flutter_easyloading</a></p>
-<p>用法，添加到materialApp的builder属性中</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="comment">// This widget is the root of your application.</span></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> MaterialApp(</span><br><span class="line">      title: <span class="string">&#x27;Flutter EasyLoading&#x27;</span>,</span><br><span class="line">      theme: ThemeData(</span><br><span class="line">        primarySwatch: Colors.blue,</span><br><span class="line">      ),</span><br><span class="line">      home: MyHomePage(title: <span class="string">&#x27;Flutter EasyLoading&#x27;</span>),</span><br><span class="line">      builder: EasyLoading.init(),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the next. It’s synchronous, but at times that can be harmful. For example, if a function takes awhile to execute or has to wait on something, it freezes everything up in the meanwhile.</p>
+<p>A good example of this happening is the window alert function. <code>alert(&quot;Hello World&quot;)</code></p>
+<p>You can’t interact with the webpage at all until you hit OK and dismiss the alert. You’re stuck.</p>
+<p>So how do we get asynchronous code with Javascript then?</p>
+<p>Well, we can thank the Javascript engine (V8, Spidermonkey, JavaScriptCore, etc…) for that, which has Web API that handle these tasks in the background. The call stack recognizes functions of the Web API and hands them off to be handled by the browser. Once those tasks are finished by the browser, they return and are pushed onto the stack as a callback.</p>
+<p>Open your console and type <code>window</code> then press enter. You’ll see most everything the Web API has to offer. This includes things like ajax calls, event listeners, the fetch API, and setTimeout. Javascript uses low level programming languages like C++ to perform these behind the scenes.</p>
+<p>Let’s look at a simple example, run this code your console:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;first&quot;)</span><br><span class="line">setTimeout(() &#x3D;&gt; &#123;</span><br><span class="line">    console.log(&quot;second&quot;)</span><br><span class="line">&#125;, 1000)</span><br><span class="line">console.log(&quot;third&quot;)</span><br></pre></td></tr></table></figure>
 
 
 
-<p>接下来在任何地方调用</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">EasyLoading.<span class="keyword">show</span>(status: <span class="string">&#x27;loading...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showProgress(<span class="number">0.3</span>, status: <span class="string">&#x27;downloading...&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showSuccess(<span class="string">&#x27;Great Success!&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showError(<span class="string">&#x27;Failed with Error&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showInfo(<span class="string">&#x27;Useful Information.&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.showToast(<span class="string">&#x27;Toast&#x27;</span>);</span><br><span class="line"></span><br><span class="line">EasyLoading.dismiss();</span><br></pre></td></tr></table></figure>
+<p>What did we get back?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">first</span><br><span class="line">third</span><br><span class="line">undefined</span><br><span class="line">second</span><br></pre></td></tr></table></figure>
 
 
 
-<p>示例图片</p>
-<p><img src="https://raw.githubusercontent.com/kokohuang/flutter_easyloading/master/images/gif01.gif" alt="image"></p>
+<p>Feels odd, right? Well, let’s break this down line by line:</p>
+<p><code>console.log(&quot;first&quot;)</code> is on the stack first, so it gets printed. <strong>Next, the engine notices setTimeout, which isn’t handled by Javascript and pushes it off to the WebAPI to be done asynchronously.</strong> The call stack moves on without caring about the code handed off to the Web APIs and <code>console.log(&quot;three&quot;)</code> is printed.</p>
+<p>Next, the Javascript engine’s event loop kicks in, like a little kid asking “Are we there yet?” on a road trip. It starts firing, waiting for events to be pushed into it. Since the <code>setTimeout</code> isn’t finished, it returns <code>undefined</code>, as the default, well because it hasn’t been given the value yet. Once the callback finally does hits we get <code>console.log(&quot;second&quot;)</code> printed.</p>
+<p>There’s a really good site that slows this all down and shows this happening.</p>
+<p><a target="_blank" rel="noopener" href="http://latentflip.com/loupe">http://latentflip.com/loupe</a></p>
+<p>I suggest playing around in this sandbox to help solidify your understanding. It helped me get a feel for how asynchronous code can work with Javascript being single threaded.</p>
+<p>Ref:<a target="_blank" rel="noopener" href="https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd">https://dev.to/bbarbour/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd</a></p>
 
     </div>
 
@@ -225,13 +236,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/01/05/flutter/flutter-padding/" rel="prev" title="flutter padding组件">
-      <i class="fa fa-chevron-left"></i> flutter padding组件
+    <a href="/2022/01/10/vue/concurrency-model-event-loop/" rel="prev" title="Concurrency Model and The Event Loop">
+      <i class="fa fa-chevron-left"></i> Concurrency Model and The Event Loop
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/01/05/flutter/flutter-dio-net/" rel="next" title="flutter网络三方库Flutter-Net">
-      flutter网络三方库Flutter-Net <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
