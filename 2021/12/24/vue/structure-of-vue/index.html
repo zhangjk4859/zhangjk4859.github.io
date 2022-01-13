@@ -32,8 +32,9 @@
 <meta property="og:image" content="https://miro.medium.com/max/1400/1*QN4Gf4ZCJNi4-C60Q4L5SQ.png">
 <meta property="og:image" content="https://miro.medium.com/max/1400/1*xr6nDJ7gy4glRZe_lAfHrQ.png">
 <meta property="og:image" content="https://codingexplained.com/wp-content/uploads/2017/04/Vue-instance-lifecycle-Page-1.png">
+<meta property="og:image" content="https://dotblogsfile.blob.core.windows.net/user/chris%20chen/a38af4ca-3e68-4115-ab56-355d92d0e792/1488768217_35567.png">
 <meta property="article:published_time" content="2021-12-24T11:15:35.000Z">
-<meta property="article:modified_time" content="2022-01-10T03:21:34.284Z">
+<meta property="article:modified_time" content="2022-01-13T07:44:49.595Z">
 <meta property="article:author" content="张俊凯">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://miro.medium.com/max/1400/1*ypvWdsbWb18Hl-xq016ytA.png">
@@ -187,7 +188,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-01-10 11:21:34" itemprop="dateModified" datetime="2022-01-10T11:21:34+08:00">2022-01-10</time>
+                <time title="Modified: 2022-01-13 15:44:49" itemprop="dateModified" datetime="2022-01-13T15:44:49+08:00">2022-01-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,6 +234,8 @@
 
 <p>At this point, the template is no longer simple and declarative. You have to look at it for a second before realizing that it displays <code>message</code> in reverse. The problem is made worse when you want to include the reversed message in your template more than once.That’s why for any complex logic, you should use a <strong>computed property</strong>.Computed property is much more like a function,but what’s the difference? For the end result, the two approaches are indeed exactly the same. However, the difference is that <strong>computed properties are cached based on their reactive dependencies.</strong> A computed property will only re-evaluate when some of its reactive dependencies have changed. This means as long as <code>message</code> has not changed, multiple access to the <code>reversedMessage</code> computed property will immediately return the previously computed result without having to run the function again.In comparison, a method invocation will <strong>always</strong> run the function whenever a re-render happens.</p>
 <p>Ref:<a target="_blank" rel="noopener" href="https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property">https://vuejs.org/v2/guide/computed.html#Computed-vs-Watched-Property</a></p>
+<h2 id="The-Route-Object"><a href="#The-Route-Object" class="headerlink" title="The Route Object"></a>The Route Object</h2><p>A <strong>route object</strong> represents the state of the current active route. It contains parsed information of the current URL and the <strong>route records</strong> matched by the URL.The route object is immutable.Every successful navigation will result in <a target="_blank" rel="noopener" href="https://router.vuejs.org/api/#the-route-object">a fresh route object</a></p>
+<p><img src="https://dotblogsfile.blob.core.windows.net/user/chris%20chen/a38af4ca-3e68-4115-ab56-355d92d0e792/1488768217_35567.png" alt="image"></p>
 
     </div>
 
@@ -320,7 +323,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-What-is-One-Way-Data-Flow"><span class="nav-number">1.</span> <span class="nav-text">Q:What is One-Way Data Flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-What-is-Computed-Property"><span class="nav-number">2.</span> <span class="nav-text">Q:What is Computed Property</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-What-is-One-Way-Data-Flow"><span class="nav-number">1.</span> <span class="nav-text">Q:What is One-Way Data Flow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Q-What-is-Computed-Property"><span class="nav-number">2.</span> <span class="nav-text">Q:What is Computed Property</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Route-Object"><span class="nav-number"></span> <span class="nav-text">The Route Object</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -334,7 +337,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">80</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
