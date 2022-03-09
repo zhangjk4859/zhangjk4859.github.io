@@ -148,89 +148,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2020/12/02/cs/what-is-bit-code/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/12/02/cs/what-is-bit-code/" class="post-title-link" itemprop="url">什么是bitCode</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-12-02 07:45:52" itemprop="dateCreated datePublished" datetime="2020-12-02T07:45:52+08:00">2020-12-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-01-12 23:40:01" itemprop="dateModified" datetime="2021-01-12T23:40:01+08:00">2021-01-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>The process of compiling consists of three different steps:</p>
-<p>1.The compilier front-end converts the source code into some kind of intermediate representation.</p>
-<p>2.The optimizer performs a sequence of optimizing transformations on the IR to render it smaller and more performant:redundant code is removed,results are pretaculated,code is inlined, etc.This crucial step of the compilation process makes use of IR,rather than cource code or machine code,because it can more easily be interreted by the optimizer.</p>
-<ol start="3">
-<li>The compilier back-end generates machine code based on the optimized IR. </li>
-</ol>
-<p>When we are talking about bitcode,we are actually talking about the IR used by the Clang Compilier.</p>
-<p><img src="https://www.guardsquare.com/files/media/guardsquare2017/Compiling-with-bitcode-enabled.png" alt="image"></p>
-<p>With the bitcode embedded in the executable,Apple is able to recompile applications without interacting with the developer.This has a lot of advantages. </p>
-<p>source:<a target="_blank" rel="noopener" href="https://www.guardsquare.com/en/blog/enable-bitcode">https://www.guardsquare.com/en/blog/enable-bitcode</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2020/11/27/flutter/flutter-components/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -952,6 +869,113 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2020/11/20/algo/lru-cache/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/20/algo/lru-cache/" class="post-title-link" itemprop="url">LRU cache implementation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-11-20 23:39:09" itemprop="dateCreated datePublished" datetime="2020-11-20T23:39:09+08:00">2020-11-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-01-12 23:40:01" itemprop="dateModified" datetime="2021-01-12T23:40:01+08:00">2021-01-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>LRU cache stand for Least Recently Used Cache,which evict least   recently used entry.As Cache purpose is to provide fast and efficient way of retrieving data, it need to meet certain requirement.</p>
+<p>Some of the Requirement are</p>
+<ul>
+<li>fixed size:cache need to have some bounds to limit memory usages.</li>
+<li>Fast Access:Cache Inert and lookup operation should be fast, preferably O(1) time</li>
+<li>Replacement of Entry in case,Memory Limit is reached:A cache shoule have efficient algorithm to evict when memory is full.</li>
+</ul>
+<p>In case of LRU cache we evict least recently used entry so we have to keep track of recently used entries, entries which have not been used from long time and which have been used recently, plus lookup and insertion operation should be fast enough .</p>
+<p>When we think about O(1) lookup, obvious data structure comes in our mind is HashMap.HashMap provide O(1) insertion and lookup,but HashMap does not has mechanism of tracking which entry has been queried recently and which not.</p>
+<p>To track this we require another data-structure which provide fast insertion ,deletion and updation,in case of LRU we use Doubly Linkedlist.Reason for choosing doubly LinkList is O(1) deletion,updation and insertion  if we have the address of Node on which this operation has to perform</p>
+<p>So our Implementation of LRU cache will have HashMap and Doubly LinkedList.In which HashMap will hold the keys and address of the Nodes of Doubly LinkedList.And Doubly LinkedList will hold the values of keys.</p>
+<p>As we need to keep track of Recently used entries,we will use a clever approach.We will remove element from bottom and add element on start of LinkedList and whenever any entries is accessed,it will be moved to top.so that recently used entries will be on Top and Least used will be on Bottom.</p>
+<p><img src="https://miro.medium.com/max/1300/0*fOwBd3z0XtHh7WN1.png" alt="image"></p>
+<p>Let implementation the LRU Cache</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line">package com.learning;</span><br><span class="line"></span><br><span class="line">&#x2F;* package whatever; &#x2F;&#x2F; don&#39;t place package name! *&#x2F;</span><br><span class="line"></span><br><span class="line">import java.util.HashMap;</span><br><span class="line">class Entry &#123;</span><br><span class="line">	int value;</span><br><span class="line">	int key;</span><br><span class="line">	Entry left;</span><br><span class="line">	Entry right;</span><br><span class="line">&#125;</span><br><span class="line">public class LRUCache &#123;</span><br><span class="line"></span><br><span class="line">	HashMap&lt;Integer, Entry&gt; hashmap;</span><br><span class="line">	Entry start, end;</span><br><span class="line">	int LRU_SIZE &#x3D; 4; &#x2F;&#x2F; Here i am setting 4 to test the LRU cache</span><br><span class="line">						&#x2F;&#x2F; implementation, it can make be dynamic</span><br><span class="line">	public LRUCache() &#123;</span><br><span class="line">		hashmap &#x3D; new HashMap&lt;Integer, Entry&gt;();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public int getEntry(int key) &#123;</span><br><span class="line">		if (hashmap.containsKey(key)) &#x2F;&#x2F; Key Already Exist, just update the</span><br><span class="line">		&#123;</span><br><span class="line">			Entry entry &#x3D; hashmap.get(key);</span><br><span class="line">			removeNode(entry);</span><br><span class="line">			addAtTop(entry);</span><br><span class="line">			return entry.value;</span><br><span class="line">		&#125;</span><br><span class="line">		return -1;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void putEntry(int key, int value) &#123;</span><br><span class="line">		if (hashmap.containsKey(key)) &#x2F;&#x2F; Key Already Exist, just update the value and move it to top</span><br><span class="line">		&#123;</span><br><span class="line">			Entry entry &#x3D; hashmap.get(key);</span><br><span class="line">			entry.value &#x3D; value;</span><br><span class="line">			removeNode(entry);</span><br><span class="line">			addAtTop(entry);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			Entry newnode &#x3D; new Entry();</span><br><span class="line">			newnode.left &#x3D; null;</span><br><span class="line">			newnode.right &#x3D; null;</span><br><span class="line">			newnode.value &#x3D; value;</span><br><span class="line">			newnode.key &#x3D; key;</span><br><span class="line">			if (hashmap.size() &gt; LRU_SIZE) &#x2F;&#x2F; We have reached maxium size so need to make room for new element.</span><br><span class="line">			&#123;</span><br><span class="line">				hashmap.remove(end.key);</span><br><span class="line">				removeNode(end);				</span><br><span class="line">				addAtTop(newnode);</span><br><span class="line"></span><br><span class="line">			&#125; else &#123;</span><br><span class="line">				addAtTop(newnode);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			hashmap.put(key, newnode);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public void addAtTop(Entry node) &#123;</span><br><span class="line">		node.right &#x3D; start;</span><br><span class="line">		node.left &#x3D; null;</span><br><span class="line">		if (start !&#x3D; null)</span><br><span class="line">			start.left &#x3D; node;</span><br><span class="line">		start &#x3D; node;</span><br><span class="line">		if (end &#x3D;&#x3D; null)</span><br><span class="line">			end &#x3D; start;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	public void removeNode(Entry node) &#123;</span><br><span class="line"></span><br><span class="line">		if (node.left !&#x3D; null) &#123;</span><br><span class="line">			node.left.right &#x3D; node.right;</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			start &#x3D; node.right;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		if (node.right !&#x3D; null) &#123;</span><br><span class="line">			node.right.left &#x3D; node.left;</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			end &#x3D; node.left;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) throws java.lang.Exception &#123;</span><br><span class="line">		&#x2F;&#x2F; your code goes here</span><br><span class="line">		LRUCache lrucache &#x3D; new LRUCache();</span><br><span class="line">		lrucache.putEntry(1, 1);</span><br><span class="line">		lrucache.putEntry(10, 15);</span><br><span class="line">		lrucache.putEntry(15, 10);</span><br><span class="line">		lrucache.putEntry(10, 16);</span><br><span class="line">		lrucache.putEntry(12, 15);</span><br><span class="line">		lrucache.putEntry(18, 10);</span><br><span class="line">		lrucache.putEntry(13, 16);</span><br><span class="line"></span><br><span class="line">		System.out.println(lrucache.getEntry(1));</span><br><span class="line">		System.out.println(lrucache.getEntry(10));</span><br><span class="line">		System.out.println(lrucache.getEntry(15));</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>I hope code and tutorial is self explanatory.</p>
+<p>来源：<a target="_blank" rel="noopener" href="https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237">https://medium.com/@krishankantsinghal/my-first-blog-on-medium-583159139237</a></p>
+<p>总结：最近最少使用算法，内存有限制，查找得快，删除得快，插入也得快</p>
+<ul>
+<li><p>获取缓存</p>
+<blockquote>
+<p> 根据key从字典查找，如果存在，返回值，双向链表删除当前值，插入到最顶端</p>
+</blockquote>
+</li>
+<li><p>插入缓存</p>
+<blockquote>
+<ol>
+<li>如果已经存在，更新值，并移动到链表顶端</li>
+<li>不存在，生成一个新的节点，插入到顶端，如果满了，删除最后一个</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -1021,7 +1045,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">80</span>
+          <span class="site-state-item-count">79</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
