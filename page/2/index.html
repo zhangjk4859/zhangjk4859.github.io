@@ -148,6 +148,953 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/11/25/iOS/add-console-in-xcode/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/25/iOS/add-console-in-xcode/" class="post-title-link" itemprop="url">open terminal in Xcode</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-11-25 14:06:27 / Modified: 14:18:36" itemprop="dateCreated datePublished" datetime="2021-11-25T14:06:27+08:00">2021-11-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index"><span itemprop="name">iOS</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>用惯了Android Studio底部直接可以用terminal，在想Xcode是不是可以有类似功能，经过查询，整理出方法</p>
+<ul>
+<li>新建一个.sh文件，内容如下，保存</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">open -a Terminal &quot;`pwd`&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>打开Xcode—&gt;Preference—&gt;Behaviors—&gt;Custom—&gt;Run,选择创建好的.sh文件，Run前面的checkbox打钩，设定一个快捷键，这样，在Xcode界面使用快捷键就可以打开当前文件夹的终端窗口了。</li>
+</ul>
+<p>完。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/21998706/terminal-window-inside-xcode">https://stackoverflow.com/questions/21998706/terminal-window-inside-xcode</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/08/26/cs/qr-code-creation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="张俊凯">
+      <meta itemprop="description" content="https://github.com/zhangjk4859/">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="加酷知识源">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/08/26/cs/qr-code-creation/" class="post-title-link" itemprop="url">二维码怎么生成</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-08-26 17:23:00" itemprop="dateCreated datePublished" datetime="2021-08-26T17:23:00+08:00">2021-08-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-09-07 15:37:21" itemprop="dateModified" datetime="2021-09-07T15:37:21+08:00">2021-09-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>QR code，Quick Response，一种矩阵条形码，二维条形码，在1994年由供职于日本电装公司Denso Wave(丰田子公司)一名职员腾弘原（Masahiro Hara）发明，灵感来源于围棋，用于追踪流水线上的汽车，二维码之所以能快速在汽车制造领域外流行是因为自身的快速读取性，高存储性，更低的容错率，不需要特殊的设备读取。</p>
+<p><img src="https://5b0988e595225.cdn.sohucs.com/images/20180202/5388bfb902134e5d9fca2dbf2ea739dc.jpeg" alt="image"></p>
+<p><img src="https://i.guim.co.uk/img/media/69452cfee35f2027d9b375e79cea482f59b540d5/0_376_2667_3333/master/2667.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=e4076f0ee84d4bf1231d97d027ebcb81" alt="image"></p>
+<p><img src="https://qvc.scene7.com/is/image/QVC/t/14/t135114.001?$aempdlarge$" alt="image"></p>
+<p>二维码里可包含地理信息，身份标识，网页地址，是对这些信息进行了编码</p>
+<p>可编码的原始信息可分为四种：</p>
+<table>
+<thead>
+<tr>
+<th>编码模式</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Numeric</td>
+<td>1234567890</td>
+</tr>
+<tr>
+<td>Alphanumeric</td>
+<td>ABCDE…..Z   1234567890</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>0000111100001111</td>
+</tr>
+<tr>
+<td>Kanji</td>
+<td>漢字の部首・画数・読み方・筆順・意味などを調べることができる漢字辞典サイトで</td>
+</tr>
+</tbody></table>
+<p>每一种模式使用不同的方法把text转换为比特，尽可能使用效率高的方法，编码后的结果是一串比特，8bit为一个单位，称为data codeword。</p>
+<h3 id="二维码拆分"><a href="#二维码拆分" class="headerlink" title="二维码拆分"></a>二维码拆分</h3><p><img src="https://cdn4.explainthatstuff.com/qr-code-barcode-features.png" alt="image"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/function-patterns2.png" alt="image"></p>
+<p>1 .<strong>Quiet zone</strong>: 二维码存放的区域，白色底板，用来和其他的图案隔离开来，比如被玷污的信封上，报纸上或者有过摩擦的纸箱表面</p>
+<p>2.<strong>Finder patterns</strong>：左上，右上，左下的三个黑白正方形，用来确认是否为二维码，以及二维码的旋转方向</p>
+<p>3.<strong>Alignment pattern</strong>: 在非正常情况下用来确保可以正常解码，比如印在凸面上，扫描角度不正等</p>
+<p>4.<strong>Timing pattern</strong>:紫色连线部分，小黑白方块组成，用来辅助确认二维码里具体的信息（data cell），尤其是二维码污损的情况下</p>
+<p>5.<strong>Version infomation</strong>:绿色部分，用来确认版本信息</p>
+<p>6.<strong>Data Cells</strong>:剩余的黑白点部分，全为具体数据</p>
+<h3 id="容错率"><a href="#容错率" class="headerlink" title="容错率"></a>容错率</h3><table>
+<thead>
+<tr>
+<th align="center">Error Correction Level</th>
+<th>Error Correction Capability</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">L  (low)</td>
+<td>Recovers 7% of data</td>
+</tr>
+<tr>
+<td align="center">M (medium)</td>
+<td>Recovers 15% of data</td>
+</tr>
+<tr>
+<td align="center">Q (quarter)</td>
+<td>Recovers 25% of data</td>
+</tr>
+<tr>
+<td align="center">H (high)</td>
+<td>Recovers 30% of data</td>
+</tr>
+</tbody></table>
+<p>容错率的特点是在原始数据后面加上Reed-Solomon Code。打个比方，一段原始数据里包括100个codeword，需要修复50个，那么需要在数据尾部挂上100个Reed-Solomon code（两倍），这样下来总数为200codeword，容错率为25%，容错等级为Q。也可以认为刚才的例子容错率为50%，鉴于在通常情况下数据部分会污损，所以还是按25%来。容错率越高，数据越大</p>
+<p>PS：<a target="_blank" rel="noopener" href="https://www.qrcode.com/en/about/error_correction.html/">Reed-Solomon Code</a> 是一种在制作音乐CD领域较为常用的数学方法，一开始发明用来卫星或者星际通讯降噪，可以在比特级纠错</p>
+<h2 id="确定数据使用的最小版本"><a href="#确定数据使用的最小版本" class="headerlink" title="确定数据使用的最小版本"></a>确定数据使用的最小版本</h2><p>最小的二维码为21 * 21像素，最大是177 * 177像素，不同的尺寸代表不同版本，21 * 21为version 1，25 * 25为version 2，4个像素为一个步进，以此类推，177 * 177为version 40。</p>
+<p>每一个版本都有数据容量上限，数据容量取决于编码的信息长度和纠错级别，<a target="_blank" rel="noopener" href="https://www.thonky.com/qr-code-tutorial/character-capacities">字符容量表</a>展示了每个版本不同纠错级别的容量</p>
+<p>打个比方，<strong>HELLO WORLD</strong>包含11个字符，使用Q级别纠错，版本1 <strong>Alphanumeric</strong>最大容量是16字符，那么版本一就是<strong>HELLO WORLD</strong>最低版本，依次类推</p>
+<p>下表是二维码数据容量的上限</p>
+<table>
+<thead>
+<tr>
+<th align="left">Encoding Mode</th>
+<th align="left">Maximum number of characters a 40-L code can contain in that mode</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Numeric</td>
+<td align="left">7089 characters</td>
+</tr>
+<tr>
+<td align="left">Alphanumeric</td>
+<td align="left">4296 characters</td>
+</tr>
+<tr>
+<td align="left">Byte</td>
+<td align="left">2953 characters</td>
+</tr>
+<tr>
+<td align="left">Kanji</td>
+<td align="left">1817 characters</td>
+</tr>
+</tbody></table>
+<h3 id="添加模式标识"><a href="#添加模式标识" class="headerlink" title="添加模式标识"></a>添加模式标识</h3><p>每一种编码模式机器需要通过在数据前添加标识来确定，<strong>HELLO WORLD</strong>的编码代码为表格第二行，0010</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mode Name</th>
+<th align="left">Mode Indicator</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Numeric Mode</td>
+<td align="left">0001</td>
+</tr>
+<tr>
+<td align="left">Alphanumeric Mode</td>
+<td align="left">0010</td>
+</tr>
+<tr>
+<td align="left">Byte Mode</td>
+<td align="left">0100</td>
+</tr>
+<tr>
+<td align="left">Kanji Mode</td>
+<td align="left">1000</td>
+</tr>
+<tr>
+<td align="left">ECI Mode</td>
+<td align="left">0111</td>
+</tr>
+</tbody></table>
+<h3 id="添加个数标识"><a href="#添加个数标识" class="headerlink" title="添加个数标识"></a>添加个数标识</h3><p>个数标识表示字符串长度，<strong>HELLO WORLD</strong>长度为11，二进制1011，版本1的比特位长度为9，在左边补齐0，结果为 00000 1011，添加在模式标识后为 0010，00000 1011</p>
+<p>下面是各版本规定的比特位长度</p>
+<h4 id="Versions-1-9"><a href="#Versions-1-9" class="headerlink" title="Versions 1 - 9"></a>Versions 1 - 9</h4><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Bits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Numeric</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Alphanumeric</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>8</td>
+</tr>
+</tbody></table>
+<h4 id="Versions-10-26"><a href="#Versions-10-26" class="headerlink" title="Versions 10 - 26"></a>Versions 10 - 26</h4><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Bits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Numeric</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Alphanumeric</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<h4 id="Versions-27-40"><a href="#Versions-27-40" class="headerlink" title="Versions 27 - 40"></a>Versions 27 - 40</h4><table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Bits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Numeric</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Alphanumeric</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Byte</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>12</td>
+</tr>
+</tbody></table>
+<h3 id="真实数据编码"><a href="#真实数据编码" class="headerlink" title="真实数据编码"></a>真实数据编码</h3><p>以<strong>HELLO WORLD</strong> Alphanumeric模式为例，参考编码表为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">0 0</span><br><span class="line">1 1</span><br><span class="line">2 2</span><br><span class="line">3 3</span><br><span class="line">4 4</span><br><span class="line">5 5</span><br><span class="line">6 6</span><br><span class="line">7 7</span><br><span class="line">8 8</span><br><span class="line">9 9</span><br><span class="line">A 10</span><br><span class="line">B 11</span><br><span class="line">C 12</span><br><span class="line">D 13</span><br><span class="line">E 14</span><br><span class="line">F 15</span><br><span class="line">G 16</span><br><span class="line">H 17</span><br><span class="line">I 18</span><br><span class="line">J 19</span><br><span class="line">K 20</span><br><span class="line">L 21</span><br><span class="line">M 22</span><br><span class="line">N 23</span><br><span class="line">O 24</span><br><span class="line">P 25</span><br><span class="line">Q 26</span><br><span class="line">R 27</span><br><span class="line">S 28</span><br><span class="line">T 29</span><br><span class="line">U 30</span><br><span class="line">V 31</span><br><span class="line">W 32</span><br><span class="line">X 33</span><br><span class="line">Y 34</span><br><span class="line">Z 35</span><br><span class="line">  36 (space)</span><br><span class="line">$ 37</span><br><span class="line">% 38</span><br><span class="line">* 39</span><br><span class="line">+ 40</span><br><span class="line">- 41</span><br><span class="line">. 42</span><br><span class="line">&#x2F; 43</span><br><span class="line">: 44</span><br></pre></td></tr></table></figure>
+
+<p>把字符串拆分为如下形式,O和空格在一起</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HE,LL,O ,WO,RL,D</span><br></pre></td></tr></table></figure>
+
+<p>找到对应的数字</p>
+<p>H → 17<br>E → 14</p>
+<p>第一个乘以45，加第二个</p>
+<p>(45 * 17) + 14 = 779</p>
+<p>转换为11bit长的字符串，左边补0</p>
+<p>779 → 01100001011</p>
+<p>以此类推得到所有的数据，最后一位D -&gt; 13 转换长度为6比特 001101</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mode Indicator</th>
+<th align="left">Character Count Indicator</th>
+<th align="left">Encoded Data</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0010</td>
+<td align="left">000001011</td>
+<td align="left">01100001011 01111000110 10001011100 10110111000 10011010100 001101</td>
+</tr>
+</tbody></table>
+<h3 id="转换为8-bit-CodeWord"><a href="#转换为8-bit-CodeWord" class="headerlink" title="转换为8-bit CodeWord"></a>转换为8-bit CodeWord</h3><p>二维码要求数据必须填满，参考<a target="_blank" rel="noopener" href="https://www.thonky.com/qr-code-tutorial/error-correction-table">纠错表</a>，此处，我们采用的是版本一，Q级别，可以有13个CW，每个CW为8-bit，总容量为13*8=104bit，到了这一步，我们的数据总长度为74，离满格还差34，需要在尾部添加四个0，最多四个，如果数据长度为102，则补齐两个0，以此类推，到现在我们的数据为</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mode Indicator</th>
+<th align="left">Character Count Indicator</th>
+<th align="left">Encoded Data</th>
+<th align="left">Terminator</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">0010</td>
+<td align="left">000001011</td>
+<td align="left">01100001011 01111000110 10001011100 10110111000 10011010100 001101</td>
+<td align="left">0000</td>
+</tr>
+</tbody></table>
+<h3 id="拆分补齐数据，使之长度为8的倍数"><a href="#拆分补齐数据，使之长度为8的倍数" class="headerlink" title="拆分补齐数据，使之长度为8的倍数"></a>拆分补齐数据，使之长度为8的倍数</h3><p>74 + 4 = 78bit，在末尾添加00成为80bit</p>
+<p>前：</p>
+<p>00100000 01011011 00001011 01111000 11010001 01110010 11011100 01001101 01000011 010000</p>
+<p>后：</p>
+<p>00100000 01011011 00001011 01111000 11010001 01110010 11011100 01001101 01000011 010000<strong>00</strong></p>
+<p>距离104还差24bit，使用Pad bytes继续填充</p>
+<table>
+<thead>
+<tr>
+<th>236</th>
+<th>17</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>11101100</td>
+<td>00010001</td>
+</tr>
+</tbody></table>
+<p>00100000 01011011 00001011 01111000 11010001 01110010 11011100 01001101 01000011 01000000 <strong>11101100 00010001 11101100</strong></p>
+<p>236 - 17 - 236 - 17 如此循环下去，直到填满为止，对应的十进制为</p>
+<p>32,91,11,120,209,114,220,77,67,64,236,17,236</p>
+<h3 id="数据纠错编码"><a href="#数据纠错编码" class="headerlink" title="数据纠错编码"></a>数据纠错编码</h3><ul>
+<li><p>数据分组</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.thonky.com/qr-code-tutorial/error-correction-coding">Reed-Solomon算法</a>，包含多项式、伽罗瓦群论、对数、XOR计算等组合方法生成</p>
+<p><img src="https://s3-us-west-2.amazonaws.com/courses-images-archive-read-only/wp-content/uploads/sites/924/2015/11/25201522/CNX_Precalc_revised_eq_12.png" alt="image"></p>
+<p><img src="https://slideplayer.com/slide/9698581/31/images/12/Galois+Field+Example+Example%3A+Multiplying+110+and+101.jpg" alt="image"></p>
+</li>
+</ul>
+<p><img src="https://i.pcmag.com/imagery/encyclopedia-terms/xor-xor.fit_lim.size_1050x.gif" alt="image"></p>
+<p>根据<a target="_blank" rel="noopener" href="https://www.thonky.com/qr-code-tutorial/show-division-steps?msg_coeff=32,91,11,120,209,114,220,77,67,64,236,17,236&num_ecc_blocks=13">算法</a>产生的纠错码为</p>
+<p>168 72 22 82 217 54 156 0 46 15 180 122 16</p>
+<p>合起来为</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">Col 1</th>
+<th align="left">Col 2</th>
+<th align="left">Col 3</th>
+<th align="left">Col 4</th>
+<th align="left">Col 5</th>
+<th align="left">Col 6</th>
+<th align="left">Col 7</th>
+<th align="left">Col 8</th>
+<th align="left">Col 9</th>
+<th align="left">Col 10</th>
+<th align="left">Col 11</th>
+<th align="left">Col 12</th>
+<th>Col 13</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Block 1</td>
+<td align="left">32</td>
+<td align="left">91</td>
+<td align="left">11</td>
+<td align="left">120</td>
+<td align="left">209</td>
+<td align="left">114</td>
+<td align="left">220</td>
+<td align="left">77</td>
+<td align="left">67</td>
+<td align="left">64</td>
+<td align="left">236</td>
+<td align="left">17</td>
+<td>236</td>
+</tr>
+<tr>
+<td align="left">Block 2</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+<tr>
+<td align="left">ECC1</td>
+<td align="left">168</td>
+<td align="left">72</td>
+<td align="left">22</td>
+<td align="left">82</td>
+<td align="left">217</td>
+<td align="left">54</td>
+<td align="left">156</td>
+<td align="left">0</td>
+<td align="left">46</td>
+<td align="left">15</td>
+<td align="left">180</td>
+<td align="left">122</td>
+<td>16</td>
+</tr>
+<tr>
+<td align="left">ECC2</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>内容连起来，转换为二进制，类似于</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">01000011111101101011011001000110</span><br></pre></td></tr></table></figure>
+
+<h3 id="尾部添加0"><a href="#尾部添加0" class="headerlink" title="尾部添加0"></a>尾部添加0</h3><p>不同的版本在末尾添加0补全</p>
+<table>
+<thead>
+<tr>
+<th align="left">QR Version</th>
+<th align="left">Required Remainder Bits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">7</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">12</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">14</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">16</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">18</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">24</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">26</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">27</td>
+<td align="left">4</td>
+</tr>
+<tr>
+<td align="left">28</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">29</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">30</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">31</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">32</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">33</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">34</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">35</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">36</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">38</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">39</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">40</td>
+<td align="left">0</td>
+</tr>
+</tbody></table>
+<p>在这里我们用第一版，不加零</p>
+<h3 id="生成矩阵"><a href="#生成矩阵" class="headerlink" title="生成矩阵"></a>生成矩阵</h3><p><img src="https://www.thonky.com/qr-code-tutorial/finder.png" alt="image"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/finder_example_1.png" alt="image"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/finder_example_18.png" alt="image"></p>
+<h4 id="添加分隔线"><a href="#添加分隔线" class="headerlink" title="添加分隔线"></a>添加分隔线</h4><p><img src="https://www.thonky.com/qr-code-tutorial/separators.png" alt="img"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/separators2.png" alt="img"></p>
+<h4 id="添加对齐图案"><a href="#添加对齐图案" class="headerlink" title="添加对齐图案"></a>添加对齐图案</h4><p><img src="https://www.thonky.com/qr-code-tutorial/alignment-pattern.png" alt="img"></p>
+<p>version 2及其以上需要这个图案，经过查表可以得知，以左上角为原点，可以摆放四个位置，(6, 6), (6, 18), (18, 6) and (18, 18)，不能遮挡，故右下角合格</p>
+<h1 id="INCORRECT"><a href="#INCORRECT" class="headerlink" title="INCORRECT"></a>INCORRECT</h1><p><img src="https://www.thonky.com/qr-code-tutorial/alignment-exclusion.png" alt="img"></p>
+<h1 id="CORRECT"><a href="#CORRECT" class="headerlink" title="CORRECT"></a>CORRECT</h1><p><img src="https://www.thonky.com/qr-code-tutorial/alignment-correct.png" alt="img"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/alignment-example.png" alt="img"></p>
+<h4 id="添加Timing-Patterns"><a href="#添加Timing-Patterns" class="headerlink" title="添加Timing Patterns"></a>添加Timing Patterns</h4><p><img src="https://www.thonky.com/qr-code-tutorial/timing-s.png" alt="img"><img src="https://www.thonky.com/qr-code-tutorial/timing-m.png" alt="img"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/timing-l.png" alt="img"></p>
+<p>开始和结束均为黑色</p>
+<h4 id="黑色模块和数据保留区"><a href="#黑色模块和数据保留区" class="headerlink" title="黑色模块和数据保留区"></a>黑色模块和数据保留区</h4><p><img src="https://www.thonky.com/qr-code-tutorial/format-reserved1.png" alt="img"><img src="https://www.thonky.com/qr-code-tutorial/format-reserved2.png" alt="img"></p>
+<p>左下角黑点 Dark Module和蓝色区域部分Reserved Areas</p>
+<h4 id="版本数据区域"><a href="#版本数据区域" class="headerlink" title="版本数据区域"></a>版本数据区域</h4><p><img src="https://www.thonky.com/qr-code-tutorial/version-area1.png" alt="img"><img src="https://www.thonky.com/qr-code-tutorial/version-area2.png" alt="img"></p>
+<p>version 7及其以上必须包含版本信息，两个蓝色区域</p>
+<h4 id="添加文本数据"><a href="#添加文本数据" class="headerlink" title="添加文本数据"></a>添加文本数据</h4><p><img src="https://www.thonky.com/qr-code-tutorial/data-bit-progression.png" alt="img"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/upward.png" alt="img"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/downward.png" alt="img"></p>
+<p>如果遇到了阻挡，绕过去</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/alignment-modules10.png" alt="img"></p>
+<p>如果遇到了垂直的Timing Pattern,跳过去到下一列</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/timing-modules4.png" alt="img"></p>
+<h3 id="Data-Masking"><a href="#Data-Masking" class="headerlink" title="Data Masking"></a>Data Masking</h3><p>为什么需要masking，因为要减少复杂度，提升机器的识别率</p>
+<p>什么是masking</p>
+<ul>
+<li>黑白切换</li>
+</ul>
+<p>Mask方法</p>
+<ul>
+<li>只mask数据区域</li>
+</ul>
+<p>Mask种类</p>
+<table>
+<thead>
+<tr>
+<th align="left">Mask Number</th>
+<th align="left">If the formula below is true for a given row/column coordinate, switch the bit at that coordinate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">(row + column) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">(row) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">(column) mod 3 == 0</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">(row + column) mod 3 == 0</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">( floor(row / 2) + floor(column / 3) ) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">((row * column) mod 2) + ((row * column) mod 3) == 0</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">( ((row * column) mod 2) + ((row * column) mod 3) ) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">( ((row + column) mod 2) + ((row * column) mod 3) ) mod 2 == 0</td>
+</tr>
+</tbody></table>
+<h4 id="寻找最佳Mask"><a href="#寻找最佳Mask" class="headerlink" title="寻找最佳Mask"></a>寻找最佳Mask</h4><p>每一种mask加上去后进行四种惩罚算法验证，得分最低者为最合适的mask</p>
+<ul>
+<li>The first rule gives the QR code a penalty for each group of five or more same-colored modules in a row (or column).</li>
+<li>The second rule gives the QR code a penalty for each 2x2 area of same-colored modules in the matrix.</li>
+<li>The third rule gives the QR code a large penalty if there are patterns that look similar to the finder patterns.</li>
+<li>The fourth rule gives the QR code a penalty if more than half of the modules are dark or light, with a larger penalty for a larger difference.</li>
+</ul>
+<p>这里举第一种惩罚算法为例</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/horizontal-total.png" alt="img"><img src="https://www.thonky.com/qr-code-tutorial/vertical-total.png" alt="img"></p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/qr-masks.png" alt="img"></p>
+<p>350得分最低，选择第一种mask</p>
+<h3 id="添加格式信息"><a href="#添加格式信息" class="headerlink" title="添加格式信息"></a>添加格式信息</h3><p>纠错级别有四个 L M Q H，Maks有八种，一共32种组合</p>
+<p>格式信息是一个15-bit长的字符串 </p>
+<p>前5个bit包含纠错版本（2-bit）和mask版本（3-bit）</p>
+<table>
+<thead>
+<tr>
+<th align="left">Error Correction Level</th>
+<th align="left">Bits</th>
+<th align="left">Integer Equivalent</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">L</td>
+<td align="left">01</td>
+<td align="left">1</td>
+</tr>
+<tr>
+<td align="left">M</td>
+<td align="left">00</td>
+<td align="left">0</td>
+</tr>
+<tr>
+<td align="left">Q</td>
+<td align="left">11</td>
+<td align="left">3</td>
+</tr>
+<tr>
+<td align="left">H</td>
+<td align="left">10</td>
+<td align="left">2</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="left">Mask Number</th>
+<th align="left">If the formula below is true for a given row/column coordinate, switch the bit at that coordinate</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0</td>
+<td align="left">(row + column) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">(row) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">(column) mod 3 == 0</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">(row + column) mod 3 == 0</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">( floor(row / 2) + floor(column / 3) ) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">((row * column) mod 2) + ((row * column) mod 3) == 0</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">( ((row * column) mod 2) + ((row * column) mod 3) ) mod 2 == 0</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">( ((row + column) mod 2) + ((row * column) mod 3) ) mod 2 == 0</td>
+</tr>
+</tbody></table>
+<p>11000,剩下的十位重新使用Reed-Solomon算法生成ECC code，填进去二维码蓝色区域</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/format-layout.png?a=" alt="The layout of format string bits, where 14 is the most significant bit and 0 is the least significant bit"></p>
+<p>无论哪个版本，格式信息总是在红色的区域</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/format-position-1.png" alt="img"><img src="https://www.thonky.com/qr-code-tutorial/format-position-2.png" alt="img"></p>
+<h4 id="生成版本信息"><a href="#生成版本信息" class="headerlink" title="生成版本信息"></a>生成版本信息</h4><p>version 7及其以上版本，必须包含18bit长度的版本信息，6-bit表示版本号，12-bit代表纠错码，同样的算法生成</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/version-location-1.png" alt="img"><img src="https://www.thonky.com/qr-code-tutorial/version-location-2.png" alt="img"></p>
+<p>蓝色区域，3*6格子，下图是一个version 7示例</p>
+<p><img src="https://www.thonky.com/qr-code-tutorial/version-example.png" alt="img"></p>
+<p>顺序是从右下到左上填充</p>
+<table>
+<thead>
+<tr>
+<th>00</th>
+<th>01</th>
+<th>02</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+</tr>
+<tr>
+<td>06</td>
+<td>07</td>
+<td>08</td>
+</tr>
+<tr>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+</tr>
+<tr>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>17</th>
+<th>16</th>
+<th>15</th>
+<th>14</th>
+<th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<h3 id="添加合适mask（上面已经叙述过）"><a href="#添加合适mask（上面已经叙述过）" class="headerlink" title="添加合适mask（上面已经叙述过）"></a>添加合适mask（上面已经叙述过）</h3><h3 id="添加quiet-zone"><a href="#添加quiet-zone" class="headerlink" title="添加quiet zone"></a>添加quiet zone</h3><h3 id="最终生成-HELLO-WORLD-二维码，1-Q-Alphanumeric"><a href="#最终生成-HELLO-WORLD-二维码，1-Q-Alphanumeric" class="headerlink" title="最终生成 HELLO WORLD 二维码，1-Q,Alphanumeric"></a>最终生成 HELLO WORLD 二维码，1-Q,Alphanumeric</h3><p><img src="https://www.thonky.com/qr-code-tutorial/hello-world-final.png" alt="img"></p>
+<p>完。</p>
+<p><img src="https://www.pgyer.com/app/qrcode/lMxO" alt="image"></p>
+<p>附录：</p>
+<p>条形码：一维码，一种包含物料详情的机读型的光学标签</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPIAAADQCAMAAAAK0syrAAAAe1BMVEX///8AAADg4OC+vr6pqaknJyd8fHx4eHj39/empqbV1dXz8/MxMTGRkZHGxsZeXl7n5+c/Pz9ubm6enp6JiYnMzMywsLCDg4Pb29tMTEy2trZmZmZTU1MhISEcHBzQ0NARERGYmJgsLCwNDQ1EREQ5OTlYWFhhYWEXFxe7j35hAAAG0UlEQVR4nO2YfZOqOgzGG14UdEFU3kRd1N3V/f6f8KZpQHRFz5k5Z+6duc/zh1AIaX5tSYrGQBAEQRAEQdC/oXlcmigOXKMMgnhu/DgzReBUGC9OTRY3bOiuxM604bPMpLEnrZpvWjPf3bSmxgRxZBr1l7J5rWaGDa2nkg3ja7fG+Hz0TBvPxNCZ2vjUo/hz3Yo3220r8f2eMtqbOZFrHIioNjtKzYScKuPTysxoyYYqZ/rGZ61ZUSOtgFsrU9BGWpEzI5qzmSf+pnwlNjH/TtmgVU+R82bP7dAt+NiYhI5iSLTlax4dOhPrL+TfGXdLZGcpppzj2/428tsVORTkBYdYKZ91OWXkzT3yUpCnilwKS0G7e+Qlsyx0CAMZmQkbzMTRvkN+V+QtH31GXouhHUSLHA6R33rkUpATmRIgAxnIQAYykIEMZCADGchABjKQgQxkIAMZyEAGMpCBDGQgAxnIQAYykIEMZCADGchABjKQgQxkIAMZyEAGMpCBDGQgAxnIQAYykIEMZCADGchABjKQgQxkIAMZyEAGMpCBDGQgAxnIQAYykIEMZCADGchABjKQgQxkIAMZyEAGMpCBDGQgAxnIQAYykIEMZCADGchABjKQgQxkIAMZyEAGMpCBDGQgAxnIQAYykIEMZCADGchABjKQgQxkIAMZyEAGMpCBDGQgAxnIQAYykP9nyN+CfNYQrSpxOaPPe+SvG+RAkTdjyFO+EnOI1syYVhwdOmRS5EuPHIvBVpC/h8jhn0ZO8rzKTFzVpslFlW/qqjRZtTbzyl2aONMj3/RMWc2k1fLN0nhsJuJWZUxeRT0y+6sKU/ANO0aZ+EpMVFVdt3M7cHycGb9KxTDPAzFNrMlEoomk28yU/Nv+GeQ/rw757wjIvygg/2n9l5DnehxDns8fmt+fP2mIHiFHL575dQ2Q56/82LL7Jcn2EXI03UtZ7LwUn7akxC7CBZ8v9E5kK+ku04YtHZvstqMfyL61ooXnWtmZG8vaPV+st6dDPXj4uHfN+nAKWe+TMeTmchPvIy1pE+e2wD1GzihcJRVju/iPXCGTybdsM9h0Fa9shTRSf7fxVBtc1M/xpHtmDJmfX1b5l+ubiy57y22Bt4MhpXd2fdaTXYKxO5fvN1Y4gjxlw02eh/d931pexNHHCHLkHp2ImUkpFCa5eCFbeteyS+D9ha2Zpdtz5bKv8mn5HHkqvhI62EMoGwrPdd8mabQYIp82uw45GQORWc7yyIWzGUXek4afWuTTWPqa07uLyxtccpYys7p3UnfaWA6sHyB3khnRzSTH6uvl8wD5SPPNryFfnY4A23Urx4Z30Cbb78w8/HpsZy/Xw7HzyS2uiQ0ydXPN81vasHYa6HroY7H3zDQsfvh+s8ipRhvILtRqd0XOGOcVcrlfmzSsrsjRCHKhPdUa5Zguuo9dR/nmnOiCdEkspqP+GB260v4YizF97O1GbrVckbshHyB/8d66R95tN9v4ldNu0TxQqVOVjZuYzWVHe/lkqIjT+/LD5ZhKl2BjXeQUSENm+6j8LZ1fhWbsN9NRYpQ3h78SvvX6FXltz3pkp/qno5uYZYoeKtAJyegw+rjt4STInJHP8hCZ61uXWuRKuyhsmkt0Qc+e5JBea53Wkzw06z/PrsiZLBZF9prIJr7xdSuqngz2dZb3z1zUS3mFJtrT1gJOFNl/MMsOuX3xtrgA3l3wnKt3xxWd6aB3euRPGYTNzcRebtPEnY53teJG3SvkvZoQgU34W9nqZi3LQllrCMIfaIopXu//Gvropiuze5lj1kfbIZfURLyf+qR2MLEFLcadrrnYjsvTHvxXmeZsB7nRjqQYdElKknT3/NHmtELTdzyWXXv53d6lV0Nd0u2QE+rl92bP3pk119pn0qU60b80RvVla2yX5NaWxdOxlBqjddstv65IL+hnRbrRT2J20OpZh5y6/xBCmlbXpV2OL6CYwqfvOb/oNl9Go5VbQ0qJBgHtJZo3ISrcOtnIFNQuJbiSlr36KPPp/Z44uM7e+TYrb9y+xj0QfQxm/N7Ds1UtDxMldXqisUo3+Vr7RbPSRcU5Jqj5y0J2n5xdm7rReiF3uCHzyrBx7Y+H5cRWl7xiTS1MeS5Tf9tN+7SqTrSqJlcPmr5oG6Qp7/TH1jUHtarE6fiHRXayb8lo/nP/L1Ko+8TZB+k/k0amnqV32uHbVovZaGlUo/4dtePkviTOGmh3p99N8ZqSdf7prudjTv3eqTdmYrv202eL30v9dPBZMvPT6/i1fmsGjWJo9uI9ZkWdXKsd9HN7y11xx/nM92dmXD+fhCAIgiAIgqC/rX8AZ3JNuBRiwdkAAAAASUVORK5CYII=" alt="image"></p>
+<p>ASCII Table:</p>
+<p><img src="http://wiki.robotz.com/images/3/37/Asciifull.gif" alt="image"></p>
+<p><img src="https://lessonsforenglish.com/wp-content/uploads/2020/05/Common-Number-Prefixes-Greek-Latin-Meaning-and-Examples.png" alt="image"></p>
+<p>在线进制转换网站 <a target="_blank" rel="noopener" href="https://tool.lu/hexconvert/">https://tool.lu/hexconvert/</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.nayuki.io/page/creating-a-qr-code-step-by-step">https://www.nayuki.io/page/creating-a-qr-code-step-by-step</a></p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/QR_code">https://en.wikipedia.org/wiki/QR_code</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.explainthatstuff.com/how-data-matrix-codes-work.html">https://www.explainthatstuff.com/how-data-matrix-codes-work.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.thonky.com/qr-code-tutorial/introduction">https://www.thonky.com/qr-code-tutorial/introduction</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/08/06/know/fabien-sanglard/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -917,235 +1864,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/04/12/algo/find-next-numnbe-advance/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/12/algo/find-next-numnbe-advance/" class="post-title-link" itemprop="url">寻找下一个数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2021-04-12 23:03:38 / Modified: 18:48:49" itemprop="dateCreated datePublished" datetime="2021-04-12T23:03:38+08:00">2021-04-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>早上开车等红绿灯时想到几个月前写的一个算法，应该可以更简单，今天重新写了一遍</p>
-<ul>
-<li><p>寻找下一个数字，例如输入345，输出354</p>
-<blockquote>
-<p>思路：从最右边位和上一位对比，如果大，就往前移，移动完，尾数排序，从小到大，保证次大</p>
-</blockquote>
-</li>
-<li><p>代码</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;字符串分成数组</span><br><span class="line">NSMutableArray *convertStringToArray(NSString *str)&#123;</span><br><span class="line">    NSMutableArray *marr &#x3D; [NSMutableArray array];</span><br><span class="line">    for (NSInteger i &#x3D; 0; i &lt; str.length; i++) &#123;</span><br><span class="line">        [marr addObject:[str substringWithRange:NSMakeRange(i, 1)]];</span><br><span class="line">    &#125;</span><br><span class="line">    return marr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;数组拼成字符串</span><br><span class="line">NSString *convertArrayToString(NSArray *arr)&#123;</span><br><span class="line">    NSMutableString *mstr &#x3D; [NSMutableString string];</span><br><span class="line">    for (NSString *str in arr) &#123;</span><br><span class="line">        [mstr appendString:str];</span><br><span class="line">    &#125;</span><br><span class="line">    return mstr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;冒泡排序 从小到大</span><br><span class="line">NSString *bubbleSort(NSString *str)&#123;</span><br><span class="line">    NSArray *sortedArray &#x3D; convertStringToArray(str);</span><br><span class="line">    NSMutableArray *marr &#x3D; [NSMutableArray arrayWithArray:sortedArray];</span><br><span class="line">    &#x2F;&#x2F;最后一位的索引</span><br><span class="line">    unsigned long j &#x3D; marr.count-1;</span><br><span class="line">    for (;j&gt;0;j--) &#123;</span><br><span class="line">      </span><br><span class="line">        BOOL didSort &#x3D; NO;</span><br><span class="line">        &#x2F;&#x2F;第一轮结束</span><br><span class="line">        for (int i&#x3D;0; i&lt;j; i++) &#123;</span><br><span class="line">            NSString *pre &#x3D; marr[i];</span><br><span class="line">            NSString *next &#x3D; marr[i+1];</span><br><span class="line">            if (pre.integerValue &gt; next.integerValue) &#123;</span><br><span class="line">                [marr exchangeObjectAtIndex:i+1 withObjectAtIndex:i];</span><br><span class="line">                didSort &#x3D; YES;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        if (!didSort) &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    NSMutableString *mstr &#x3D; [NSMutableString string];</span><br><span class="line">    for (NSString *str in marr) &#123;</span><br><span class="line">        [mstr appendString:str];</span><br><span class="line">    &#125;</span><br><span class="line">    return  mstr;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NSString *findNextLargerNum(NSString *oriNum)&#123;</span><br><span class="line">    NSString *resultStr &#x3D; oriNum;</span><br><span class="line">    NSMutableArray *oriNumMArr &#x3D;[NSMutableArray arrayWithArray:convertStringToArray(oriNum)];</span><br><span class="line">    </span><br><span class="line">    for (int j &#x3D; oriNumMArr.count-1; j&gt;0; j--) &#123;</span><br><span class="line">        </span><br><span class="line">        BOOL getResult &#x3D; NO;</span><br><span class="line">        NSString *last &#x3D; oriNumMArr[j];</span><br><span class="line">        for (int i &#x3D; j-1; i&gt;&#x3D;0; i--) &#123;</span><br><span class="line">            NSString *pre &#x3D; oriNumMArr[i];</span><br><span class="line">            if (last.integerValue &gt; pre.integerValue) &#123;</span><br><span class="line">                 [oriNumMArr exchangeObjectAtIndex:i withObjectAtIndex:j];</span><br><span class="line">                NSRange range &#x3D; NSMakeRange(i+1, oriNumMArr.count - 1 - i);</span><br><span class="line">                NSString *surfixStr &#x3D; convertArrayToString([oriNumMArr subarrayWithRange:range]);</span><br><span class="line">                NSString *surResultStr &#x3D; bubbleSort(surfixStr);</span><br><span class="line">                NSString *preStr &#x3D; convertArrayToString([oriNumMArr subarrayWithRange:NSMakeRange(0,i+1)]);</span><br><span class="line">                resultStr &#x3D; [NSString stringWithFormat:@&quot;%@%@&quot;,preStr,surResultStr];</span><br><span class="line">                getResult &#x3D; YES;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        if (getResult) &#123;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    return resultStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NSString *str &#x3D; findNextLargerNum(@&quot;8976&quot;);</span><br><span class="line">NSLog(@&quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;%@&quot;,str);</span><br><span class="line">&#x2F;&#x2F;打印结果</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;9678</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pluscool.cn/2021/04/11/flutter/flutter-app-optimization-example/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="张俊凯">
-      <meta itemprop="description" content="https://github.com/zhangjk4859/">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="加酷知识源">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/11/flutter/flutter-app-optimization-example/" class="post-title-link" itemprop="url">flutter App 优化实操</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-04-11 17:50:00" itemprop="dateCreated datePublished" datetime="2021-04-11T17:50:00+08:00">2021-04-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-01 17:46:09" itemprop="dateModified" datetime="2021-04-01T17:46:09+08:00">2021-04-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/flutter/" itemprop="url" rel="index"><span itemprop="name">flutter</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>抽取widget，尽量成为一个stateless widget</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWidget</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Expanded(</span><br><span class="line">      child: Container(</span><br><span class="line">        color: Colors.grey[<span class="number">700</span>],</span><br><span class="line">        child: Center(</span><br><span class="line">          child: Text(</span><br><span class="line">            <span class="string">&#x27;Hello Flutter&#x27;</span>,</span><br><span class="line">            style: Theme.of(context).textTheme.display1,</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>更新属性值，用传值的方式</p>
-<ul>
-<li><p>ChangeNotifier</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;------ ChangeNotifier class ----&#x2F;&#x2F;</span><br><span class="line">class MyColorNotifier extends ChangeNotifier &#123;</span><br><span class="line">  Color myColor &#x3D; Colors.grey;</span><br><span class="line">  Random _random &#x3D; new Random();</span><br><span class="line"></span><br><span class="line">  void changeColor() &#123;</span><br><span class="line">    int randomNumber &#x3D; _random.nextInt(30);</span><br><span class="line">    myColor &#x3D; Colors.primaries[randomNumber % Colors.primaries.length];</span><br><span class="line">    notifyListeners();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;------ State class ----&#x2F;&#x2F;</span><br><span class="line"></span><br><span class="line">class _MyHomePageState extends State&lt;MyHomePage&gt; &#123;</span><br><span class="line">  final _colorNotifier &#x3D; MyColorNotifier();</span><br><span class="line"></span><br><span class="line">  void _onPressed() &#123;</span><br><span class="line">    _colorNotifier.changeColor();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  void dispose() &#123;</span><br><span class="line">    _colorNotifier.dispose();</span><br><span class="line">    super.dispose();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    print(&#39;building &#96;MyHomePage&#96;&#39;);</span><br><span class="line">    return Scaffold(</span><br><span class="line">      floatingActionButton: FloatingActionButton(</span><br><span class="line">        onPressed: _onPressed,</span><br><span class="line">        child: Icon(Icons.colorize),</span><br><span class="line">      ),</span><br><span class="line">      body: Stack(</span><br><span class="line">        children: [</span><br><span class="line">          Positioned.fill(</span><br><span class="line">            child: BackgroundWidget(),</span><br><span class="line">          ),</span><br><span class="line">          Center(</span><br><span class="line">            child: AnimatedBuilder(</span><br><span class="line">              animation: _colorNotifier,</span><br><span class="line">              builder: (_, __) &#x3D;&gt; Container(</span><br><span class="line">                height: 150,</span><br><span class="line">                width: 150,</span><br><span class="line">                color: _colorNotifier.myColor,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>ValueNotifier</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_MyHomePageState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">MyHomePage</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> _colorNotifier = ValueNotifier&lt;Color&gt;(Colors.grey);</span><br><span class="line">  Random _random = <span class="keyword">new</span> Random();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> _onPressed() &#123;</span><br><span class="line">    <span class="built_in">int</span> randomNumber = _random.nextInt(<span class="number">30</span>);</span><br><span class="line">    _colorNotifier.value =</span><br><span class="line">        Colors.primaries[randomNumber % Colors.primaries.length];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> dispose() &#123;</span><br><span class="line">    _colorNotifier.dispose();</span><br><span class="line">    <span class="keyword">super</span>.dispose();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;building `MyHomePage`&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      floatingActionButton: FloatingActionButton(</span><br><span class="line">        onPressed: _onPressed,</span><br><span class="line">        child: Icon(Icons.colorize),</span><br><span class="line">      ),</span><br><span class="line">      body: Stack(</span><br><span class="line">        children: [</span><br><span class="line">          Positioned.fill(</span><br><span class="line">            child: BackgroundWidget(),</span><br><span class="line">          ),</span><br><span class="line">          Center(</span><br><span class="line">            child: ValueListenableBuilder(</span><br><span class="line">              valueListenable: _colorNotifier,</span><br><span class="line">              builder: (_, value, __) =&gt; Container(</span><br><span class="line">                height: <span class="number">150</span>,</span><br><span class="line">                width: <span class="number">150</span>,</span><br><span class="line">                color: value,</span><br><span class="line">              ),</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用const修饰stateless widget，set state不会重复刷新</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BackgroundWidget</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> BackgroundWidget();</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;building `BackgroundWidget`&#x27;</span>);</span><br><span class="line">    <span class="keyword">return</span> Image.network(</span><br><span class="line">      <span class="string">&#x27;https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg&#x27;</span>,</span><br><span class="line">      fit: BoxFit.cover,</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>生成列表的时候使用itemExtent属性告诉系统item高度，更高效的滑动</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyHomePage</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> widgets = <span class="built_in">List</span>.generate(</span><br><span class="line">    <span class="number">10000</span>,</span><br><span class="line">    (index) =&gt; Container(</span><br><span class="line">      color: Colors.primaries[index % Colors.primaries.length],</span><br><span class="line">      child: ListTile(</span><br><span class="line">        title: Text(<span class="string">&#x27;Index: <span class="subst">$index</span>&#x27;</span>),</span><br><span class="line">      ),</span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="keyword">final</span> _scrollController = ScrollController();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> _onPressed() <span class="keyword">async</span> &#123;</span><br><span class="line">    _scrollController.jumpTo(</span><br><span class="line">      _scrollController.position.maxScrollExtent,</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      floatingActionButton: FloatingActionButton(</span><br><span class="line">        onPressed: _onPressed,</span><br><span class="line">        splashColor: Colors.red,</span><br><span class="line">        child: Icon(Icons.slow_motion_video),</span><br><span class="line">      ),</span><br><span class="line">      body: ListView(</span><br><span class="line">        controller: _scrollController,</span><br><span class="line">        children: widgets,</span><br><span class="line">        itemExtent: <span class="number">200</span>,</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>需要动画的子控件设置给AnimatedBuilder的child，避免重复绘制</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      floatingActionButton: FloatingActionButton(</span><br><span class="line">        onPressed: _onPressed,</span><br><span class="line">        splashColor: Colors.red,</span><br><span class="line">        child: Icon(Icons.slow_motion_video),</span><br><span class="line">      ),</span><br><span class="line">      body: AnimatedBuilder(</span><br><span class="line">        animation: _controller,</span><br><span class="line">        child: CounterWidget(</span><br><span class="line">          counter: counter,</span><br><span class="line">        ),</span><br><span class="line">        builder: (_, child) =&gt; Transform(</span><br><span class="line">          alignment: Alignment.center,</span><br><span class="line">          transform: Matrix4.identity()</span><br><span class="line">            ..setEntry(<span class="number">3</span>, <span class="number">2</span>, <span class="number">0.001</span>)</span><br><span class="line">            ..rotateY(<span class="number">360</span> * _controller.value * (pi / <span class="number">180.0</span>)),</span><br><span class="line">          child: child,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<ul>
-<li><p>合理使用opacity属性，减少调用setlayer方法，触发离屏渲染</p>
-<ul>
-<li><p>使用fadeTransition</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_MyHomePageState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">MyHomePage</span>&gt;</span></span><br><span class="line"><span class="class">    <span class="title">with</span> <span class="title">SingleTickerProviderStateMixin</span> </span>&#123;</span><br><span class="line">  AnimationController _controller;</span><br><span class="line">  <span class="built_in">int</span> counter = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> _onPressed() &#123;</span><br><span class="line">    setState(() &#123;</span><br><span class="line">      counter++;</span><br><span class="line">    &#125;);</span><br><span class="line">    _controller.forward(from: <span class="number">0.0</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> initState() &#123;</span><br><span class="line">    _controller = AnimationController(</span><br><span class="line">        vsync: <span class="keyword">this</span>, duration: <span class="keyword">const</span> <span class="built_in">Duration</span>(milliseconds: <span class="number">600</span>));</span><br><span class="line">    _controller.addStatusListener((status) &#123;</span><br><span class="line">      <span class="keyword">if</span> (status == AnimationStatus.completed) &#123;</span><br><span class="line">        _controller.reverse();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">super</span>.initState();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> dispose() &#123;</span><br><span class="line">    _controller.dispose();</span><br><span class="line">    <span class="keyword">super</span>.dispose();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      floatingActionButton: FloatingActionButton(</span><br><span class="line">        onPressed: _onPressed,</span><br><span class="line">        splashColor: Colors.red,</span><br><span class="line">        child: Icon(Icons.slow_motion_video),</span><br><span class="line">      ),</span><br><span class="line">      body: FadeTransition(</span><br><span class="line">        opacity: Tween(begin: <span class="number">1.0</span>, end: <span class="number">0.0</span>).animate(_controller),</span><br><span class="line">        child: CounterWidget(</span><br><span class="line">          counter: counter,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>使用animatedOpacity</p>
-<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> duration = <span class="keyword">const</span> <span class="built_in">Duration</span>(milliseconds: <span class="number">600</span>);</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_MyHomePageState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">MyHomePage</span>&gt; </span>&#123;</span><br><span class="line">  <span class="built_in">int</span> counter = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">double</span> opacity = <span class="number">1.0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> _onPressed() <span class="keyword">async</span> &#123;</span><br><span class="line">    counter++;</span><br><span class="line">    setState(() &#123;</span><br><span class="line">      opacity = <span class="number">0.0</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">await</span> Future.delayed(duration);</span><br><span class="line">    setState(() &#123;</span><br><span class="line">      opacity = <span class="number">1.0</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">      floatingActionButton: FloatingActionButton(</span><br><span class="line">        onPressed: _onPressed,</span><br><span class="line">        splashColor: Colors.red,</span><br><span class="line">        child: Icon(Icons.slow_motion_video),</span><br><span class="line">      ),</span><br><span class="line">      body: AnimatedOpacity(</span><br><span class="line">        opacity: opacity,</span><br><span class="line">        duration: duration,</span><br><span class="line">        child: CounterWidget(</span><br><span class="line">          counter: counter,</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-<p>完。</p>
-<p>sources:</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://blog.codemagic.io/how-to-improve-the-performance-of-your-flutter-app./">https://blog.codemagic.io/how-to-improve-the-performance-of-your-flutter-app./</a></li>
-<li><a href="https://pluscool.cn/2021/03/31/flutter/flutter-app-optimize/">https://pluscool.cn/2021/03/31/flutter/flutter-app-optimize/</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1211,7 +1933,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">79</span>
+          <span class="site-state-item-count">81</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1244,7 +1966,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
